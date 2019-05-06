@@ -11,12 +11,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: ${({theme}) => theme.colors.white};
     background: ${({theme}) => theme.colors.gray};
+    
   }
 
   *, *::before, *::after {
     box-sizing: border-box;
+    
   }
 `;
 
@@ -24,10 +26,8 @@ const StyleWrapper = styled.div`
   height: 100vh;
   background: ${({theme}) => theme.colors.gray};
   position: relative;
-
-  @media (min-width: 768px) {
-    background: blue;
-  }
+  overflow: hidden;
+  transition: 200ms all;
 `;
 
 
@@ -35,7 +35,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper>
+            <StyleWrapper id="StyleWrapper">
                 {children}
             </StyleWrapper>
         </>
