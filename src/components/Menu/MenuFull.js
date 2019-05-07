@@ -7,6 +7,7 @@ const MenuFull = styled.div`
     width: 250px;
     height: 100vh;
     background: ${({theme}) => theme.colors.gray};
+    /* background: ${(props) => props.isOn ? 'red' : 'black'}; */
     border-left: 5px solid ${({theme}) => theme.colors.white};
     position: fixed;
     top: 0;
@@ -24,6 +25,7 @@ const MenuFull = styled.div`
         margin: 0;
     }
     li{
+        cursor: pointer;
         position: relative;
         text-align: center;
         transition: 200ms;
@@ -31,7 +33,7 @@ const MenuFull = styled.div`
         font-family: 'Rubik';
         font-size: 2.2rem;
         line-height: 3.5rem;
-        cursor: pointer;
+        
         &:after{
             width: 0%;
             content: '';

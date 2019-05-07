@@ -31,6 +31,20 @@ ${({theme}) => theme.media.laptop} {
 ${({theme}) => theme.media.hd} {
     max-width: 520px;
 }
+
+    transform: translatey(0px);
+  animation: logoSwing 12s ease-in-out infinite;
+  @keyframes logoSwing {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(-5px,10px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
   `
 
   

@@ -23,6 +23,38 @@ import social4 from '../assets/git.png'
 
 class Home extends Component{
 
+  //to control nav and hamburger menu and hide theme on resize event
+  handleResize = () => {
+    if ( window.innerWidth > 1367 ) {
+      const a = document.querySelector("#MenuFull")
+      const bd = document.querySelector("#StyleWrapper")
+      a.style.margin = "0px"
+      bd.style.right = "0px"
+    } else if ( window.innerWidth < 1367 ) {
+      const a = document.querySelector("#MenuFull")
+      const bd = document.querySelector("#StyleWrapper")
+      a.style.margin = "0px -250px 0px 0px"
+      bd.style.right = "0px"
+    }
+  }
+
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.handleResize();
+    window.removeEventListener('resize', this.handleResize.bind(this));
+  }
+
+ 
+
+
+
+
+
+
 
 
   //toggle menu on tablets and phones and animate ham-menu icon
@@ -50,20 +82,13 @@ class Home extends Component{
     
   }
 
-  handleScroll = () => {
-    if ( document.innerWidth > 1367 ) {
-      const a = document.querySelector("#MenuFull")
-      const bd = document.querySelector("#StyleWrapper")
-      a.style.margin = "0px"
-      bd.style.right = "0px"
-    }
-  }
+ 
 
   enlargeIcon = (e) => {
     e.target.style.transform = 'scale(1.3)'
   }
 
-resizeIcon = (e) => {
+  resizeIcon = (e) => {
     e.target.style.transform = 'scale(1)'
   }
 
