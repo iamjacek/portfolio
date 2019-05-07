@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 const Polish = styled.h2`
+    cursor: pointer;
     position: absolute;
     top: 5vh;
     left: 12vw;
@@ -14,7 +15,9 @@ const Polish = styled.h2`
     ${({theme}) => theme.media.hd} {  
       font-size: 1.2rem;
     }
-    
+    &:hover{
+      color: ${({theme}) => theme.colors.red};
+    }
 `
 
   

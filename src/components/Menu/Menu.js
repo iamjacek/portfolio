@@ -14,6 +14,10 @@ const Menu = styled.span`
     ${({theme}) => theme.media.laptop} {
       display: none;
     }
+    * {
+      opacity: 1;
+      transition: 200ms all ease-in;
+    }
 `
 
 

@@ -25,19 +25,29 @@ class Home extends Component{
 
 
 
-  //toggle menu on tablets and phones
+  //toggle menu on tablets and phones and animate ham-menu icon
   toggleMenu = () => {
     const a = document.querySelector("#MenuFull")
     const bd = document.querySelector("#StyleWrapper")
     const menu = document.querySelector("#Menu")
+    const l1 = document.querySelector("#l1")
+    const l2 = document.querySelector("#l2")
+    const l3 = document.querySelector("#l3")
     if (a.style.margin === "0px -250px 0px 0px" || a.style.margin === "") {
       a.style.margin = "0px"
       bd.style.right = "250px"
-      // menu.style.right = "0px"
+      l2.style.opacity = "0"
+      l1.style.transform = "rotate(45deg) translate(1px, 15px)"
+      l3.style.transform = "rotate(-45deg) translate(0px, -15px)"
     } else if (a.style.margin = "0px"){
       a.style.margin = "0px -250px 0px 0px"
       bd.style.right = "0px"
+      l2.style.opacity = "1"
+      l1.style.transform = "rotate(0deg) translate(0px, 0px)"
+      l3.style.transform = "rotate(0deg) translate(0px, 0px)"
     }
+
+    
   }
 
   handleScroll = () => {
@@ -49,6 +59,15 @@ class Home extends Component{
     }
   }
 
+  enlargeIcon = (e) => {
+    e.target.style.transform = 'scale(1.3)'
+  }
+
+resizeIcon = (e) => {
+    e.target.style.transform = 'scale(1)'
+  }
+
+
  
 
   render() {
@@ -59,9 +78,9 @@ class Home extends Component{
       </Background>
         <Polish>PL</Polish>
         <Menu onClick={ this.toggleMenu } id="Menu">
-          <Line/>
-          <Line/>
-          <Line/>
+          <Line id="l1"/>
+          <Line id="l2"/>
+          <Line id="l3"/>
         </Menu>
         <MenuFull id="MenuFull">
           <ul>
@@ -78,10 +97,10 @@ class Home extends Component{
         <Scroll src={scroll} alt="arrow to scroll down"/>
         <Social>
           <div>
-            <img src={social1} alt="twitter" />
-            <img src={social2} alt="LinkedIn" />
-            <img src={social3} alt="Instagram" />
-            <img src={social4} alt="Github" />
+            <img src={social1} alt="twitter" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
+            <img src={social2} alt="LinkedIn" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
+            <img src={social3} alt="Instagram" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
+            <img src={social4} alt="Github" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
           </div>
         </Social>
   

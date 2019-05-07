@@ -24,12 +24,33 @@ const MenuFull = styled.div`
         margin: 0;
     }
     li{
+        position: relative;
+        text-align: center;
+        transition: 200ms;
         margin-left: 5px;
         font-family: 'Rubik';
         font-size: 2.2rem;
         line-height: 3.5rem;
         cursor: pointer;
+        &:after{
+            width: 0%;
+            content: '';
+            position: absolute;
+            left: 0; bottom: 5px;
+            height: 3px;
+            background-color: ${({theme}) => theme.colors.white};
+            transition: width .2s;
+        }
     }
+    li:hover{
+        transition: 200ms;
+            color:red;
+            &:after{
+                width: 100%;
+
+            }
+        }
+       
     ${({theme}) => theme.media.laptop} {
         margin: 0;
         border-left: none;
@@ -49,7 +70,10 @@ const MenuFull = styled.div`
             margin-left: 20px;
             font-family: 'Rubik';
             font-size: 1rem;
-           
+            &:after{
+                bottom: 15px;
+                height: 2px;
+            }
         }
     }
     ${({theme}) => theme.media.hd} {

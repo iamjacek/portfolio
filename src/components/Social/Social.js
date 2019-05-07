@@ -29,9 +29,12 @@ import styled from 'styled-components';
         }
     }                   
     img{
+        cursor: pointer;
+        transition: 200ms ease-in;
         width: 13vw; 
         max-width: 50px;     
         margin: 0 2vw;
+        transform: scale(1);
         ${({theme}) => theme.media.laptop} {
             width: 30px;
             margin: 0 5px;

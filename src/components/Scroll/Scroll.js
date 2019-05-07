@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 
  const Logo = styled.img`
+
+
+  cursor: pointer;
   position: absolute;
   left: 0; 
   right: 0; 
@@ -20,6 +23,19 @@ import styled from 'styled-components';
   }
   ${({theme}) => theme.media.hd} {
     bottom: 3vh;
+  }
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
   }
   `
 
