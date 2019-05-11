@@ -18,9 +18,6 @@ import social3 from '../assets/insta.png'
 import social4 from '../assets/git.png'
 
 
-
-
-
 class Home extends Component{
 
   //to control nav and hamburger menu and hide theme on resize event
@@ -48,15 +45,6 @@ class Home extends Component{
     window.removeEventListener('resize', this.handleResize.bind(this));
   }
 
- 
-
-
-
-
-
-
-
-
   //toggle menu on tablets and phones and animate ham-menu icon
   toggleMenu = () => {
     const a = document.querySelector("#MenuFull")
@@ -78,11 +66,7 @@ class Home extends Component{
       l1.style.transform = "rotate(0deg) translate(0px, 0px)"
       l3.style.transform = "rotate(0deg) translate(0px, 0px)"
     }
-
-    
   }
-
- 
 
   enlargeIcon = (e) => {
     e.target.style.transform = 'scale(1.3)'
@@ -92,17 +76,21 @@ class Home extends Component{
     e.target.style.transform = 'scale(1)'
   }
 
-
- 
+  wooble = (e) => {
+      e.target.style.animation = "woobleSocial .25s ease-in-out"
+  }
+  woobleOut = (e) => {
+      e.target.removeAttribute("style")
+  }
 
   render() {
     return(
       <Layout>
-    
+
       <Background>
       </Background>
-        <Polish>PL</Polish>
-        <Menu onClick={ this.toggleMenu } id="Menu">
+        <Polish  onMouseOver={ this.wooble } onMouseOut={ this.woobleOut }>PL</Polish>
+        <Menu onClick={ this.toggleMenu } id="Menu" >
           <Line id="l1"/>
           <Line id="l2"/>
           <Line id="l3"/>
@@ -122,10 +110,10 @@ class Home extends Component{
         <Scroll src={scroll} alt="arrow to scroll down"/>
         <Social>
           <div>
-            <img src={social1} alt="twitter" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
-            <img src={social2} alt="LinkedIn" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
-            <img src={social3} alt="Instagram" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
-            <img src={social4} alt="Github" onMouseOver={ this.enlargeIcon } onMouseOut={ this.resizeIcon } />
+            <img src={social1} className="socialWooble" alt="twitter" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            <img src={social2} className="socialWooble" alt="LinkedIn" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            <img src={social3} className="socialWooble" alt="Instagram" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            <img src={social4} className="socialWooble" alt="Github" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
           </div>
         </Social>
   

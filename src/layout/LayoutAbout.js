@@ -29,6 +29,14 @@ const StyleWrapper = styled.div`
   position: relative;
   overflow: hidden;
   transition: 200ms all;
+  ${({theme}) => theme.media.tablet}{
+    height: initial;
+    min-height: 100vh;
+  }
+  ${({theme}) => theme.media.tabletVertical}{
+    height: 100vh;
+    min-height: 720px;
+  }
 `;
 
 

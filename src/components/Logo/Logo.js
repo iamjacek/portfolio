@@ -36,13 +36,13 @@ ${({theme}) => theme.media.hd} {
   animation: logoSwing 12s ease-in-out infinite;
   @keyframes logoSwing {
     0% {
-      transform: translate(0px, 0px);
+      transform: translate(-6px, 0px) scale(1.025);
     }
     50% {
-      transform: translate(-5px,10px);
+      transform: translate(12px,3px) scale(1);
     }
     100% {
-      transform: translate(0px, 0px);
+      transform: translate(-6px, 0px) scale(1.025);
     }
   }
   `

@@ -3,13 +3,15 @@ import { Link } from "gatsby";
 
 
 import Home from './Home';
+import About from './About';
 
 
 
 
 const IndexPage = () => (
   <>
-      <Home/>
+      <Home />
+      <About />
   </>
 );
 
