@@ -4,9 +4,10 @@ import {theme} from '../assets/theme';
 
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre');
   body {
     margin: 0;
     padding: 0;
@@ -24,11 +25,14 @@ const GlobalStyle = createGlobalStyle`
 
 const StyleWrapper = styled.div`
   height: 100vh;
-  min-height: 720px;
+  min-height: 568px;
   background: ${({theme}) => theme.colors.gray};
   position: relative;
   overflow: hidden;
   transition: 200ms all;
+  ${({theme}) => theme.media.tablet} {
+    min-height: 720px;
+  }
 `;
 
 

@@ -29,7 +29,9 @@ ${({theme}) => theme.media.laptop} {
    
 }
 ${({theme}) => theme.media.hd} {
-    max-width: 520px;
+    max-width: 960px;
+    width: calc( 32vw);
+    margin-top: 26vh;
 }
 
     transform: translatey(0px);

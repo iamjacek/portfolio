@@ -6,7 +6,7 @@ import styled from 'styled-components';
  const SmallPic = styled.img`
   position: absolute;
   width: 170px;
-  top: 190px;
+  top: 150px;
   filter: drop-shadow(0px -1px 5px ${({theme}) => theme.colors.white});
 
 
@@ -34,7 +34,8 @@ ${({theme}) => theme.media.laptop} {
   top: calc(22vh - 2vw);
 }
 ${({theme}) => theme.media.hd} {
-  max-width: 1000px;
+  width: 50vw;
+  max-width: 1600px;
   top: calc(22vh - 4vw);
 }
 

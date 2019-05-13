@@ -7,12 +7,11 @@ const Par = styled.p`
     text-align: center;
     color: ${({theme}) => theme.colors.white};
     font-family: 'Roboto', sans-serif;
-    font-size: 2.2vh;
-    line-height: 1.5rem;
-    width: 80%;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7vw;
     ${({theme}) => theme.media.tabletVertical} {
      width: 40%;
      position: absolute;
@@ -31,7 +30,9 @@ const Par = styled.p`
      top: 250px;
     }
     ${({theme}) => theme.media.hd} {  
-      
+      top: 25vh;
+      font-size: 3vh;
+     line-height: 3rem;
     }
 `
 

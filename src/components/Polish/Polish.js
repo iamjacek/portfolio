@@ -13,7 +13,7 @@ const Polish = styled.h2`
       font-size: 1rem;
     }
     ${({theme}) => theme.media.hd} {  
-      font-size: 1.2rem;
+      font-size: calc(1.2rem);
     }
     &:hover{
       color: ${({theme}) => theme.colors.red};

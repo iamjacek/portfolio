@@ -11,6 +11,7 @@ const Menu = styled.span`
     top: 5vh;
     right: 12vw;
     margin: 0;
+    
     ${({theme}) => theme.media.laptop} {
       display: none;
     }

@@ -7,7 +7,8 @@ const H1 = styled.h1`
     text-align: center;
     color: ${({theme}) => theme.colors.red};
     font-family: 'Montserrat Semibold', sans-serif;
-    font-size: 60px;
+    font-size: calc(40px + 1vw);
+
     ${({theme}) => theme.media.laptop} {
       position: absolute;
       top: 10vh;
@@ -18,7 +19,7 @@ const H1 = styled.h1`
       width: 100%;
     }
     ${({theme}) => theme.media.hd} {  
-      
+      font-size: calc(62px + 1vw);
     }
 `
 

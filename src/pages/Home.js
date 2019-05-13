@@ -59,12 +59,17 @@ class Home extends Component{
       l2.style.opacity = "0"
       l1.style.transform = "rotate(45deg) translate(1px, 15px)"
       l3.style.transform = "rotate(-45deg) translate(0px, -15px)"
+      menu.style.position = "fixed";
     } else if (a.style.margin = "0px"){
       a.style.margin = "0px -250px 0px 0px"
       bd.style.right = "0px"
       l2.style.opacity = "1"
       l1.style.transform = "rotate(0deg) translate(0px, 0px)"
       l3.style.transform = "rotate(0deg) translate(0px, 0px)"
+      setTimeout(() => {
+        menu.removeAttribute("style");
+      }, 200);
+      
     }
   }
 

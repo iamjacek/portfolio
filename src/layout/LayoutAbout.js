@@ -4,9 +4,10 @@ import {theme} from '../assets/theme';
 
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre');
   body {
     margin: 0;
     padding: 0;
@@ -44,7 +45,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper id="StyleWrapper">
+            <StyleWrapper id="StyleWrapper2">
                 {children}
             </StyleWrapper>
         </>

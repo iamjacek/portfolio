@@ -20,7 +20,7 @@ ${({theme}) => theme.media.laptop} {
     width: 80%;
 }
 ${({theme}) => theme.media.hd} {
- 
+    top: 20vh;
 }
 `
 
