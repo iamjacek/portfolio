@@ -10,6 +10,16 @@ const H1Skills = styled.h2`
     padding-left: 30px;
     transform: ${(props) => props.left ? "rotate(11deg)" : "rotate(-12deg)"};
 
+    ${({theme}) => theme.media.tablet} {
+      position: absolute;
+      font-size: 50px;
+      padding-left: 0px;
+      left: 0;
+      right: 0;
+      top: ${(props) => props.left ? "45vh" : "0px"};
+      margin-right: auto;
+      margin-left: auto;
+    }
     ${({theme}) => theme.media.laptop} {
 
     }

@@ -6,7 +6,12 @@ const SkillPic1 = styled.img`
     position: relative;
     width: calc(50px + 15vw);
 
-
+    ${({theme}) => theme.media.tablet} {
+      position: absolute;
+      top: calc(10vh + 90px);
+      right: 10vw;
+      
+    }
     ${({theme}) => theme.media.laptop} {
 
     }

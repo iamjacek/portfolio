@@ -6,8 +6,10 @@ const TextContainer = styled.div`
     
     
 
-    ${({theme}) => theme.media.laptop} {
-
+    ${({theme}) => theme.media.tablet} {
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
     ${({theme}) => theme.media.hd} {  
 

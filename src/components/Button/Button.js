@@ -37,10 +37,13 @@ ${({theme}) => theme.media.tablet} {
     width: 50%;
 }
 ${({theme}) => theme.media.tabletVertical} {
-    width: 30%;
+    width: 50%;
     position: absolute;
-    top: 60vh;
-    left: 7vw;
+    top: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     height: 50px;
     margin-top: calc(5vw);
 }

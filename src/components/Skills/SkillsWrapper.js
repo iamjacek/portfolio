@@ -10,6 +10,10 @@ const SkillsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
+  ${({theme}) => theme.media.tablet} {
+    display: block;
+    }
  `
 
   export default SkillsWrapper;

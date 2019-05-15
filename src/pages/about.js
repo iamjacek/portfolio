@@ -21,7 +21,8 @@ import arrowskills from '../assets/arrow_skills.png'
 import TextContainer from '../components/Skills/TextContainer';
 import SkillPic1 from '../components/Skills/SkillPic1';
 import SkillPic2 from '../components/Skills/SkillPic2';
-import ParSkills from '../components/Skills/ParSkills';
+import ParSkills1 from '../components/Skills/ParSkills1';
+import ParSkills2 from '../components/Skills/ParSkills2';
 import H1Skills from '../components/Skills/H1Skills';
 import FlexPic from '../components/Skills/FlexPic';
 import { Link } from "gatsby";
@@ -95,14 +96,15 @@ woobleOut = () => {
              <H1>ABOUT ME</H1>
             <TitleLine></TitleLine>
              <Par>
-             {`
-             I am the full of passion front-end web developer interested in programming and web design for many years.\n
+{`I am the full of passion 
+front-end web developer 
+interested in programming 
+and web design for years.
 
-                I love to code and I love to make webpages alive.\n
+I love to code and I love 
+to make webpages alive.
 
-                I am also a big technology fanboy.
-                I spend free time playing video games and celebrating every moment with my family.
-                `}
+Video Games Fan!`}
             </Par>
             <Button onClick={ this.openSkills } >Skills</Button>
              </AboutWrapper>
@@ -116,15 +118,15 @@ woobleOut = () => {
               <ArrowSkills src={arrowskills} onClick={ this.closeSkills }/>
               <TextContainer>                         
                 <H1Skills>DEVELOPER</H1Skills>
-                <ParSkills>
-                  Please find the technologies I work with:
-                  HTML5 CSS3 SASS
-                  JAVASCRIPT ES6/7
-                  REACT BOOTSTRAP jQUERY
-                  GIT NPM NODEJS
-                  MACOS/LINUX CLI GULP WEBPACK PARCEL
-                  BEM
-                </ParSkills>
+                <ParSkills1>
+{`Please find the technologies I work with:
+HTML5 CSS3 SASS
+JAVASCRIPT ES6/7
+REACT BOOTSTRAP jQUERY
+GIT NPM NODEJS
+MACOS/LINUX CLI GULP WEBPACK PARCEL
+BEM`}
+                </ParSkills1>
               </TextContainer>
               <FlexPic>
                 <SkillPic1 src={pic1}/>
@@ -132,12 +134,13 @@ woobleOut = () => {
               </FlexPic>
               <TextContainer>                         
                 <H1Skills left>DESIGNER</H1Skills>
-                <ParSkills>
-                  On the top of that I decided to create my own design which you may find handy so I can take care of everything!
-                  We may also use proffesional design provided by you or my friends designers!
-                  I work on: 
-                  ADOBE PS, GIMP, ADOBE XD, SKETCH 
-                </ParSkills>
+                <ParSkills2>
+{`On the top of that I create my 
+own design which you may find 
+handy so I can take care of everything!
+I work on: 
+ADOBE PS, GIMP, ADOBE XD, SKETCH `}
+                </ParSkills2>
               </TextContainer>
              </SkillsWrapper>
            </Skills>

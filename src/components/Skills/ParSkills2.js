@@ -6,10 +6,21 @@ const ParSkills = styled.p`
     font-size: calc(.2rem + 2vh);
     line-height: 1.5rem;
     font-weight: 300;
-    margin: 0 auto;
+    margin: 2vh auto;
     width: 90%; 
-    padding: 7vw;
-    
+    padding: 0;
+    white-space: pre-wrap;
+    text-align: center;
+
+    ${({theme}) => theme.media.tablet} {
+      margin: 10vh auto;
+      width: 85%; 
+      position: absolute;
+      top: unset;
+      bottom: 10vh;
+      left: initial;
+      right: -50px;
+    }
  
     ${({theme}) => theme.media.laptop} {
 

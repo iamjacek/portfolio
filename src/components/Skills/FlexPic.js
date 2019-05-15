@@ -13,6 +13,11 @@ const FlexPic = styled.div`
       display: none;
     }
 
+    ${({theme}) => theme.media.tablet} {
+      position: absolute;
+      display: block;
+      height: 100%;
+    }
     ${({theme}) => theme.media.laptop} {
 
     }
