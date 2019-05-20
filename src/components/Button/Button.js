@@ -57,7 +57,7 @@ ${({theme}) => theme.media.laptop} {
 ${({theme}) => theme.media.hd} {
     height: 60px;
     width: 65%;
-    top: 35vh;
+    top: 33vh;
 }
   `
 

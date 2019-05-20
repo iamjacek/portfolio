@@ -11,9 +11,9 @@ const ArrowSkills = styled.img`
       animation: wooble .25s ease-in-out infinite;
     }
     
-    ${({theme}) => theme.media.laptop} {
-       
-       
+    ${({theme}) => theme.media.tabletVertical} {
+       top: calc(50vh - 40px);
+       left: -40px;
     }
     ${({theme}) => theme.media.hd} {
       

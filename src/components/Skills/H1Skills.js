@@ -16,10 +16,19 @@ const H1Skills = styled.h2`
       padding-left: 0px;
       left: 0;
       right: 0;
-      top: ${(props) => props.left ? "45vh" : "0px"};
+      top: ${(props) => props.left ? "52vh" : "5vh"};
       margin-right: auto;
       margin-left: auto;
     }
+
+     ${({theme}) => theme.media.tabletVertical} {
+      font-size: 50px;
+      left: 0;
+      right: 0;
+      top: ${(props) => props.left ? "52vh" : "5vh"};
+
+    }
+
     ${({theme}) => theme.media.laptop} {
 
     }

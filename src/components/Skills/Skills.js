@@ -14,9 +14,9 @@ const Skills = styled.div`
     margin: 0;
     padding: 0;
     z-index: 1000;
-    ${({theme}) => theme.media.laptop} {
-       
-       
+    ${({theme}) => theme.media.tabletVertical} {
+      width: 87vw;
+      margin-left: 13vw;
     }
     ${({theme}) => theme.media.hd} {
        

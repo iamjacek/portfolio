@@ -42,7 +42,7 @@ const Par = styled.p`
     ${({theme}) => theme.media.hd} {  
       top: 25vh;
       font-size: 3vh;
-     line-height: 3rem;
+     line-height: 3vh;
     }
 `
 

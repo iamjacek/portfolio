@@ -14,8 +14,8 @@ import laptop from '../assets/laptop.png'
 import AboutWrapper from '../components/Wrapper/AboutWrapper'
 import Skills from '../components/Skills/Skills'
 import SkillsWrapper from '../components/Skills/SkillsWrapper';
-import pic1 from '../assets/skill1.png'
-import pic2 from '../assets/skill2.png'
+import pic1 from '../assets/skill2.png'
+import pic2 from '../assets/skill1.png'
 import ArrowSkills from '../components/Skills/ArrowSkills';
 import arrowskills from '../assets/arrow_skills.png'
 import TextContainer from '../components/Skills/TextContainer';
@@ -23,6 +23,7 @@ import SkillPic1 from '../components/Skills/SkillPic1';
 import SkillPic2 from '../components/Skills/SkillPic2';
 import ParSkills1 from '../components/Skills/ParSkills1';
 import ParSkills2 from '../components/Skills/ParSkills2';
+import LineSkills from '../components/Skills/LineSkills';
 import H1Skills from '../components/Skills/H1Skills';
 import FlexPic from '../components/Skills/FlexPic';
 import { Link } from "gatsby";
@@ -32,26 +33,49 @@ import { Link } from "gatsby";
 
 class About extends Component{
 
+checkWidth = () => {
+  const x = document.innerWidth;
+  return x;
+}
+
 openSkills = () => {
-  const a = document.querySelector("#Skills")
-  const bd = document.querySelector("#StyleWrapper")
-  const bd2 = document.querySelector("#StyleWrapper2")
-  if (a.style.left === "100vw" || a.style.left ==="") {
-    a.style.left = "0px";
-    bd.style.right = "100vw"
-    bd2.style.right = "100vw"
+  
+  const skills = document.querySelector("#Skills")
+  
+  if (skills.style.left === "100vw" || skills.style.left ==="") {
+    skills.style.left = "0px";
+    const bd = document.querySelector("#StyleWrapper")
+    const bd2 = document.querySelector("#StyleWrapper2")
+    if ( this.checkWidth() > 1023 ) {
+      bd.style.right = "100vw"
+      bd2.style.right = "100vw"
+    } else {       
+      bd.style.right = "85vw"
+      bd2.style.right = "85vw"
+    }
+    //set the diagonal line because view is responsive and rectangle is changing
+    //using law of cosinus
+    const a = skills.offsetWidth;
+    const b = skills.offsetHeight;
+    const c = Math.round(Math.sqrt(a*a+b*b));
+    const angle = Math.acos((b*b+c*c-a*a)/(2*b*c)); 
+    const notrad = (Math.round(angle * (180 / Math.PI))) + 90 
+    document.querySelector("#Lineskill").style.transform = `rotate(${notrad}deg)`;
+    document.querySelector("#Lineskill").style.opacity = 1;
   }
 }
 
 closeSkills = () => {
   const a = document.querySelector("#Skills")
-  const bd = document.querySelector("#StyleWrapper")
-  const bd2 = document.querySelector("#StyleWrapper2")
-  console.log(a.style.left)
+
   if ( a.style.left === "0px" ) {
+    const bd = document.querySelector("#StyleWrapper")
+    const bd2 = document.querySelector("#StyleWrapper2")
     a.removeAttribute("style");
     bd.style.right = "0px"
     bd2.style.right = "0px"
+    document.querySelector("#Lineskill").style.transform = `rotate(2deg)`;
+    document.querySelector("#Lineskill").style.opacity = 0;
   }
 }
 
@@ -143,6 +167,7 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `}
                 </ParSkills2>
               </TextContainer>
              </SkillsWrapper>
+             <LineSkills id="Lineskill"/>
            </Skills>
            
       

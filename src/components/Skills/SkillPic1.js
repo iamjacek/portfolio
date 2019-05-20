@@ -12,6 +12,13 @@ const SkillPic1 = styled.img`
       right: 10vw;
       
     }
+    ${({theme}) => theme.media.tabletVertical} {
+      position: absolute;
+      top: 0;
+      left: calc(30vw + 6vw);
+      margin: 7vh 0;
+      width: calc(50px + 10vw);
+    }
     ${({theme}) => theme.media.laptop} {
 
     }

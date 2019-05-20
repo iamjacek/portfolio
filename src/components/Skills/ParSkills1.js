@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ParSkills = styled.p`
     font-family: 'Roboto', sans-serif;
     font-size: calc(.2rem + 2vh);
-    line-height: 1.5rem;
+    line-height: calc(1.5rem + .5vh);
     font-weight: 300;
     margin: 2vh auto;
     width: 90%; 
@@ -15,12 +15,21 @@ const ParSkills = styled.p`
     ${({theme}) => theme.media.tablet} {
       font-size: calc(.2rem + 2vh);
       margin: 10vh auto;
-      width: 85%; 
+      width: 50%; 
       position: absolute;
       top: 10vh;
-      left: -50px;
+      left: 5vw;
     }
  
+    ${({theme}) => theme.media.tabletVertical} {
+      font-size: calc(.2rem + 2vh);
+      margin: 10vh 0;
+      width: 30vw; 
+      position: absolute;
+      top: 1vh;
+      left: 2vw;
+    }
+
     ${({theme}) => theme.media.laptop} {
 
     }

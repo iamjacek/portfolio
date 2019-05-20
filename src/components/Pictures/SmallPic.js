@@ -20,10 +20,10 @@ ${({theme}) => theme.media.tablet} {
 ${({theme}) => theme.media.tabletVertical} {
   width: 50vw;
   max-width: 700px;
-  margin-top: calc(90px + 1vw);
+  margin-top: 0;
   position: absolute;
   right: -5vw;
-  top: 25vh;
+  top: 30vh;
 }
 ${({theme}) => theme.media.laptop} {
   width: 50vw;
