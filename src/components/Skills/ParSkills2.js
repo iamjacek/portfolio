@@ -11,6 +11,7 @@ const ParSkills = styled.p`
     padding: 0;
     white-space: pre-wrap;
     text-align: center;
+    transition: all 600ms ease-in;
 
     ${({theme}) => theme.media.tablet} {
       margin: 10vh auto;
@@ -28,14 +29,17 @@ const ParSkills = styled.p`
       top: unset;
       left: unset;
       right: 2vw;
-      bottom: 2vh;
+      bottom: 5vh;
     }
  
     ${({theme}) => theme.media.laptop} {
-
+      bottom: -20px;
+      right: calc(250px + 7vw);
     }
     ${({theme}) => theme.media.hd} {  
-
+      font-size: calc(.5rem + 2vh);
+      right: 170px;
+      bottom: 20px;
     }
 `
 

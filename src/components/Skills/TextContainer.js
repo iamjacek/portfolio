@@ -19,9 +19,7 @@ const TextContainer = styled.div`
       height: 100%;
       
     }
-    ${({theme}) => theme.media.hd} {  
 
-    }
 `
 
   

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const Skills = styled.div`
-    transition: 200ms left ease-in;
+    transition: 600ms left ease-in;
     width: 100vw;
     height: 100vh;
     display: block;

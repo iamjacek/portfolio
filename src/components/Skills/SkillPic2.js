@@ -5,6 +5,7 @@ const SkillPic2 = styled.img`
     
     position: relative;
     width: calc(50px + 15vw);
+    transition: all 600ms ease-in;
 
     ${({theme}) => theme.media.tablet} {
       position: absolute;
@@ -25,7 +26,11 @@ const SkillPic2 = styled.img`
     }
 
     ${({theme}) => theme.media.laptop} {
-
+      position: absolute;
+      top: unset;
+      left: unset;
+      right: calc(100px + 5vw);
+      bottom: 270px;
     }
     ${({theme}) => theme.media.hd} {  
 

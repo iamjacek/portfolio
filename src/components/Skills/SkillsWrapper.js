@@ -14,6 +14,10 @@ const SkillsWrapper = styled.div`
   ${({theme}) => theme.media.tablet} {
     display: block;
     }
+
+  ${({theme}) => theme.media.laptop} {
+    padding-top: 0;
+  }
  `
 
   export default SkillsWrapper;

@@ -68,7 +68,7 @@ class Home extends Component{
       l3.style.transform = "rotate(0deg) translate(0px, 0px)"
       setTimeout(() => {
         menu.removeAttribute("style");
-      }, 200);
+      }, 600);
       
     }
   }

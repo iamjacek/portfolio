@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const MenuFull = styled.div`
-    transition: 200ms margin ease-in;
+    transition: 600ms margin ease-in;
     display: flex;
     width: 250px;
     height: 100vh;

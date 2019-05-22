@@ -17,7 +17,7 @@ const Menu = styled.span`
     }
     * {
       opacity: 1;
-      transition: 200ms all ease-in;
+      transition: 600ms all ease-in;
     }
 `
 

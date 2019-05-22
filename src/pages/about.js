@@ -16,11 +16,15 @@ import Skills from '../components/Skills/Skills'
 import SkillsWrapper from '../components/Skills/SkillsWrapper';
 import pic1 from '../assets/skill2.png'
 import pic2 from '../assets/skill1.png'
+import pic3 from '../assets/skill3.png'
+import pic4 from '../assets/skill4.png'
 import ArrowSkills from '../components/Skills/ArrowSkills';
 import arrowskills from '../assets/arrow_skills.png'
 import TextContainer from '../components/Skills/TextContainer';
 import SkillPic1 from '../components/Skills/SkillPic1';
 import SkillPic2 from '../components/Skills/SkillPic2';
+import SkillPic3 from '../components/Skills/SkillPic3';
+import SkillPic4 from '../components/Skills/SkillPic4';
 import ParSkills1 from '../components/Skills/ParSkills1';
 import ParSkills2 from '../components/Skills/ParSkills2';
 import LineSkills from '../components/Skills/LineSkills';
@@ -38,6 +42,55 @@ checkWidth = () => {
   return x;
 }
 
+checkWidthWindow = () => {
+  const x = window.innerWidth;
+  return x;
+}
+
+checkRadius = () => {
+  const skills = document.querySelector("#Skills")
+  const a = skills.offsetWidth;
+  const b = skills.offsetHeight;
+  const c = Math.round(Math.sqrt(a*a+b*b));
+  const angle = Math.acos((b*b+c*c-a*a)/(2*b*c)); 
+  const notrad = (Math.round(angle * (180 / Math.PI))) + 90 
+  return notrad;
+}
+
+rotateHeaders = () => {
+  if ( this.checkWidthWindow() > 1023 && this.checkWidthWindow() < 1368 ){
+    const angle = this.checkRadius();
+    document.querySelector("#H1Skills1").style.transform = `rotate(${angle + 180}deg)`;
+    document.querySelector("#H1Skills2").style.transform = `rotate(${angle +180}deg)`;
+  } else if (this.checkWidthWindow() < 1024 ) {
+    document.querySelector("#H1Skills1").style.transform = "rotate(11deg)";
+    document.querySelector("#H1Skills2").style.transform = "rotate(-12deg)";
+  } else if (this.checkWidthWindow() > 1367 ) {
+    document.querySelector("#H1Skills1").style.transform = "rotate(270deg)";
+    document.querySelector("#H1Skills2").style.transform = "rotate(-90deg)";
+  }
+  
+}
+
+diagonalLineSet = () => {
+  //set the diagonal line because view is responsive and rectangle is changing
+    //using law of cosinus
+   
+    const skills = document.querySelector("#Skills")
+    const a = skills.offsetWidth;
+    const b = skills.offsetHeight;
+    const c = Math.round(Math.sqrt(a*a+b*b));
+    const angle = Math.acos((b*b+c*c-a*a)/(2*b*c)); 
+    const notrad = (Math.round(angle * (180 / Math.PI))) + 90 
+    document.querySelector("#Lineskill").style.transform = `rotate(${notrad}deg)`;
+    document.querySelector("#Lineskill").style.opacity = 1;
+}
+
+diagonalLineUnset = () => {
+  document.querySelector("#Lineskill").style.transform = `rotate(2deg)`;
+  document.querySelector("#Lineskill").style.opacity = 0;
+}
+
 openSkills = () => {
   
   const skills = document.querySelector("#Skills")
@@ -49,19 +102,16 @@ openSkills = () => {
     if ( this.checkWidth() > 1023 ) {
       bd.style.right = "100vw"
       bd2.style.right = "100vw"
+      
+      
     } else {       
       bd.style.right = "85vw"
       bd2.style.right = "85vw"
+
+      //rotate H1 with the line angle
+      this.rotateHeaders();
     }
-    //set the diagonal line because view is responsive and rectangle is changing
-    //using law of cosinus
-    const a = skills.offsetWidth;
-    const b = skills.offsetHeight;
-    const c = Math.round(Math.sqrt(a*a+b*b));
-    const angle = Math.acos((b*b+c*c-a*a)/(2*b*c)); 
-    const notrad = (Math.round(angle * (180 / Math.PI))) + 90 
-    document.querySelector("#Lineskill").style.transform = `rotate(${notrad}deg)`;
-    document.querySelector("#Lineskill").style.opacity = 1;
+    this.diagonalLineSet();
   }
 }
 
@@ -74,8 +124,7 @@ closeSkills = () => {
     a.removeAttribute("style");
     bd.style.right = "0px"
     bd2.style.right = "0px"
-    document.querySelector("#Lineskill").style.transform = `rotate(2deg)`;
-    document.querySelector("#Lineskill").style.opacity = 0;
+    this.diagonalLineUnset();
   }
 }
 
@@ -90,16 +139,22 @@ aboutPicture = () => {
   }
 }
 
+
 componentDidMount() {
   this.aboutPicture();
+  this.rotateHeaders();
   window.addEventListener('load', this.aboutPicture.bind(this));
   window.addEventListener('resize', this.aboutPicture);
+  window.addEventListener('resize', this.diagonalLineSet);
+  window.addEventListener('resize', this.rotateHeaders);
 }
 
 componentWillUnmount() {
   this.aboutPicture();
   window.removeEventListener('load', this.aboutPicture.bind(this));
-  window.addEventListener('resize', this.aboutPicture);
+  window.removeEventListener('resize', this.aboutPicture);
+  window.removeEventListener('resize', this.diagonalLineSet);
+  window.removeEventListener('resize', this.rotateHeaders);
 }
 
 wooble = () => {
@@ -141,7 +196,7 @@ Video Games Fan!`}
               
               <ArrowSkills src={arrowskills} onClick={ this.closeSkills }/>
               <TextContainer>                         
-                <H1Skills>DEVELOPER</H1Skills>
+                <H1Skills id="H1Skills1">DEVELOPER</H1Skills>
                 <ParSkills1>
 {`Please find the technologies I work with:
 HTML5 CSS3 SASS
@@ -155,9 +210,11 @@ BEM`}
               <FlexPic>
                 <SkillPic1 src={pic1}/>
                 <SkillPic2 src={pic2}/>
+                <SkillPic3 src={pic3}/>
+                <SkillPic4 src={pic4}/>
               </FlexPic>
               <TextContainer>                         
-                <H1Skills left>DESIGNER</H1Skills>
+                <H1Skills left id="H1Skills2">DESIGNER</H1Skills>
                 <ParSkills2>
 {`On the top of that I create my 
 own design which you may find 
