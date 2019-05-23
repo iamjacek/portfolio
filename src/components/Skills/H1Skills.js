@@ -42,11 +42,11 @@ const H1Skills = styled.h2`
       opacity: ${(props) => props.left ? "0.3" : "1"};
     }
     ${({theme}) => theme.media.hd} {  
-      font-size: ${(props) => props.left ? "170px" : "120px"};
+      font-size: ${(props) => props.left ? "160px" : "120px"};
       top: ${(props) => props.left ? "unset" : "570px"};
       bottom: ${(props) => props.left ? "30px" : "unset"};
       left: ${(props) => props.left ? "unset" : "-30px"};
-      right: ${(props) => props.left ? "-20px" : "unset"};
+      right: ${(props) => props.left ? "-20px" : "unset"}; 
     }
 `
 

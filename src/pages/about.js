@@ -173,7 +173,7 @@ woobleOut = () => {
            <Frame>
              <AboutWrapper>
              <H1>ABOUT ME</H1>
-            <TitleLine></TitleLine>
+            <TitleLine />
              <Par>
 {`I am the full of passion 
 front-end web developer 

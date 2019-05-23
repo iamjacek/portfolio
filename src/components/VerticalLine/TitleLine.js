@@ -6,7 +6,7 @@ const TitleLine = styled.div`
     height: 5px;
     background: ${({theme}) => theme.colors.white};
     position: relative;
-    margin: 20px auto 240px auto;
+    margin: ${props => props.noMargin ? '20px auto' : '20px auto 240px auto'};
     
 ${({theme}) => theme.media.tablet} {
     margin: 20px auto 68vw auto;
