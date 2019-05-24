@@ -13,8 +13,8 @@ const H1 = styled.h1`
       font-size: calc(50px + 1vw);
     }
     ${({theme}) => theme.media.laptop} {
-      position: absolute;
-      top: 10vh;
+      position: ${props => props.relative ? "relative" : "absolute"};
+      top: ${props => props.relative ? "5vh" : "10vh"};
       left: 0;
       right: 0;
       margin: 10px auto;

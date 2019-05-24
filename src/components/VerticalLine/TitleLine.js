@@ -9,12 +9,12 @@ const TitleLine = styled.div`
     margin: ${props => props.noMargin ? '20px auto' : '20px auto 240px auto'};
     
 ${({theme}) => theme.media.tablet} {
-    margin: 20px auto 68vw auto;
+    margin: ${props => props.noMargin ? '20px auto' : '20px auto 68vw auto'};
 }
 ${({theme}) => theme.media.laptop} {
     margin: 30px auto;
-    position: absolute;
-    top: 180px;
+    position: ${props => props.relative ? "relative" : "absolute"};
+    top: ${props => props.relative ? "5vh" : "calc(180px + 1vw + 2vh)"};
     left: 0;
     right: 0;
     width: 80%;

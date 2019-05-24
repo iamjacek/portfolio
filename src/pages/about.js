@@ -97,20 +97,22 @@ openSkills = () => {
   
   if (skills.style.left === "100vw" || skills.style.left ==="") {
     skills.style.left = "0px";
+
+   
+      skills.style.opacity = "1";
+    
+    
     const bd = document.querySelector("#StyleWrapper")
     const bd2 = document.querySelector("#StyleWrapper2")
-    if ( this.checkWidth() > 1023 ) {
-      bd.style.right = "100vw"
-      bd2.style.right = "100vw"
-      
-      
-    } else {       
-      bd.style.right = "85vw"
+    bd.style.right = "85vw"
       bd2.style.right = "85vw"
-
+    if ( this.checkWidth() > 1023 ) {
+    } else {       
+     
       //rotate H1 with the line angle
       this.rotateHeaders();
     }
+   
     this.diagonalLineSet();
   }
 }
@@ -121,10 +123,13 @@ closeSkills = () => {
   if ( a.style.left === "0px" ) {
     const bd = document.querySelector("#StyleWrapper")
     const bd2 = document.querySelector("#StyleWrapper2")
-    a.removeAttribute("style");
+    a.style.left = "100vw";
     bd.style.right = "0px"
     bd2.style.right = "0px"
     this.diagonalLineUnset();
+    setTimeout(() => {
+      a.removeAttribute('style');
+    }, 600);
   }
 }
 

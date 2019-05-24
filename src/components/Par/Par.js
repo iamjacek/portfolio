@@ -35,7 +35,7 @@ const Par = styled.p`
      left: 0;
      width: 80%;
      font-size: 3.2vh;
-     line-height: 2rem;
+     line-height: calc(2.2rem + 1vh);
      top: 250px;
     }
     
