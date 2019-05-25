@@ -10,9 +10,16 @@ const JobPic = styled.img`
         margin: 20px 10px;
     
     
-    ${({theme}) => theme.media.laptop} {
-   
+    ${({theme}) => theme.media.tablet} {
+      width: 200px;
+      height: 400px;
     }
+
+    ${({theme}) => theme.media.laptop} {
+      width: 250px;
+      height: 500px;
+    }
+
     ${({theme}) => theme.media.hd} {  
     
     }

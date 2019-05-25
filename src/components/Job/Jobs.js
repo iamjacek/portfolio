@@ -7,7 +7,7 @@ const Jobs = styled.div`
         display: flex;
         flex-direction: column;
         align-content: space-around;
-        margin: 20px 0; 
+        margin: 20px 0 120px 0; 
 
     ${({theme}) => theme.media.tabletVertical} {
       flex-wrap: wrap;
@@ -18,6 +18,12 @@ const Jobs = styled.div`
 
     ${({theme}) => theme.media.laptop} {
       top: 5vh;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     ${({theme}) => theme.media.hd} {  

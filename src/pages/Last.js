@@ -5,7 +5,7 @@ import Background3 from '../components/Background/Background3'
 import Job from '../components/Job/Job'
 import How from '../components/How/How'
 import Contact from '../components/Contact/Contact'
-import { Link } from "gatsby";
+
 
 
 

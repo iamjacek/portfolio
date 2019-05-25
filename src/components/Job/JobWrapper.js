@@ -10,12 +10,12 @@ const JobWrapper = styled.div`
         flex-direction: row;
         justify-content: center;
         
-        ${({theme}) => theme.media.tabletVertical} {
-          width: 50%;
+    ${({theme}) => theme.media.tabletVertical} {
+      width: 50%;
     }
     
     ${({theme}) => theme.media.laptop} {
-   
+      width: 400px;
     }
     ${({theme}) => theme.media.hd} {  
     

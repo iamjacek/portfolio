@@ -11,9 +11,14 @@ const JobDescription = styled.div`
         text-align: left;
         line-height: 2rem;
     
-    
+    ${({theme}) => theme.media.tablet} {
+      margin: 60px 0;
+      transform: scale(1.15);
+    }
+
+
     ${({theme}) => theme.media.laptop} {
-   
+      display: none;
     }
     ${({theme}) => theme.media.hd} {  
     

@@ -6,8 +6,12 @@ import JobDescription from './JobDescription'
 const JobDescriptionSmall = styled(JobDescription)`
         height: 160px;
         font-size: .8rem;
-        line-height: 1rem;
-        
+        line-height: 1.2rem;
+        margin: 17px 0;
+
+    ${({theme}) => theme.media.tablet} {
+      margin: 35px 0;
+    }
     ${({theme}) => theme.media.laptop} {
    
     }

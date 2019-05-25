@@ -30,7 +30,7 @@ import ParSkills2 from '../components/Skills/ParSkills2';
 import LineSkills from '../components/Skills/LineSkills';
 import H1Skills from '../components/Skills/H1Skills';
 import FlexPic from '../components/Skills/FlexPic';
-import { Link } from "gatsby";
+
 
 
 
