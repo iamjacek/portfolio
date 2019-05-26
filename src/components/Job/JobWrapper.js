@@ -11,14 +11,14 @@ const JobWrapper = styled.div`
         justify-content: center;
         
     ${({theme}) => theme.media.tabletVertical} {
-      width: 50%;
+      width: 50vw;
     }
     
     ${({theme}) => theme.media.laptop} {
       width: 400px;
     }
     ${({theme}) => theme.media.hd} {  
-    
+      width: 280px;
     }
 `
 

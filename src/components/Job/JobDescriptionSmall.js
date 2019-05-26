@@ -12,8 +12,8 @@ const JobDescriptionSmall = styled(JobDescription)`
     ${({theme}) => theme.media.tablet} {
       margin: 35px 0;
     }
-    ${({theme}) => theme.media.laptop} {
-   
+    ${({theme}) => theme.media.tabletVertical} {
+      margin: 25px 0;
     }
     ${({theme}) => theme.media.hd} {  
     

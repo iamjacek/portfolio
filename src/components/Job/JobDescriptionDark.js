@@ -10,7 +10,10 @@ const JobDescriptionDark = styled(JobDescription)`
 
 
     ${({theme}) => theme.media.laptop} {
-      display: none;
+      cursor: pointer;
+      display: block;
+      opacity: 0;
+      transition: all 200ms ease-in;
       position: absolute;
       margin: 83px;
       padding: 40px;
@@ -20,6 +23,7 @@ const JobDescriptionDark = styled(JobDescription)`
       height: 422px;
       z-index: 1;
       color: ${({theme}) => theme.colors.gray};
+      
       ::before{
         content: "";
         position: absolute;
@@ -33,7 +37,8 @@ const JobDescriptionDark = styled(JobDescription)`
       }
     }
     ${({theme}) => theme.media.hd} {  
-    
+      left: -46px;
+      top: -24px;
     }
 `
 

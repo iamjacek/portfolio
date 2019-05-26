@@ -104,11 +104,12 @@ openSkills = () => {
     
     const bd = document.querySelector("#StyleWrapper")
     const bd2 = document.querySelector("#StyleWrapper2")
-    bd.style.right = "85vw"
+    const bd3 = document.querySelector("#StyleWrapper3")
+      bd.style.right = "85vw"
       bd2.style.right = "85vw"
+      bd3.style.right = "85vw"
     if ( this.checkWidth() > 1023 ) {
     } else {       
-     
       //rotate H1 with the line angle
       this.rotateHeaders();
     }
@@ -123,9 +124,11 @@ closeSkills = () => {
   if ( a.style.left === "0px" ) {
     const bd = document.querySelector("#StyleWrapper")
     const bd2 = document.querySelector("#StyleWrapper2")
+    const bd3 = document.querySelector("#StyleWrapper3")
     a.style.left = "100vw";
     bd.style.right = "0px"
     bd2.style.right = "0px"
+    bd3.style.right = "0px"
     this.diagonalLineUnset();
     setTimeout(() => {
       a.removeAttribute('style');

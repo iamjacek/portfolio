@@ -39,7 +39,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper id="StyleWrapper">
+            <StyleWrapper id="StyleWrapper3">
                 {children}
             </StyleWrapper>
         </>

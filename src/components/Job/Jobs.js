@@ -27,7 +27,9 @@ const Jobs = styled.div`
     }
 
     ${({theme}) => theme.media.hd} {  
-    
+      max-width: 1800px;
+      align-items: flex-start;
+      align-self: flex-start;
     }
 `
 

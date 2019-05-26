@@ -20,7 +20,8 @@ ${({theme}) => theme.media.laptop} {
     width: 80%;
 }
 ${({theme}) => theme.media.hd} {
-    top: 20vh;
+    top: ${props => props.relative ? "5vh" : "20vh"};
+    margin-bottom: ${props => props.noMargin ? '12vh' : ''};
 }
 `
 

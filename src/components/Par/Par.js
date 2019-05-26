@@ -34,8 +34,8 @@ const Par = styled.p`
      right: 0;
      left: 0;
      width: 80%;
-     font-size: 3.2vh;
-     line-height: calc(2.2rem + 1vh);
+     font-size: 3vh;
+     line-height: calc(2rem + 1vh);
      top: 250px;
     }
     
