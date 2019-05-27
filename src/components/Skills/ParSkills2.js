@@ -40,6 +40,7 @@ const ParSkills = styled.p`
       font-size: calc(.5rem + 2vh);
       right: 170px;
       bottom: 20px;
+      line-height: calc(1.5rem + 1vw);
     }
 `
 

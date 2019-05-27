@@ -10,6 +10,7 @@ const SkillPic3 = styled.img`
       position: absolute;
       top: 50px;
       left: 150px;
+      
     }
 `
 

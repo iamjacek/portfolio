@@ -55,9 +55,13 @@ ${({theme}) => theme.media.laptop} {
     width: 60%;
 }
 ${({theme}) => theme.media.hd} {
-    height: 60px;
+    height: calc(50px + 1vw);
     width: 65%;
     top: 33vh;
+    font-size: 1.8rem;
+    :hover{
+        font-size: 2rem;
+    }
 }
   `
 

@@ -33,7 +33,7 @@ const SkillPic2 = styled.img`
       bottom: 270px;
     }
     ${({theme}) => theme.media.hd} {  
-
+      
     }
 `
 

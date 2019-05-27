@@ -6,7 +6,10 @@ const LastWrapper = styled.div`
         overflow: hidden;
         width: 100%;
         min-height: 100vh;
-    
+
+    ${({theme}) => theme.media.tabletVertical} {
+    height: ${props => props.FullHeight ? "100vh" : "unset"}
+    }
     ${({theme}) => theme.media.laptop} {
       
     }

@@ -21,7 +21,7 @@ const SkillPic1 = styled.img`
     }
     ${({theme}) => theme.media.laptop} {
       position: absolute;
-      top: 270px;
+      top: calc(270px + 4vw);
       left: calc(250px + 2vw);
     }
     ${({theme}) => theme.media.hd} {  

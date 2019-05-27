@@ -83,8 +83,9 @@ const MenuFull = styled.div`
         border-left: none;
         transition: 0s;
         width: 400px;
+        right: calc(12vw + .5vw);
         li{
-            font-size: 1.2rem;
+            font-size: calc(.8rem + .5vw);
         }
       }
 `

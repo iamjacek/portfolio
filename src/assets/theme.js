@@ -12,5 +12,6 @@ export const theme = {
         tabletVertical: '@media (min-width: 1024px)',
         laptop: '@media (min-width: 1368px)',
         hd: '@media (min-width: 1920px)',
+        fourK: '@media (min-width: 4096px)',
     }
 }

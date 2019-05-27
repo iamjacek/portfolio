@@ -8,7 +8,8 @@ const SkillPic4 = styled.img`
       display: block;
       position: absolute;
       bottom: 2vh;
-      left: 600px;
+      left: calc(40vw - 90px);
+      
     }
 `
 

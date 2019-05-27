@@ -30,6 +30,23 @@ const Jobs = styled.div`
       max-width: 1800px;
       align-items: flex-start;
       align-self: flex-start;
+      transform: scale(1.1);
+    }
+    @media (min-width: 2220px){
+      top: 7vh;
+      transform: scale(1.2);
+    }
+    @media (min-width: 2520px){
+      top: 8vh;
+      transform: scale(1.3);
+    }
+    @media (min-width: 3400px){
+      top: 12vh;
+      transform: scale(1.6);
+    }
+    ${({theme}) => theme.media.fourK} {  
+      top: 15vh;
+      transform: scale(1.8);
     }
 `
 

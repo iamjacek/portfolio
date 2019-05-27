@@ -12,7 +12,7 @@ ${({theme}) => theme.media.tablet} {
     margin: ${props => props.noMargin ? '20px auto' : '20px auto 68vw auto'};
 }
 ${({theme}) => theme.media.laptop} {
-    margin: 30px auto;
+    margin: 40px auto;
     position: ${props => props.relative ? "relative" : "absolute"};
     top: ${props => props.relative ? "5vh" : "calc(180px + 1vw + 2vh)"};
     left: 0;

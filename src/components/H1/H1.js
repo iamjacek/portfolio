@@ -9,8 +9,12 @@ const H1 = styled.h1`
     font-family: 'Montserrat Semibold', sans-serif;
     font-size: calc(40px + 1vw);
 
-    ${({theme}) => theme.media.tabletVertical} {
+    ${({theme}) => theme.media.tablet} {
       font-size: calc(50px + 1vw);
+    }
+
+    ${({theme}) => theme.media.tabletVertical} {
+      font-size: calc(55px + 1vw);
     }
     ${({theme}) => theme.media.laptop} {
       position: ${props => props.relative ? "relative" : "absolute"};

@@ -39,7 +39,8 @@ const ParSkills = styled.p`
     }
     ${({theme}) => theme.media.hd} {  
       font-size: calc(.5rem + 2vh);
-      left: calc(450px + 5vw);
+      left: calc(450px + 6vw);
+      line-height: calc(1.5rem + 1vw);
     }
 `
 

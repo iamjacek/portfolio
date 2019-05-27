@@ -31,7 +31,7 @@ ${({theme}) => theme.media.laptop} {
 ${({theme}) => theme.media.hd} {
     max-width: 960px;
     width: calc( 32vw);
-    margin-top: 26vh;
+    margin-top: 23vh;
 }
 
     transform: translatey(0px);

@@ -12,7 +12,7 @@ import styled from 'styled-components';
     height: 50px;
     text-align: center; 
     ${({theme}) => theme.media.laptop} {
-        width: 0;
+        
         left: 0;
     }
     div{
@@ -27,6 +27,10 @@ import styled from 'styled-components';
             left: 12vw;
             width: 10vw;
         }
+        ${({theme}) => theme.media.hd} {
+           
+            width: 12vw;
+        }
     }                   
     img{
         cursor: pointer;
@@ -36,12 +40,13 @@ import styled from 'styled-components';
         margin: 0 2vw;
         transform: scale(1);
         ${({theme}) => theme.media.laptop} {
-            width: 30px;
+           width: calc(30px + .5vw); 
             margin: 0 5px;
         }
         ${({theme}) => theme.media.hd} {
-            width: 35px;     
+            width: calc(30px + 1vw);     
             margin: 0 6px;
+            max-width: 100px; 
         }
     }
 
