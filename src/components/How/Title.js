@@ -7,6 +7,7 @@ const Title = styled.h3`
     padding: 20px 0 20px 60px;
     font-size: 2rem;
     margin: 0;
+    text-align: center;
     
     ${({theme}) => theme.media.tablet} {
       

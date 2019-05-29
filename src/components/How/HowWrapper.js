@@ -9,7 +9,7 @@ const HowWrapper = styled.div`
         flex-wrap: wrap;
         width: 1000px;
         margin: 0 auto;
-        justify-content: center;
+        justify-content: space-between;
         align-content: space-around;
         height: 77vh;
     }
@@ -21,7 +21,14 @@ const HowWrapper = styled.div`
 
     ${({theme}) => theme.media.hd} {  
         height: 70vh;
+        width: 1100px;
     }
+
+    ${({theme}) => theme.media.fourK} {  
+        justify-content: center;
+        width: 1800px;
+    }
+  
 `
 
   

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 
  const Social = styled.div`
-    position: absolute;
-    bottom: 5vh;
+    position: relative;
+    margin: 0;
     padding: 0;
     left: 50%;
     width: 80vw;
@@ -13,12 +13,13 @@ import styled from 'styled-components';
     text-align: center; 
     ${({theme}) => theme.media.laptop} {
       position: absolute;
-        left: 0px;
+      top: unset;
+      bottom: 8vh;
+      padding-top: 10px;
     }
     ${({theme}) => theme.media.hd} {
      
-      
-       
+
     }
     div{
         position: relative;
@@ -30,51 +31,39 @@ import styled from 'styled-components';
         align-items: center;
         justify-content: space-between;
         ${({theme}) => theme.media.laptop} {
-          position: absolute;
-            
-            left: 12vw;
-            width: 10vw;
+          width: 12vw;
+          justify-content: space-between;
+          margin-left: auto;
         }
         ${({theme}) => theme.media.hd} {
-            width: 12vw;
+          
         }
     }                   
     img{
         cursor: pointer;
         transition: 200ms ease-in;
-        width: 13vw; 
-        max-width: 50px;     
-        margin: 0 2vw;
-        transform: scale(1);
+        width: 10vw; 
+        max-width: 45px;     
+        ${({theme}) => theme.media.tablet} {
+          width: 10vw; 
+          max-width: 55px;
+        }
+        ${({theme}) => theme.media.tabletVertical} {
+          width: 11vw; 
+          max-width: 60px;
+        }
         ${({theme}) => theme.media.laptop} {
-           width: calc(30px + .5vw); 
-            margin: 0 5px;
+          width: 2.5vw; 
+          max-width: 40px;
         }
         ${({theme}) => theme.media.hd} {
-            width: calc(30px + 1vw);     
-            margin: 0 6px;
-            max-width: 100px; 
+          width: 2.3vw; 
+          max-width: 70px;
         }
     }
 
    
-    @keyframes woobleSocial {
-    0% {
-      transform: skew(0deg, 0deg) translateY(0px);
-    }
-    25% {
-      transform: skew(2deg, 2deg) translateY(-2px);
-    }
-    50% {
-      transform: skew(0deg, 0deg) translateY(-4px);
-    }
-    75% {
-      transform: skew(-2deg, -2deg) translateY(-2px);
-    }
-    100% {
-      transform: skew(0deg, 0deg) translateY(0px);
-    }
-  }
+    
   `
 
   

@@ -17,14 +17,16 @@ const H2 = styled.h2`
     }
 
     ${({theme}) => theme.media.laptop} {
-      font-size: 2.5rem;
-      transform: translateY(40px);
+      font-size: 2rem;
+      transform: translateY(5vh);
     }
 
     ${({theme}) => theme.media.hd} {  
-      font-size: 3rem;
+      font-size: 2.4rem;
       transform: translateY(-20px);
     }
+
+    
 `
 
   
