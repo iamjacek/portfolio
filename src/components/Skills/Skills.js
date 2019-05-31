@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 
 const Skills = styled.div`
+@media (max-width: 325px) {
+  overflow-y: auto;
+    }
     transition: 600ms left ease-in;
     width: 100vw;
+    min-height: 795px;
     height: 100vh;
     display: block;
     background: ${({theme}) => theme.colors.gray};

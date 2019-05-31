@@ -66,17 +66,13 @@ class Job extends Component{
 
   toogleDesc = (e) => {
     if ( window.innerWidth > 1367 ) {
-      e.target.parentNode.childNodes[2].classList.toggle("toggleDescription");
+      e.target.classList.add("toggleDescription");
     }
   }
 
   //making sure all descriptions are off after mouse is out and even the curent description so we use  toggle on current element because current element is not in the array
-  removeToggleDescriptionClass = (e) => {
-    const a = document.querySelectorAll(".toggleDescription")
-    a.forEach(element => {
-      element.classList.remove("toggleDescription");
-    });
-    e.target.classList.toggle("toggleDescription")
+  removeToggleDescriptionClass = (e) => {  
+    e.target.classList.remove("toggleDescription")
   }
 
     render() {
@@ -86,7 +82,7 @@ class Job extends Component{
           <TitleLine noMargin relative/>
           <Jobs>
             <JobWrapper>
-              <JobPic src={jobPicture1} onMouseOver={this.toogleDesc} />
+              <JobPic src={jobPicture1}  />
               <JobDescription>
                 <Icon width='13px' marginT="20px" src={iconTick}/>
                 {`   WEBSITE \n`}
@@ -105,7 +101,7 @@ class Job extends Component{
                 <Icon width='40px' margin="3px" src={iconSass}/>
                 <Icon width='40px' margin="3px" src={iconBootstrap}/>
               </JobDescription>
-              <JobDescriptionDark onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="0px" src={iconTickDark}/>
                 {`   WEBSITE \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -125,7 +121,7 @@ class Job extends Component{
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>
-              <JobPic src={jobPicture2} onMouseOver={this.toogleDesc}/>
+              <JobPic src={jobPicture2} />
               <JobDescription>
                 <Icon width='13px' marginT="0px" src={iconTick}/>
                 {`   WEBSITE \n`}
@@ -146,7 +142,7 @@ class Job extends Component{
                 <Icon width='30px' margin="3px" src={iconGimp}/> 
                 <Icon width='30px' margin="3px" src={iconXD}/> 
               </JobDescription>
-              <JobDescriptionDark onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="0px" src={iconTickDark}/>
                 {`   WEBSITE \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -168,7 +164,7 @@ class Job extends Component{
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>
-              <JobPic src={jobPicture3} onMouseOver={this.toogleDesc}/>
+              <JobPic src={jobPicture3} />
               <JobDescription>
                 <Icon width='13px' marginT="10px" src={iconTick}/>
                 {`   WEBSITE \n`}
@@ -188,7 +184,7 @@ class Job extends Component{
                 <Icon width='24px' margin="3px" src={iconFigma}/>
                 <Icon width='45px' margin="3px" src={iconBEM}/>
               </JobDescription>
-              <JobDescriptionDark onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="10px" src={iconTickDark}/>
                 {`   WEBSITE \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -211,7 +207,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper>
-              <JobPicSmall src={jobPicture4} onMouseOver={this.toogleDesc}/>
+              <JobPicSmall src={jobPicture4} />
               <JobDescriptionSmall>
                 <Icon width='13px' marginT="15px" src={iconTick}/>
                 {`   TODO LIST \n`}
@@ -228,7 +224,7 @@ class Job extends Component{
                 <Icon width='23px' margin="3px" src={iconJS}/>
                 <Icon width='25px' margin="3px" src={iconReact}/>
               </JobDescriptionSmall>
-              <JobDescriptionSmallDark onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionSmallDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="15px" src={iconTickDark}/>
                 {`   TODO LIST \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -246,7 +242,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <JobPicSmall src={jobPicture5} onMouseOver={this.toogleDesc}/>
+            <JobPicSmall src={jobPicture5} />
               <JobDescriptionSmall>
                 <Icon width='13px' marginT="15px" src={iconTick}/>
                 {`   TIC TAC TOE \n`}
@@ -262,7 +258,7 @@ class Job extends Component{
                 <Icon width='20px' margin="3px" src={iconCss}/>
                 <Icon width='23px' margin="3px" src={iconJS}/>
               </JobDescriptionSmall>
-              <JobDescriptionSmallDark  onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionSmallDark onMouseOver={this.toogleDesc}  onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="15px" src={iconTickDark}/>
                 {`   TIC TAC TOE \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -282,7 +278,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper> 
-            <JobPicSmall src={jobPicture6} onMouseOver={this.toogleDesc}/>
+            <JobPicSmall src={jobPicture6} />
               <JobDescriptionSmall>
                 <Icon width='13px' marginT="15px" src={iconTick}/>
                 {`   CALCULATOR \n`}
@@ -299,7 +295,7 @@ class Job extends Component{
                 <Icon width='23px' margin="3px" src={iconJS}/>
                 <Icon width='25px' margin="3px" src={iconReact}/>
               </JobDescriptionSmall>
-              <JobDescriptionSmallDark  onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionSmallDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="15px" src={iconTickDark}/>
                 {`   CALC APP \n`}
                 <Icon width='13px' src={iconTickDark}/>
@@ -317,7 +313,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <JobPicSmall src={jobPicture7} onMouseOver={this.toogleDesc}/>
+            <JobPicSmall src={jobPicture7} />
             <JobDescriptionSmall>
                 <Icon width='13px' marginT="15px" src={iconTick}/>
                 {`   TIP CALC \n`}
@@ -333,7 +329,7 @@ class Job extends Component{
                 <Icon width='20px' margin="3px" src={iconCss}/>
                 <Icon width='23px' margin="3px" src={iconJS}/>
               </JobDescriptionSmall>
-              <JobDescriptionSmallDark onMouseLeave={this.removeToggleDescriptionClass}>
+              <JobDescriptionSmallDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="15px" src={iconTickDark}/>
                 {`   TIP CALC \n`}
                 <Icon width='13px' src={iconTickDark}/>

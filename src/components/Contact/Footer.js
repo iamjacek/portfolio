@@ -5,7 +5,7 @@ const Footer = styled.p`
   text-align: center;
   font-family: "Rubik";
   font-size: .7rem;
-  
+  color: ${({theme}) => theme.colors.white};
  
     
     ${({theme}) => theme.media.tablet} {
