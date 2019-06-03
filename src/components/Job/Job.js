@@ -48,6 +48,8 @@ import iconReact from '../../assets/icons/react.png'
 import iconReactDark from '../../assets/icons/react-dark.png'
 import iconXD from '../../assets/icons/xd.png'
 import iconXDDark from '../../assets/icons/xd-dark.png'
+import icon4kdark from '../../assets/icons/4k.png'
+import icon4k from '../../assets/icons/4kw.png'
 import iconFigma from '../../assets/icons/figma.png'
 import iconFigmaDark from '../../assets/icons/figma-dark.png'
 import iconBEM from '../../assets/icons/BEM.png'
@@ -141,6 +143,7 @@ class Job extends Component{
                 <Icon width='29px' margin="3px" src={iconStyled}/> 
                 <Icon width='30px' margin="3px" src={iconGimp}/> 
                 <Icon width='30px' margin="3px" src={iconXD}/> 
+                <Icon width='38px' margin="3px" src={icon4k}/>
               </JobDescription>
               <JobDescriptionDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="0px" src={iconTickDark}/>
@@ -161,6 +164,7 @@ class Job extends Component{
                 <Icon width='29px' margin="3px" src={iconStyledDark}/> 
                 <Icon width='30px' margin="3px" src={iconGimp}/> 
                 <Icon width='30px' margin="3px" src={iconXDDark}/> 
+                <Icon width='38px' margin="3px" src={icon4kdark}/>
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>

@@ -74,6 +74,14 @@ class Contact extends Component{
       }, 600);
     }
   }
+
+  wooble = (e) => {
+    e.target.style.animation = "woobleSocial .25s ease-in-out"
+  }
+  woobleOut = (e) => {
+    e.target.removeAttribute("style")
+  }
+
     
   
     render() {

@@ -10,7 +10,6 @@ const JobDescriptionDark = styled(JobDescription)`
 
 
     ${({theme}) => theme.media.laptop} {
-      cursor: pointer;
       display: block;
       opacity: 0;
       transition: all 200ms ease-in;

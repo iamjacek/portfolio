@@ -59,22 +59,22 @@ import styled from 'styled-components';
 
    
     @keyframes woobleSocial {
-    0% {
-      transform: skew(0deg, 0deg) translateY(0px);
+      0% {
+        transform: skew(0deg, 0deg) translateY(0px);
+      }
+      25% {
+        transform: skew(2deg, 2deg) translateY(-2px);
+      }
+      50% {
+        transform: skew(0deg, 0deg) translateY(-4px);
+      }
+      75% {
+        transform: skew(-2deg, -2deg) translateY(-2px);
+      }
+      100% {
+        transform: skew(0deg, 0deg) translateY(0px);
+      }
     }
-    25% {
-      transform: skew(2deg, 2deg) translateY(-2px);
-    }
-    50% {
-      transform: skew(0deg, 0deg) translateY(-4px);
-    }
-    75% {
-      transform: skew(-2deg, -2deg) translateY(-2px);
-    }
-    100% {
-      transform: skew(0deg, 0deg) translateY(0px);
-    }
-  }
   `
 
   
