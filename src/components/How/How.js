@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React, {Component} from 'react';
 import LastWrapper from '../Wrapper/LastWrapper'
 import H1 from '../H1/H1'
-import TitleLine from '../VerticalLine/TitleLine'
+import TitleLine from '../About/TitleLine/TitleLine'
 import HowContainer from "./HowContainer"
 import HowWrapper from "./HowWrapper"
 import Number from "./Number"

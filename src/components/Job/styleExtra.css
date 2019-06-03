@@ -1,6 +1,11 @@
 /* class created to perform opacity animation on description_dark when agent width is larger or equal laptop sizes */
-.toggleDescription{
-    
-    opacity: 1;
-    transition: all 200ms ease-in;
+.toggleDescription {
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+/* a styles */
+a {
+  text-decoration: none;
+  color: #de4030;
 }
