@@ -102,8 +102,8 @@ openSkills = () => {
       skills.style.opacity = "1";
     
     
-    const bd = document.querySelector("#StyleWrapper")
-    const bd2 = document.querySelector("#StyleWrapper2")
+    const bd = document.querySelector("#sectionHome")
+    const bd2 = document.querySelector("#sectionAbout")
     const bd3 = document.querySelector("#StyleWrapper3")
       bd.style.right = "85vw"
       bd2.style.right = "85vw"
@@ -122,8 +122,8 @@ closeSkills = () => {
   const a = document.querySelector("#Skills")
 
   if ( a.style.left === "0px" ) {
-    const bd = document.querySelector("#StyleWrapper")
-    const bd2 = document.querySelector("#StyleWrapper2")
+    const bd = document.querySelector("#sectionHome")
+    const bd2 = document.querySelector("#sectionAbout")
     const bd3 = document.querySelector("#StyleWrapper3")
     a.style.left = "100vw";
     bd.style.right = "0px"

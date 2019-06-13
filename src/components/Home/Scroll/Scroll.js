@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
- const Logo = styled.img`
+ const Scroll = styled.img`
 
 
   cursor: pointer;
@@ -40,4 +40,4 @@ import styled from 'styled-components';
   `
 
   
-  export default Logo;
+  export default Scroll;

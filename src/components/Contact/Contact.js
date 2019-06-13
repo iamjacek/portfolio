@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import React, {Component} from 'react';
 import LastWrapper from '../Wrapper/LastWrapper'
 import LogoContact from './LogoContact'
@@ -34,6 +33,7 @@ import ButtonWrap from "./Form/ButtonWrap"
 import Line from "./Form/Line"
 import Label from "./Form/Label"
 import ArrowContact from './Form/ArrowContact';
+import Captcha from './Form/Captcha'
 import Arrowpic from "../../assets/arrow_skills.png"
 import VerticalLine from "../VerticalLine/VerticalLine"
 import VerticalLine2 from "../VerticalLine/VerticalLine2"
@@ -49,8 +49,8 @@ class Contact extends Component{
   
       Contacts.style.opacity = "1";
       
-      const bd = document.querySelector("#StyleWrapper")
-      const bd2 = document.querySelector("#StyleWrapper2")
+      const bd = document.querySelector("#sectionHome")
+      const bd2 = document.querySelector("#sectionAbout")
       const bd3 = document.querySelector("#StyleWrapper3")
         bd.style.right = "85vw"
         bd2.style.right = "85vw"
@@ -62,8 +62,8 @@ class Contact extends Component{
     const Contacts = document.querySelector("#Contacts")
   
     if ( Contacts.style.left === "0px" ) {
-      const bd = document.querySelector("#StyleWrapper")
-      const bd2 = document.querySelector("#StyleWrapper2")
+      const bd = document.querySelector("#sectionHome")
+      const bd2 = document.querySelector("#sectionAbout")
       const bd3 = document.querySelector("#StyleWrapper3")
       Contacts.style.left = "100vw";
       bd.style.right = "0px"
@@ -87,7 +87,7 @@ class Contact extends Component{
     render() {
       return( 
         
-          <LastWrapper>
+          <LastWrapper id="sectionContact">
             <Wrap>
                 <LogoContact src={logopic}/>
                 <LogoContactDouble>
@@ -127,22 +127,26 @@ class Contact extends Component{
             </Wrap>
 
             <Form id="Contacts">
+            <ArrowContact src={Arrowpic} onClick={ this.closeSkills }/>
               <FormWrapper>
                 
-                <ArrowContact src={Arrowpic} onClick={ this.closeSkills }/>
+                
                 <H1Form>CONTACT FORM</H1Form>
                 <Line></Line>
                 <FormP>If you want to talk about project collaboration or just say hello fill this form below or mail to jacek@jacek.com</FormP>
-              
-                <NameForm type="text" id="name" name="name"></NameForm>
-                <Label htmlFor="name">Name</Label>
-                <EmailForm type="text" id="email" name="email"></EmailForm>
-                <Label htmlFor="email">Email</Label>
-                <MsgForm></MsgForm>
-                <Label>Message</Label>
-                <ButtonWrap>
-                <ButtonForm>Send</ButtonForm>
-                </ButtonWrap>
+                
+                <form action="./send_mail.php" method="POST">
+                  <NameForm type="text" id="name" name="name"></NameForm>
+                  <Label htmlFor="name">Name</Label>
+                  <EmailForm type="text" id="email" name="email"></EmailForm>
+                  <Label htmlFor="email">Email</Label>
+                  <MsgForm name="message"></MsgForm>
+                  <Label>Message</Label>
+                  <ButtonWrap>
+                  <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha>
+                  <ButtonForm>Send</ButtonForm>
+                  </ButtonWrap>
+                </form>
                 <SocialContact margin>
                   <div>
                     <img src={social1} className="socialWooble" alt="twitter" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
@@ -151,10 +155,10 @@ class Contact extends Component{
                     <img src={social4} className="socialWooble" alt="Github" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
                   </div>
                 </SocialContact>
-                
-              </FormWrapper>
-              <BackgroundText dev>DEVELOPER</BackgroundText>
+                <BackgroundText dev>DEVELOPER</BackgroundText>
               <BackgroundText>DESIGNER</BackgroundText>
+              </FormWrapper>
+              
             </Form>
 
           </LastWrapper>

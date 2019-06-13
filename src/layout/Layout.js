@@ -21,6 +21,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     
   }
+  html{
+    scroll-behavior: smooth;
+  }
+  a {
+    cursor: pointer;
+  }
 `;
 
 const StyleWrapper = styled.div`
@@ -40,7 +46,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper id="StyleWrapper">
+            <StyleWrapper id="sectionHome">
                 {children}
             </StyleWrapper>
         </>

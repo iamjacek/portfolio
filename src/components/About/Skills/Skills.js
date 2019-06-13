@@ -17,7 +17,7 @@ const Skills = styled.div`
     left: 100vw;
     margin: 0;
     padding: 0;
-    z-index: 1000;
+    z-index: 1003;
     opacity: 0;
     ${({theme}) => theme.media.tabletVertical} {
       width: 87vw;

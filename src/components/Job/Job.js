@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import {Link} from 'gatsby';
 import React, {Component} from 'react';
 import LastWrapper from '../Wrapper/LastWrapper'
-import H1 from '../H1/H1'
+import H1 from '../About/H1/H1'
 import TitleLine from '../About/TitleLine/TitleLine'
 import JobWrapper from './JobWrapper'
 import JobDouble from './JobDouble'
@@ -55,7 +54,7 @@ import iconFigma from '../../assets/icons/figma.png'
 import iconFigmaDark from '../../assets/icons/figma-dark.png'
 import iconBEM from '../../assets/icons/BEM.png'
 import iconBEMDark from '../../assets/icons/BEM-dark.png'
-import "./styleExtra.css"
+
 
 const Icon = styled.img`
   width: ${({width}) => width};
@@ -80,29 +79,29 @@ class Job extends Component{
 
     render() {
       return(
-       <LastWrapper>
+       <LastWrapper id="sectionJob">
           <H1 relative>JOB</H1>
           <TitleLine noMargin relative/>
           <Jobs>
             <JobWrapper>
-              <a href="http://www.2theweb.co.uk/" target="_blank">
+              <a href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <JobPic src={jobPicture1}  />
               </a>
               <JobDescription>
-                <Icon width='13px' marginT="20px" src={iconTick}/>
+                <Icon width='13px' marginT="10px" src={iconTick}/>
                 {`   WEBSITE \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
                 <a
-                  href="http://www.2theweb.co.uk/" target="_blank"
+                  href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer"
                 >
                   <Icon width='14px' src={iconLive}/>
                   {`   LIVE \n`}
                 </a>
                 <a
-                  href="https://github.com/iamjacek/2thewebsite" target="_blank"
+                  href="https://github.com/iamjacek/2thewebsite" target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
@@ -114,6 +113,7 @@ class Job extends Component{
                 <Icon width='40px' margin="3px" src={iconSass}/>
                 <Icon width='40px' margin="3px" src={iconBootstrap}/>
               </JobDescription>
+              
               <JobDescriptionDark onMouseOver={this.toogleDesc} onMouseLeave={this.removeToggleDescriptionClass}>
                 <Icon width='13px' marginT="0px" src={iconTickDark}/>
                 {`   WEBSITE \n`}
@@ -121,10 +121,18 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a
+                  href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer"
+                >
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a
+                  href="https://github.com/iamjacek/2thewebsite" target="_blank" rel="noopener noreferrer"
+                >
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='33px' margin="3px" marginT="70px" src={iconHtmlDark}/>
                 <Icon width='33px' margin="3px" src={iconCssDark}/>
                 <Icon width='38px' margin="3px" src={iconJSDark}/>
@@ -134,7 +142,7 @@ class Job extends Component{
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <JobPic src={jobPicture2} />
               </a>
               <JobDescription>
@@ -145,13 +153,13 @@ class Job extends Component{
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
                 <a
-                  href="#" target="_blank"
+                  href="#" target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
                 <a
-                  href="https://github.com/iamjacek/Portfolio" target="_blank"
+                  href="https://github.com/iamjacek/Portfolio" target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
@@ -173,10 +181,18 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a
+                  href="#" target="_blank" rel="noopener noreferrer"
+                >
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a
+                  href="https://github.com/iamjacek/Portfolio" target="_blank" rel="noopener noreferrer"
+                >
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='30px' margin="3px" marginT="55px" src={iconHtmlDark}/>
                 <Icon width='30px' margin="3px" src={iconCssDark}/>
                 <Icon width='34px' margin="3px" src={iconJSDark}/>
@@ -189,7 +205,7 @@ class Job extends Component{
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>
-              <a href="http://gymsite.2theweb.co.uk/" target="_blank">
+              <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <JobPic src={jobPicture3} />
               </a>
               <JobDescription>
@@ -199,11 +215,11 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://gymsite.2theweb.co.uk/" target="_blank">
+                <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
-                <a href="https://github.com/iamjacek/gymsite" target="_blank">
+                <a href="https://github.com/iamjacek/gymsite" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
                 </a>
@@ -222,10 +238,14 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a href="https://github.com/iamjacek/gymsite" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='33px' margin="3px" marginT="50px" src={iconHtmlDark}/>
                 <Icon width='33px' margin="3px" src={iconCssDark}/>
                 <Icon width='38px' margin="3px" src={iconJSDark}/>
@@ -238,7 +258,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper>
-              <a href="http://todo.2theweb.co.uk/" target="_blank">
+              <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <JobPicSmall src={jobPicture4} />
               </a>
               <JobDescriptionSmall>
@@ -248,11 +268,11 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://todo.2theweb.co.uk/" target="_blank">
+                <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
-                <a href="https://github.com/iamjacek/todo-list" target="_blank">
+                <a href="https://github.com/iamjacek/todo-list" target="_blank" rel="noopener noreferrer">
                 
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
@@ -269,10 +289,14 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a href="https://github.com/iamjacek/todo-list" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='20px' margin="3px" marginT="20px" src={iconHtmlDark}/>
                 <Icon width='20px' margin="3px" src={iconCssDark}/>
                 <Icon width='23px' margin="3px" src={iconJSDark}/>
@@ -280,7 +304,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank">
+            <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture5} />
             </a>
               <JobDescriptionSmall>
@@ -290,11 +314,11 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank">
+                <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                   <Icon width='14px' src={iconLive}/>
                   {`   LIVE \n`}
                 </a>
-                <a href="https://github.com/iamjacek/tic-tac-toe" target="_blank">
+                <a href="https://github.com/iamjacek/tic-tac-toe" target="_blank" rel="noopener noreferrer">
                   <Icon width='13px' src={iconGithub}/>
                   {`   GITHUB \n`}
                 </a>
@@ -309,10 +333,14 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a href="https://github.com/iamjacek/tic-tac-toe" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='20px' margin="3px" marginT="20px" src={iconHtmlDark}/>
                 <Icon width='20px' margin="3px" src={iconCssDark}/>
                 <Icon width='23px' margin="3px" src={iconJSDark}/>
@@ -322,7 +350,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper> 
-            <a href="#" target="_blank">
+            <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture6} />
             </a>
               <JobDescriptionSmall>
@@ -332,11 +360,11 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="#" target="_blank">
+                <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
-                <a href="https://github.com/iamjacek/simple-calc-react" target="_blank">
+                <a href="https://github.com/iamjacek/simple-calc-react" target="_blank" rel="noopener noreferrer">
                 
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
@@ -353,10 +381,14 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a href="https://github.com/iamjacek/simple-calc-react" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='20px' margin="3px" marginT="20px" src={iconHtmlDark}/>
                 <Icon width='20px' margin="3px" src={iconCssDark}/>
                 <Icon width='23px' margin="3px" src={iconJSDark}/>
@@ -364,7 +396,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <a href="http://tip-calculator.2theweb.co.uk/" target="_blank">
+            <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture7} />
             </a>
             <JobDescriptionSmall>
@@ -374,11 +406,11 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tip-calculator.2theweb.co.uk/" target="_blank">
+                <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
-                <a href="https://github.com/iamjacek/tip-calculator" target="_blank">
+                <a href="https://github.com/iamjacek/tip-calculator" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithub}/>
                 {`   GITHUB \n`}
                 </a>
@@ -393,10 +425,14 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
+                <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
+                </a>
+                <a href="https://github.com/iamjacek/tip-calculator" target="_blank" rel="noopener noreferrer">
                 <Icon width='13px' src={iconGithubDark}/>
                 {`   GITHUB \n`}
+                </a>
                 <Icon width='20px' margin="3px" marginT="20px" src={iconHtmlDark}/>
                 <Icon width='20px' margin="3px" src={iconCssDark}/>
                 <Icon width='23px' margin="3px" src={iconJSDark}/>

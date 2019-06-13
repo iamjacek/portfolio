@@ -21,15 +21,19 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     
   }
+  html{
+    scroll-behavior: smooth;
+  }
 `;
 
 const StyleWrapper = styled.div`
-  height: 100vh;
-  min-height: 720px;
-  background: ${({theme}) => theme.colors.gray};
-  position: relative;
-  overflow: hidden;
-  transition: 600ms all ease-in;
+    height: 100vh;
+    min-height: 720px;
+    background: ${({theme}) => theme.colors.gray};
+    position: relative;
+    overflow: hidden;
+    transition: 600ms all ease-in;
+    right: 0px;
   ${({theme}) => theme.media.tablet}{
     height: initial;
     min-height: 100vh;
@@ -38,6 +42,7 @@ const StyleWrapper = styled.div`
     height: 100vh;
     min-height: 720px;
   }
+
 `;
 
 
@@ -45,7 +50,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper id="StyleWrapper2">
+            <StyleWrapper id="sectionAbout">
                 {children}
             </StyleWrapper>
         </>

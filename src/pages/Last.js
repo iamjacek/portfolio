@@ -26,7 +26,7 @@ class About extends Component{
              
            
 
-           <Contact />
+           <Contact id="sectionContact"/>
             
            
       

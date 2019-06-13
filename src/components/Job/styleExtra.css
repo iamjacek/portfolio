@@ -7,5 +7,18 @@
 /* a styles */
 a {
   text-decoration: none;
-  color: #de4030;
+  color: #f0ebe7;
+}
+
+@media (min-width: 1368px) {
+  a {
+    text-decoration: none;
+    color: #545353;
+  }
+  ul a {
+    color: #f0ebe7;
+  }
+  a:hover {
+    color: #de4030;
+  }
 }

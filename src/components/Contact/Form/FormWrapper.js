@@ -2,11 +2,17 @@ import styled from 'styled-components';
 
 
 const FromWrapper = styled.div`
-position: absolute;
+position: relative;
 left: 0;
 top: 0;
 width: 100%;
 height: 100vh;
+z-index: 1001;
+overflow-y: auto;
+overflow-x: hidden;
+
+  
+
 
 ${({theme}) => theme.media.laptop}{
     left: unset;

@@ -21,6 +21,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     
   }
+  html{
+    scroll-behavior: smooth;
+  }
+  .toggleDescription {
+    opacity: 1;
+    transition: all 200ms ease-in;
+  }
 `;
 
 const StyleWrapper = styled.div`
@@ -29,6 +36,7 @@ const StyleWrapper = styled.div`
   position: relative;
   overflow: hidden;
   transition: 600ms all ease-in;
+  right: 0px;
   ${({theme}) => theme.media.tablet} {
     min-height: 720px;
   }

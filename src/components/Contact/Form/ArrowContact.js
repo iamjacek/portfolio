@@ -6,7 +6,9 @@ const ArrowContact = styled.img`
     top: 5vh;
     left: 5vw;
     cursor: pointer;
-    z-index: 1001;
+z-index: 1010;
+
+    
     :hover{
       animation: wooble .25s ease-in-out infinite;
     }
@@ -15,8 +17,8 @@ const ArrowContact = styled.img`
        top: calc(50vh - 40px);
        left: -40px;
     }
-    ${({theme}) => theme.media.hd} {
-      
+    ${({theme}) => theme.media.laptop} {
+      left: -40px;
        
     }
 `

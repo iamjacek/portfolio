@@ -10,6 +10,7 @@ const Wrap = styled.div`
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
+  z-index: 1;
   
     
     ${({theme}) => theme.media.tabletVertical} {

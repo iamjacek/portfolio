@@ -6,7 +6,7 @@ const ParSkills = styled.p`
     font-size: calc(.2rem + 2vh);
     line-height: calc(1.5rem + .5vh);
     font-weight: 300;
-    margin: 2vh auto;
+    margin: 4vh auto;
     width: 90%; 
     padding: 0;
     white-space: pre-wrap;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
- const Button = styled.button`
+ const Button404 = styled.button`
     cursor: pointer;
     position: relative;
     background-color: ${({theme}) => theme.colors.gray};
@@ -15,8 +15,6 @@ import styled from 'styled-components';
     font-size: 1.3rem;
     color: ${({theme}) => theme.colors.white};
     transition: font-size 200ms ease-in, background-color 200ms ease-in, letter-spacing 200ms ease-in;
-
-  
     letter-spacing: normal;
 
     :hover{
@@ -33,38 +31,25 @@ import styled from 'styled-components';
   
 
 ${({theme}) => theme.media.tablet} {
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    width: 50%;
+    
 }
 ${({theme}) => theme.media.tabletVertical} {
-    width: 50%;
-    position: absolute;
-    top: 80%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    margin-top: calc(5vw);
+    width: 40%;
 }
 ${({theme}) => theme.media.laptop} {
-    position: relative;
-    top: calc(300px + 2vw);
-    left: 0;
-    margin: 0;
-    width: 60%;
+    
 }
 ${({theme}) => theme.media.hd} {
-    height: calc(50px + 1vw);
-    width: 65%;
-    top: 33vh;
+    width: 30%;
     font-size: 1.8rem;
+    height: 90px;
     :hover{
+       
         font-size: 2rem;
+    
     }
 }
   `
 
   
-  export default Button;
+  export default Button404;

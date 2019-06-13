@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+
 import React, {Component} from 'react';
 import LastWrapper from '../Wrapper/LastWrapper'
-import H1 from '../H1/H1'
+import H1 from '../About/H1/H1'
 import TitleLine from '../About/TitleLine/TitleLine'
 import HowContainer from "./HowContainer"
 import HowWrapper from "./HowWrapper"
@@ -15,7 +15,7 @@ class How extends Component{
   
     render() {
       return(
-       <LastWrapper FullHeight>
+       <LastWrapper FullHeight id="sectionHow">
            <H1 relative>3 STEPS</H1>
           <TitleLine noMargin relative BigMargin/>
           <H2>Keep it simple</H2>
