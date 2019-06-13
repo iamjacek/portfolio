@@ -48,6 +48,22 @@ const Jobs = styled.div`
       top: 15vh;
       transform: scale(1.8);
     }
+
+/* links styling */
+   
+    @media (min-width: 1368px) {
+      a {
+        text-decoration: none;
+        color: #545353;
+      }
+      ul a {
+        color: #f0ebe7;
+      }
+      a:hover {
+        color: #de4030;
+        cursor: pointer;
+      }
+    } 
 `
 
   

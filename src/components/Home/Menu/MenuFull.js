@@ -17,6 +17,11 @@ const MenuFull = styled.div`
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    /* a styles */
+    a {
+    text-decoration: none;
+    color: ${({theme}) => theme.colors.white};
+    }
     ul{
         display: flex;
         flex-direction: column; 

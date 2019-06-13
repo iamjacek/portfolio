@@ -6,7 +6,7 @@ import TitleLine from '../About/TitleLine/TitleLine'
 import JobWrapper from './JobWrapper'
 import JobDouble from './JobDouble'
 import Jobs from './Jobs'
-import JobPic from './JobPic'
+import JobPic from './JobPic' 
 import JobPicSmall from './JobPicSmall'
 import JobDescription from './JobDescription'
 import JobDescriptionDark from './JobDescriptionDark'
@@ -68,13 +68,14 @@ class Job extends Component{
 
   toogleDesc = (e) => {
     if ( window.innerWidth > 1367 ) {
-      e.target.classList.add("toggleDescription");
+      e.target.style.opacity = "1";
+      e.target.style.transition = "all 200ms ease-in";
     }
   }
 
   //making sure all descriptions are off after mouse is out and even the curent description so we use  toggle on current element because current element is not in the array
   removeToggleDescriptionClass = (e) => {  
-    e.target.classList.remove("toggleDescription")
+    e.target.style.opacity = "0";
   }
 
     render() {

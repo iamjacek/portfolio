@@ -34,9 +34,14 @@ ${({theme}) => theme.media.laptop} {
   top: calc(22vh - 2vw);
 }
 ${({theme}) => theme.media.hd} {
-  width: 50vw;
-  max-width: 1600px;
-  top: calc(22vh - 4vw);
+  width: 45vw;
+  max-width: 2000px;
+  top: calc(25vh - 4vw);
+}
+
+${({theme}) => theme.media.fourK} {
+  width: 85vw;
+  
 }
 
 
