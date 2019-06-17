@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const Form = styled.div`
-  
+
   min-height: 325px;
   transition: 600ms left ease-in;
   width: 100vw;

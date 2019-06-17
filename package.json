@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Jacek Witucki - Portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple portfolio to show off some project and give some way of contact for potential customers",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jacek Witucki",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.16",
@@ -25,7 +25,7 @@
     "prettier": "^1.17.0"
   },
   "keywords": [
-    "gatsby"
+    "jacek witucki web development"
   ],
   "license": "MIT",
   "scripts": {
@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/iamjacek/Portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/iamjacek/Portfolio"
   }
 }
