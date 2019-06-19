@@ -135,7 +135,11 @@ class Contact extends Component{
                 <Line></Line>
                 <FormP>If you want to talk about project collaboration or just say hello fill this form below or mail to jacek@jacek.com</FormP>
                 
-                <form name="contact" method="POST" data-netlify="true">
+                <form name="contact" 
+                      method="POST" 
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field" 
+                >
                   <NameForm type="text" id="name" name="name"></NameForm>
                   <Label htmlFor="name">Name</Label>
                   <EmailForm type="text" id="email" name="email"></EmailForm>
