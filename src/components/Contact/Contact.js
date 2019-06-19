@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LastWrapper from '../Wrapper/LastWrapper'
+import LastWrapper from '../Wrapper/LastWrapper';
 import LogoContact from './LogoContact'
 import LogoContactDouble from './LogoContactDouble'
 import Wrap from './Wrap'
