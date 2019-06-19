@@ -135,7 +135,7 @@ class Contact extends Component{
                 <Line></Line>
                 <FormP>If you want to talk about project collaboration or just say hello fill this form below or mail to jacek@jacek.com</FormP>
                 
-                <form action="./send_mail.php" method="POST">
+                <form name="contact" method="POST" data-netlify="true">
                   <NameForm type="text" id="name" name="name"></NameForm>
                   <Label htmlFor="name">Name</Label>
                   <EmailForm type="text" id="email" name="email"></EmailForm>
@@ -144,7 +144,7 @@ class Contact extends Component{
                   <Label>Message</Label>
                   <ButtonWrap>
                   <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha>
-                  <ButtonForm>Send</ButtonForm>
+                  <ButtonForm type="submit">Send</ButtonForm>
                   </ButtonWrap>
                 </form>
                 <SocialContact margin>

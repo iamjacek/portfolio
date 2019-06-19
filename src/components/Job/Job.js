@@ -23,6 +23,8 @@ import iconTick from '../../assets/icons/tick.png'
 import iconTickDark from '../../assets/icons/tick-dark.png'
 import iconLive from '../../assets/icons/live.png'
 import iconLiveDark from '../../assets/icons/live-dark.png'
+import iconNetlify from '../../assets/icons/netlify.png'
+import iconNetlifyDark from '../../assets/icons/netlify-dark.png'
 import iconGithub from '../../assets/icons/github.png'
 import iconGithubDark from '../../assets/icons/github-dark.png'
 import iconBootstrap from '../../assets/icons/bootstrap.png'
@@ -166,7 +168,7 @@ class Job extends Component{
                 {`   GITHUB \n`}
                 </a>
                 <Icon width='30px' margin="3px" marginT="15px" src={iconHtml}/>
-                <Icon width='30px' margin="3px" src={iconCss}/>
+                <Icon width='33px' margin="3px" src={iconNetlifyDark}/>
                 <Icon width='34px' margin="3px" src={iconJS}/>
                 <Icon width='30px' margin="3px" src={iconGatsby}/>
                 <Icon width='33px' margin="3px" src={iconReact}/>
@@ -195,7 +197,7 @@ class Job extends Component{
                 {`   GITHUB \n`}
                 </a>
                 <Icon width='30px' margin="3px" marginT="55px" src={iconHtmlDark}/>
-                <Icon width='30px' margin="3px" src={iconCssDark}/>
+                <Icon width='33px' margin="3px" src={iconNetlify}/>
                 <Icon width='34px' margin="3px" src={iconJSDark}/>
                 <Icon width='30px' margin="3px" src={iconGatsbyDark}/>
                 <Icon width='33px' margin="3px" src={iconReactDark}/>
