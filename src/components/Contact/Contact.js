@@ -140,6 +140,7 @@ class Contact extends Component{
                       data-netlify="true"
                       data-netlify-honeypot="bot-field" 
                 >
+                  <NameForm type="hidden" name="bot-field" />
                   <NameForm type="text" name="name-form" />
                   <Label htmlFor="name">Name</Label>
                   <EmailForm type="text" name="email-form" />
