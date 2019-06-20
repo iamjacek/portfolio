@@ -140,14 +140,14 @@ class Contact extends Component{
                       data-netlify="true"
                       data-netlify-honeypot="bot-field" 
                 >
-                  <NameForm type="text" id="name" name="name"></NameForm>
+                  <NameForm type="text" name="name-form" />
                   <Label htmlFor="name">Name</Label>
-                  <EmailForm type="text" id="email" name="email"></EmailForm>
+                  <EmailForm type="text" name="email-form" />
                   <Label htmlFor="email">Email</Label>
-                  <MsgForm name="message"></MsgForm>
+                  <MsgForm name="message-form"></MsgForm>
                   <Label>Message</Label>
                   <ButtonWrap>
-                  <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha>
+                  {/* <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha> */}
                   <ButtonForm type="submit">Send</ButtonForm>
                   </ButtonWrap>
                 </form>
