@@ -21,11 +21,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     
   }
+
   html{
     scroll-behavior: smooth;
   }
+
   a {
     cursor: pointer;
+    text-decoration: none;
+    color: ${({theme}) => theme.colors.white};
   }
 `;
 
