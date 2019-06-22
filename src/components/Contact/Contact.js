@@ -33,7 +33,7 @@ import ButtonWrap from "./Form/ButtonWrap"
 import Line from "./Form/Line"
 import Label from "./Form/Label"
 import ArrowContact from './Form/ArrowContact';
-import Captcha from './Form/Captcha'
+
 import Arrowpic from "../../assets/arrow_skills.png"
 import VerticalLine from "../VerticalLine/VerticalLine"
 import VerticalLine2 from "../VerticalLine/VerticalLine2"

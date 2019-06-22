@@ -20,10 +20,11 @@ const FormButton = styled.button`
 
     :hover{
         background-color: ${({theme}) => theme.colors.red};
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         transition: all 200ms ease-in;
         letter-spacing: 1px;
         color: ${({theme}) => theme.colors.white};
+        border: 2px solid ${({theme}) => theme.colors.red};
     }
 
   
