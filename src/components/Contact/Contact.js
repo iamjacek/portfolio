@@ -135,20 +135,18 @@ class Contact extends Component{
                 <Line></Line>
                 <FormP>If you want to talk about project collaboration or just say hello fill this form below or mail to jacek@jacek.com</FormP>
                 
-                <form name="contact" 
+                <form name="contact"
+                      action="https://formspree.io/jake47s@gmail.com" 
                       method="POST" 
-                      data-netlify="true"
-                      data-netlify-honeypot="bot-field" 
                 >
-                  <NameForm type="text" name="bot" />
-                  <NameForm type="text" name="name-form" />
+                  <NameForm type="text" name="name" />
                   <Label htmlFor="name">Name</Label>
-                  <EmailForm type="text" name="email-form" />
+                  <EmailForm type="text" name="email" />
                   <Label htmlFor="email">Email</Label>
-                  <MsgForm name="message-form"></MsgForm>
+                  <MsgForm name="message"></MsgForm>
                   <Label>Message</Label>
                   <ButtonWrap>
-                  {/* <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha> */}
+                  <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha>
                   <ButtonForm type="submit">Send</ButtonForm>
                   </ButtonWrap>
                 </form>
