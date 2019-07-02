@@ -87,7 +87,7 @@ class Job extends Component{
           <TitleLine noMargin relative/>
           <Jobs>
             <JobWrapper>
-              <a href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+              <a href="http://2theweb.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <JobPic src={jobPicture1}  />
               </a>
               <JobDescription>
@@ -98,7 +98,7 @@ class Job extends Component{
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
                 <a
-                  href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer"
+                  href="http://2theweb.jacekwitucki.com/" target="_blank" rel="noopener noreferrer"
                 >
                   <Icon width='14px' src={iconLive}/>
                   {`   LIVE \n`}
@@ -125,7 +125,7 @@ class Job extends Component{
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
                 <a
-                  href="http://www.2theweb.co.uk/" target="_blank" rel="noopener noreferrer"
+                  href="http://2theweb.jacekwitucki.com/" target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
@@ -208,7 +208,7 @@ class Job extends Component{
               </JobDescriptionDark>
             </JobWrapper>
             <JobWrapper>
-              <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+              <a href="http://gymsite.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <JobPic src={jobPicture3} />
               </a>
               <JobDescription>
@@ -218,7 +218,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://gymsite.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
@@ -241,7 +241,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
-                <a href="http://gymsite.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://gymsite.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
                 </a>
@@ -261,7 +261,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper>
-              <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+              <a href="http://todo.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <JobPicSmall src={jobPicture4} />
               </a>
               <JobDescriptionSmall>
@@ -271,7 +271,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://todo.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
@@ -292,7 +292,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
-                <a href="http://todo.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://todo.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
                 </a>
@@ -307,7 +307,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+            <a href="http://tictactoe.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture5} />
             </a>
               <JobDescriptionSmall>
@@ -317,7 +317,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://tictactoe.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                   <Icon width='14px' src={iconLive}/>
                   {`   LIVE \n`}
                 </a>
@@ -336,7 +336,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tic-tac-toe.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://tictactoe.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
                 </a>
@@ -353,7 +353,7 @@ class Job extends Component{
 
             <JobDouble>
             <JobWrapper> 
-            <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
+            <a href="http://calculator.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture6} />
             </a>
               <JobDescriptionSmall>
@@ -363,7 +363,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
+                <a href="http://calculator.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
@@ -384,7 +384,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
-                <a href="http://calculator.2theweb.co.uk" target="_blank" rel="noopener noreferrer">
+                <a href="http://calculator.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
                 </a>
@@ -399,7 +399,7 @@ class Job extends Component{
               </JobDescriptionSmallDark>
             </JobWrapper>
             <JobWrapper>
-            <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+            <a href="http://tipcalc.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
               <JobPicSmall src={jobPicture7} />
             </a>
             <JobDescriptionSmall>
@@ -409,7 +409,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTick}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://tipcalc.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLive}/>
                 {`   LIVE \n`}
                 </a>
@@ -428,7 +428,7 @@ class Job extends Component{
                 {`   DESIGNED \n`}
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
-                <a href="http://tip-calculator.2theweb.co.uk/" target="_blank" rel="noopener noreferrer">
+                <a href="http://tipcalc.jacekwitucki.com/" target="_blank" rel="noopener noreferrer">
                 <Icon width='14px' src={iconLiveDark}/>
                 {`   LIVE \n`}
                 </a>

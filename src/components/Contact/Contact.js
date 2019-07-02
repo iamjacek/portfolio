@@ -146,7 +146,7 @@ class Contact extends Component{
                   <MsgForm name="message"></MsgForm>
                   <Label>Message</Label>
                   <ButtonWrap>
-                  <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha>
+                  {/* <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha> */}
                   <ButtonForm type="submit">Send</ButtonForm>
                   </ButtonWrap>
                 </form>
