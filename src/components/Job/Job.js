@@ -77,8 +77,15 @@ class Job extends Component{
 
   //making sure all descriptions are off after mouse is out and even the curent description so we use  toggle on current element because current element is not in the array
   removeToggleDescriptionClass = (e) => {  
-    e.target.style.opacity = "0";
+    console.log(e.target.tagName);
+    if ( e.target.tagName === "A" ){
+     //prevent to link disapering
+    }else {
+      e.target.style.opacity = "0";
+    }
+    
   }
+ 
 
     render() {
       return(
@@ -125,10 +132,10 @@ class Job extends Component{
                 <Icon width='13px' src={iconTickDark}/>
                 {`   DEVELOPED \n`}
                 <a
-                  href="http://2theweb.jacekwitucki.com/" target="_blank" rel="noopener noreferrer"
+                  href="http://2theweb.jacekwitucki.com/" onMouseLeave={this.removeToggleDescriptionLinks} target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='14px' src={iconLiveDark}/>
-                {`   LIVE \n`}
+                {`   LIVE3 \n`}
                 </a>
                 <a
                   href="https://github.com/iamjacek/2thewebsite" target="_blank" rel="noopener noreferrer"
