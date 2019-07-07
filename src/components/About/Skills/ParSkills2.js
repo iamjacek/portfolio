@@ -21,6 +21,7 @@ const ParSkills = styled.p`
       bottom: 5vh;
       left: unset;
       right: 5vw;
+      font-weight: 400;
     }
 
     ${({theme}) => theme.media.tabletVertical} {
@@ -41,6 +42,9 @@ const ParSkills = styled.p`
       right: 170px;
       bottom: 20px;
       line-height: calc(1.5rem + 1vw);
+    }
+    ${({theme}) => theme.media.fourK} {
+      bottom: 150px;
     }
 `
 

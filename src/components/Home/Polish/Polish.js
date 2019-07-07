@@ -4,11 +4,12 @@ import styled from 'styled-components';
 const Polish = styled.h2`
     cursor: pointer;
     position: absolute;
-    top: 5vh;
+    top: 4vh;
     left: 12vw;
     margin: 0;
     font-family: 'Rubik', sans-serif;
     font-size: 2.2rem;
+    padding: 1vh;
     ${({theme}) => theme.media.laptop} {
       font-size: 1rem;
     }

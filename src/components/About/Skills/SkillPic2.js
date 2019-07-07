@@ -32,8 +32,8 @@ const SkillPic2 = styled.img`
       right: calc(100px + 5vw);
       bottom: 270px;
     }
-    ${({theme}) => theme.media.hd} {  
-      
+    ${({theme}) => theme.media.fourK} {  
+      bottom: 470px;
     }
 `
 

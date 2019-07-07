@@ -11,6 +11,7 @@ import styled from 'styled-components';
   left: 0; 
   right: 0; 
   top: 64vh;
+  padding: 1vw;
   margin-left: auto;
   margin-right: auto;
   ${({theme}) => theme.media.tabletVertical} {

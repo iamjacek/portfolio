@@ -20,7 +20,7 @@ const ContactInfo = styled.p`
         margin-right: auto;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 1.1vw;
+        font-size: 1.5vw;
     }
 
     ${({theme}) => theme.media.hd} {  

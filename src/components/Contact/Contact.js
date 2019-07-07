@@ -104,14 +104,13 @@ class Contact extends Component{
                 </Ocupation>
                 <Avatar src={avatarpic}/>
                 
-                  <FormButton onClick={ this.openSkills }>
+                  <FormButton id="buttonContact" onClick={ this.openSkills }>
                     Contact Form
                   </FormButton>
                 
                 
                 <ContactInfo>
-                  {`info@jacekwitucki.test
-    07777777777`}
+                  {`info@jacekwitucki.com`}
                 </ContactInfo>
                 <SocialContact>
                   <div>
@@ -131,23 +130,23 @@ class Contact extends Component{
               <FormWrapper>
                 
                 
-                <H1Form>CONTACT FORM</H1Form>
+                <H1Form id="h1contact">CONTACT FORM</H1Form>
                 <Line></Line>
-                <FormP>If you want to talk about project collaboration or just say hello fill this form below or mail to jacek@jacek.com</FormP>
+                <FormP id="formDescription">If you want to talk about project, collaboration or just say hello fill this form below or mail to info@jacekwitucki.com</FormP>
                 
                 <form name="contact"
-                      action="https://formspree.io/jake47s@gmail.com" 
+                      action="" 
                       method="POST" 
                 >
                   <NameForm type="text" name="name" />
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" id="nameLabel">Name</Label>
                   <EmailForm type="text" name="email" />
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" id="emailLabel">Email</Label>
                   <MsgForm name="message"></MsgForm>
-                  <Label>Message</Label>
+                  <Label  id="messageLabel">Message</Label>
                   <ButtonWrap>
                   {/* <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha> */}
-                  <ButtonForm type="submit">Send</ButtonForm>
+                  <ButtonForm type="submit"  id="submit">Send</ButtonForm>
                   </ButtonWrap>
                 </form>
                 <SocialContact margin>

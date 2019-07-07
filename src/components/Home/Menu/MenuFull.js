@@ -33,6 +33,7 @@ const MenuFull = styled.div`
         cursor: pointer;
         position: relative;
         text-align: center;
+        white-space: nowrap;
         transition: 200ms;
         margin-left: 5px;
         font-family: 'Rubik';

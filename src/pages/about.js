@@ -180,9 +180,11 @@ woobleOut = () => {
            
            <Frame>
              <AboutWrapper>
-             <H1>ABOUT ME</H1>
+             <H1  id="h1about"
+            >
+            ABOUT ME</H1>
             <TitleLine />
-             <Par>
+             <Par id="parabout">
 {`I am the full of passion 
 front-end web developer 
 interested in programming 
@@ -193,7 +195,7 @@ to make webpages alive.
 
 Video Games Fan!`}
             </Par>
-            <Button onClick={ this.openSkills } >Skills</Button>
+            <Button id="buttonAbout" onClick={ this.openSkills } >Tech</Button>
              </AboutWrapper>
              <SmallPic id="sPic" alt="Avatar" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut }></SmallPic>
            
@@ -205,11 +207,11 @@ Video Games Fan!`}
               <ArrowSkills src={arrowskills} onClick={ this.closeSkills }/>
               <TextContainer>                         
                 <H1Skills id="H1Skills1">DEVELOPER</H1Skills>
-                <ParSkills1>
+                <ParSkills1 id="skills1">
 {`Please find the technologies I work with:
 HTML5 CSS3 SASS
-JAVASCRIPT ES6/7
-REACT BOOTSTRAP jQUERY
+JAVASCRIPT ES6/7 jQUERY
+REACT BOOTSTRAP GATSBY
 GIT NPM NODEJS
 MACOS/LINUX CLI GULP WEBPACK PARCEL
 BEM`}
@@ -223,10 +225,11 @@ BEM`}
               </FlexPic>
               <TextContainer>                         
                 <H1Skills left id="H1Skills2">DESIGNER</H1Skills>
-                <ParSkills2>
+                <ParSkills2 id="skills2">
 {`On the top of that I create my 
 own design which you may find 
 handy so I can take care of everything!
+
 I work on: 
 ADOBE PS, GIMP, ADOBE XD, SKETCH `}
                 </ParSkills2>

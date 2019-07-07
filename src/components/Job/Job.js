@@ -90,7 +90,7 @@ class Job extends Component{
     render() {
       return(
        <LastWrapper id="sectionJob">
-          <H1 relative>JOB</H1>
+          <H1 relative id="h1job">JOB</H1>
           <TitleLine noMargin relative/>
           <Jobs>
             <JobWrapper>
@@ -135,7 +135,7 @@ class Job extends Component{
                   href="http://2theweb.jacekwitucki.com/" onMouseLeave={this.removeToggleDescriptionLinks} target="_blank" rel="noopener noreferrer"
                 >
                 <Icon width='14px' src={iconLiveDark}/>
-                {`   LIVE3 \n`}
+                {`   LIVE \n`}
                 </a>
                 <a
                   href="https://github.com/iamjacek/2thewebsite" target="_blank" rel="noopener noreferrer"

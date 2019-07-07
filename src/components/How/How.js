@@ -16,16 +16,16 @@ class How extends Component{
     render() {
       return(
        <LastWrapper FullHeight id="sectionHow">
-           <H1 relative>3 STEPS</H1>
+           <H1 relative id="h1how">3 STEPS</H1>
           <TitleLine noMargin relative BigMargin/>
-          <H2>Keep it simple</H2>
+          <H2 id="h2how">Keep it simple</H2>
           <HowWrapper>
           <HowContainer>
             <Number>
               01
             </Number>
-            <Title>Research</Title>
-            <Text>
+            <Title id="t1how">Research</Title>
+            <Text id="txt1how">
               Understand the client’s needs. 
               Collect all information. 
               Determine methods and techniques to fit all requirements. 
@@ -37,8 +37,8 @@ class How extends Component{
             <Number>
               02
             </Number>
-            <Title>Design</Title>
-            <Text>
+            <Title id="t2how">Design</Title>
+            <Text id="txt2how">
             Create a web design. Use examples, concepts and all details provided to prepare some sketches, wireframes and style guide so we can  finally start to prototype the finish product.
             </Text>
           </HowContainer>
@@ -47,9 +47,9 @@ class How extends Component{
             <Number>
               03
             </Number>
-            <Title>Develop</Title>
-            <Text>
-            If we have a design and it is accepted we may proceed to the next final phase which is web development. We are going to make web page alive in the browser using all utilities provided in designing phase.
+            <Title id="t3how" long>Development</Title>
+            <Text id="txt3how">
+            If we have the design and it is accepted we may proceed to the next final phase which is web development and deployment. We are going to make web page alive in the browser using all utilities provided in designing phase.
             </Text>
           </HowContainer>
           </HowWrapper>

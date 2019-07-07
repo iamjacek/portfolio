@@ -20,6 +20,7 @@ const ParSkills = styled.p`
       position: absolute;
       top: 10vh;
       left: 5vw;
+      font-weight: 400;
     }
  
     ${({theme}) => theme.media.tabletVertical} {
