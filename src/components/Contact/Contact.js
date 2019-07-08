@@ -81,9 +81,30 @@ class Contact extends Component{
   woobleOut = (e) => {
     e.target.removeAttribute("style")
   }
+//form handling
+    state = {
+      firstName: "",
+      email:"",
+      message:""
+    }
 
-    
-  
+  handleInputChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+
+    this.setState({
+        [name]: value,
+      })
+    }
+
+    handleSubmit = event => {
+      event.preventDefault()
+      alert(`Welcome ${this.state.firstName} your email is ${this.state.email} and a message:
+* * * * * * * * * * * * * * *
+${this.state.message}`)
+    }
+
     render() {
       return( 
         
@@ -135,14 +156,27 @@ class Contact extends Component{
                 <FormP id="formDescription">If you want to talk about project, collaboration or just say hello fill this form below or mail to info@jacekwitucki.com</FormP>
                 
                 <form name="contact"
-                      action="" 
-                      method="POST" 
+                      onSubmit={this.handleSubmit}
                 >
-                  <NameForm type="text" name="name" />
+                  <NameForm 
+                    type="text" 
+                    name="firstName" 
+                    value={this.state.firstName}
+                    onChange={this.handleInputChange}
+                  />
                   <Label htmlFor="name" id="nameLabel">Name</Label>
-                  <EmailForm type="text" name="email" />
+                  <EmailForm 
+                    type="text" 
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange} 
+                  />
                   <Label htmlFor="email" id="emailLabel">Email</Label>
-                  <MsgForm name="message"></MsgForm>
+                  <MsgForm 
+                    name="message"
+                    value={this.state.message}
+                    onChange={this.handleInputChange}
+                  ></MsgForm>
                   <Label  id="messageLabel">Message</Label>
                   <ButtonWrap>
                   {/* <Captcha className="g-recaptcha" data-sitekey="6LfVc6cUAAAAAEgE-m0EjWAIEMWiZaxI5P0A9nB7"></Captcha> */}
