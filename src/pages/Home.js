@@ -18,7 +18,7 @@ import JumpToTop from '../components/JumpToTop/JumpToTop';
 import VerticalLine from '../components/VerticalLine/VerticalLine';
 import VerticalLine2 from '../components/VerticalLine/VerticalLine2';
 import Layout from '../layout/Layout';
-import about from '../pages/about'
+
 
 
 
@@ -139,7 +139,7 @@ class Home extends Component{
     document.querySelector("#emailLabel").innerText = "Email"
     document.querySelector("#messageLabel").innerText = "Treść"
     document.querySelector("#submit").innerText = "Wyślij"
-    document.querySelector("#formDescription").innerText = "Chcesz do mnie napisać? Współpraca lub prywatny projekt? Proszę napisz w formularzu lub widomości email na info@jacekwitucki.com a odpiszę najszybciej jak będę mógł!"
+    document.querySelector("#formDescription").innerText = "Chcesz do mnie napisać? Współpraca lub prywatny projekt? Proszę napisz w formularzu lub wiadomości email na info@jacekwitucki.com a odpiszę najszybciej jak będę mógł!"
     document.querySelector("#parabout").innerHTML = `Jestem frontendowcem,
 z uporem maniaka tworzę
 strony internetowe!

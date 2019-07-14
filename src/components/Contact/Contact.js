@@ -38,6 +38,8 @@ import Arrowpic from "../../assets/arrow_skills.png"
 import VerticalLine from "../VerticalLine/VerticalLine"
 import VerticalLine2 from "../VerticalLine/VerticalLine2"
 
+import axios from 'axios';
+
 class Contact extends Component{
 
   openSkills = () => {
@@ -81,29 +83,8 @@ class Contact extends Component{
   woobleOut = (e) => {
     e.target.removeAttribute("style")
   }
-//form handling
-    state = {
-      firstName: "",
-      email:"",
-      message:""
-    }
 
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
 
-    this.setState({
-        [name]: value,
-      })
-    }
-
-    handleSubmit = event => {
-      event.preventDefault()
-      alert(`Welcome ${this.state.firstName} your email is ${this.state.email} and a message:
-* * * * * * * * * * * * * * *
-${this.state.message}`)
-    }
 
     render() {
       return( 
@@ -156,26 +137,26 @@ ${this.state.message}`)
                 <FormP id="formDescription">If you want to talk about project, collaboration or just say hello fill this form below or mail to info@jacekwitucki.com</FormP>
                 
                 <form name="contact"
-                      onSubmit={this.handleSubmit}
+                      method="post"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
                 >
                   <NameForm 
                     type="text" 
+                    name="bot-field" 
+                  />
+                  <NameForm 
+                    type="text" 
                     name="firstName" 
-                    value={this.state.firstName}
-                    onChange={this.handleInputChange}
                   />
                   <Label htmlFor="name" id="nameLabel">Name</Label>
                   <EmailForm 
                     type="text" 
                     name="email"
-                    value={this.state.email}
-                    onChange={this.handleInputChange} 
                   />
                   <Label htmlFor="email" id="emailLabel">Email</Label>
                   <MsgForm 
                     name="message"
-                    value={this.state.message}
-                    onChange={this.handleInputChange}
                   ></MsgForm>
                   <Label  id="messageLabel">Message</Label>
                   <ButtonWrap>

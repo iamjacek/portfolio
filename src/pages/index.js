@@ -3,7 +3,7 @@ import React, { Component }  from "react";
 
 
 import Home from './Home';
-import About from './About';
+import About from './about';
 import Last from './Last';
 
 
@@ -30,3 +30,5 @@ class IndexPage extends Component {
 };
 
 export default IndexPage;
+
+
