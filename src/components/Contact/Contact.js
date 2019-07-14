@@ -136,14 +136,14 @@ class Contact extends Component{
                 <Line></Line>
                 <FormP id="formDescription">If you want to talk about project, collaboration or just say hello fill this form below or mail to info@jacekwitucki.com</FormP>
                 
-                <form name="contact"
+                <form name="contact-form"
                       method="post"
                       data-netlify="true"
                       data-netlify-honeypot="bot-field"
                 >
                   <NameForm 
                     type="text" 
-                    name="bot-field" 
+                    name="name" 
                   />
                   <NameForm 
                     type="text" 
