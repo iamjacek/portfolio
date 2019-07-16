@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from 'styled-components';
 import scroll from '../assets/arrow.png';
 import social4 from '../assets/git.png';
 import social2 from '../assets/in.png';
@@ -20,29 +21,52 @@ import VerticalLine2 from '../components/VerticalLine/VerticalLine2';
 import Layout from '../layout/Layout';
 
 
-
+const ExtraWrapper = styled.div`
+width: 100%;
+height: 100%;
+transition: transform 250ms ease-out;
+`
 
 class Home extends Component{ 
 
-  //to control nav and hamburger menu and hide theme on resize event
+  //to control nav and hamburger menu and hide them on resize event
   handleResize = () => {
+        const bd2 = document.querySelector("#sectionAbout")
+        const bd3 = document.querySelector("#StyleWrapper3")
     if ( window.innerWidth > 1367 ) {
-      const a = document.querySelector("#MenuFull")
-      const bd = document.querySelector("#sectionHome")
-      a.style.margin = "0px"
-      bd.style.right = "0px"
+      if (this.ExtraWrapper.style.transform === "translateX(-250px)") {
+        this.hamburger.click();
+        this.ExtraWrapper.style.transform = "translateX(0px)"
+        bd2.style.transform = "translateX(0px)"
+        bd3.style.transform = "translateX(0px)"
+       
+      }
+      this.myMenu.style.transform = "translateX(0px)"
+      console.log("Duze okno")
     } else if ( window.innerWidth < 1367 ) {
-      const a = document.querySelector("#MenuFull")
-      const bd = document.querySelector("#sectionHome")
-      a.style.margin = "0px -250px 0px 0px"
-      bd.style.right = "0px"
+      this.ExtraWrapper.style.transform = "translateX(0px)"
+      bd2.style.transform = "translateX(0px)"
+      bd3.style.transform = "translateX(0px)"
+      this.myMenu.style.transform = "translateX(250px)"
+        console.log("Male okno")
+
+        //on resize menu is closed and X mark turns back to hamburger
+        const l1 = document.querySelector("#l1")
+        const l2 = document.querySelector("#l2")
+        const l3 = document.querySelector("#l3")
+        l2.style.opacity = "1"
+        l1.style.transform = "rotate(0deg) translate(0px, 0px)"
+        l3.style.transform = "rotate(0deg) translate(0px, 0px)"
+     
+      // this.myMenu.style.transform = "translateX(250px)"
+      // this.ExtraWrapper.style.transform = "translateX(0px)"
     }
   }
 
   toggleJumpToTop = () => {
     
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){ 
-      document.querySelector("#JumpToTop").style.opacity = "1";
+      document.querySelector("#JumpToTop").style.opacity = "1"; 
 
     } else if (document.body.scrollTop < 100 || document.documentElement.scrollTop < 100){
       document.querySelector("#JumpToTop").style.opacity = "0";
@@ -63,35 +87,48 @@ class Home extends Component{
 
   //toggle menu on tablets and phones and animate ham-menu icon
   toggleMenu = () => {
+    console.log("toogle is on")
       if ( window.innerWidth < 1367 ) {
-        const a = document.querySelector("#MenuFull")
-        const bd = document.querySelector("#sectionHome")
+        
+        
         const bd2 = document.querySelector("#sectionAbout")
         const bd3 = document.querySelector("#StyleWrapper3")
         const menu = document.querySelector("#Menu")
         const l1 = document.querySelector("#l1")
         const l2 = document.querySelector("#l2")
         const l3 = document.querySelector("#l3")
-        if (a.style.margin === "0px -250px 0px 0px" || a.style.margin === "") {
-          a.style.margin = "0px"
-          bd.style.right = "250px"
-          bd2.style.right = "250px"
-          bd3.style.right = "250px"
+        if (this.myMenu.style.transform === "translateX(250px)" || this.myMenu.style.transform === "") {
+          this.myMenu.style.transform = "translateX(0px)"
+          this.ExtraWrapper.style.transform = "translateX(-250px)"
+          bd2.style.transform = "translateX(-250px)"
+          bd3.style.transform = "translateX(-250px)"
           l2.style.opacity = "0"
           l1.style.transform = "rotate(45deg) translate(1px, 15px)"
           l3.style.transform = "rotate(-45deg) translate(0px, -15px)"
+          console.log("toogle is on")
           menu.style.position = "fixed";
-        } else if (a.style.margin === "0px"){
-          a.style.margin = "0px -250px 0px 0px"
-          bd.style.right = "0px"
-          bd2.style.right = "0px"
-          bd3.style.right = "0px"
+          // this.sectionHome.style.opacity = "1";
+          // this.sectionAbout.style.opacity = "1";
+          // this.sectionJob.style.opacity = "1";
+          // this.sectionHow.style.opacity = "1";
+          // this.sectionContact.style.opacity = "1";
+          
+        } else if (this.myMenu.style.transform === "translateX(0px)"){
+          this.myMenu.style.transform = "translateX(250px)"
+          this.ExtraWrapper.style.transform = "translateX(0px)"
+          bd2.style.transform = "translateX(0px)"
+          bd3.style.transform = "translateX(0px)"
           l2.style.opacity = "1"
           l1.style.transform = "rotate(0deg) translate(0px, 0px)"
           l3.style.transform = "rotate(0deg) translate(0px, 0px)"
           setTimeout(() => {
             menu.removeAttribute("style");
-          }, 600);
+            // this.sectionHome.style.opacity = "0";
+            // this.sectionAbout.style.opacity = "0";
+            // this.sectionJob.style.opacity = "0";
+            // this.sectionHow.style.opacity = "0";
+            // this.sectionContact.style.opacity = "0";
+          }, 250);
           
         }
     }
@@ -219,70 +256,98 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `
 
   render() {
     return(
-      <Layout>
-
-      <Background>
-      </Background>
-      <a href="#sectionHome">
-        <JumpToTop id="JumpToTop" src={JumpToToppic}/>
-      </a>
-
-        <Polish 
-          ref={Polish => {
-            this.myH2 = Polish;
-          }}
-          onMouseOver={ this.wooble } 
-          onMouseOut={ this.woobleOut } 
-          onClick={ this.languageSwitch }
-        >
-          PL
-        </Polish>
-
-        <Menu 
-          onClick={ this.toggleMenu } 
-          id="Menu" 
-        >
-          <Line id="l1"/>
-          <Line id="l2"/>
-          <Line id="l3"/>
-        </Menu>
-        <MenuFull 
-          ref={Menu => {
-            this.myMenu = Menu;
-          }}
-          id="MenuFull"
-        >
-          <ul>
-            <a href="#sectionHome" onClick={ this.collapseMenu }><li>Home</li></a>
-            <a href="#sectionAbout" onClick={ this.collapseMenu }><li>About</li></a>
-            <a href="#sectionJob" onClick={ this.collapseMenu }><li>Job</li></a>
-            <a href="#sectionHow" onClick={ this.collapseMenu }><li>How</li></a>
-            <a href="#sectionContact" onClick={ this.collapseMenu }><li>Contact</li></a>
-          </ul>
-        </MenuFull>
-        <Logo src={logo} alt="Logo" />
-        <VerticalLine />
-        <VerticalLine2 />
-        <a href="#sectionAbout">
-          <Scroll src={scroll} alt="arrow to scroll down"/>
+    <Layout>
+      <ExtraWrapper  ref={ExtraWrapper => {
+              this.ExtraWrapper = ExtraWrapper;
+            }}>
+        <Background>
+        </Background>
+        <a href="#sectionHome">
+          <JumpToTop id="JumpToTop" src={JumpToToppic}/>
         </a>
-        <Social>
-          <div>
-          <a href="https://twitter.com/JacekWitucki" target="_blank" rel="noopener noreferrer">
-            <img src={social1} className="socialWooble" alt="twitter" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+
+          <Polish 
+            ref={Polish => {
+              this.myH2 = Polish;
+            }}
+            onMouseOver={ this.wooble } 
+            onMouseOut={ this.woobleOut } 
+            onClick={ this.languageSwitch }
+          >
+            PL
+          </Polish>
+
+          
+          
+          <Logo src={logo} alt="Logo" />
+          <VerticalLine />
+          <VerticalLine2 />
+          <a href="#sectionAbout">
+            <Scroll src={scroll} alt="arrow to scroll down"/>
           </a>
-          <a href="https://www.linkedin.com/in/iamjacek/" target="_blank" rel="noopener noreferrer">
-            <img src={social2} className="socialWooble" alt="LinkedIn" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
-          </a>
-          <a href="https://www.instagram.com/i_am_jacek/" target="_blank" rel="noopener noreferrer">
-            <img src={social3} className="socialWooble" alt="Instagram" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
-          </a>
-          <a href="https://github.com/iamjacek" target="_blank" rel="noopener noreferrer">
-            <img src={social4} className="socialWooble" alt="Github" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
-          </a>
-          </div>                    
-        </Social>
-  
+          <Social>
+            <div>
+            <a href="https://twitter.com/JacekWitucki" target="_blank" rel="noopener noreferrer">
+              <img src={social1} className="socialWooble" alt="twitter" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            </a>
+            <a href="https://www.linkedin.com/in/iamjacek/" target="_blank" rel="noopener noreferrer">
+              <img src={social2} className="socialWooble" alt="LinkedIn" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            </a>
+            <a href="https://www.instagram.com/i_am_jacek/" target="_blank" rel="noopener noreferrer">
+              <img src={social3} className="socialWooble" alt="Instagram" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            </a>
+            <a href="https://github.com/iamjacek" target="_blank" rel="noopener noreferrer">
+              <img src={social4} className="socialWooble" alt="Github" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut } />
+            </a>
+            </div>                    
+          </Social>
+
+         
+      </ExtraWrapper>
+      <Menu 
+            onClick={ this.toggleMenu } 
+            id="Menu"
+            ref={MenuIcon => {
+              this.hamburger = MenuIcon;
+            }} 
+          >
+            <Line id="l1"/>
+            <Line id="l2"/>
+            <Line id="l3"/>
+          </Menu>
+      <MenuFull 
+            ref={Menu => {
+              this.myMenu = Menu;
+            }}
+          >
+            <ul>
+              <a 
+                ref={home => {
+                  this.sectionHome = home;
+                }}  
+                href="#sectionHome" 
+                onClick={ this.collapseMenu }
+                >
+                <li>Home</li>
+              </a>
+              <a  ref={about => {
+                  this.sectionAbout = about;
+                }}  
+                href="#sectionAbout" onClick={ this.collapseMenu }><li>About</li></a>
+              <a  ref={job => {
+                  this.sectionJob = job;
+                }}  
+                href="#sectionJob" onClick={ this.collapseMenu }><li>Job</li></a>
+              <a  ref={how => {
+                  this.sectionHow = how;
+                }}  
+                href="#sectionHow" onClick={ this.collapseMenu }><li>How</li></a>
+              <a  ref={contact => {
+                  this.sectionContact = contact;
+                }}  
+                href="#sectionContact" onClick={ this.collapseMenu }><li>Contact</li></a>
+            </ul>
+          </MenuFull>
     </Layout>
     )
   }             

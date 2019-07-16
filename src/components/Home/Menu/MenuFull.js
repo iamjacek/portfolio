@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const MenuFull = styled.div`
-    transition: 600ms margin ease-in;
+    transition: 250ms transform ease-out;
     display: flex;
     width: 250px;
     height: 100vh;
@@ -12,11 +12,12 @@ const MenuFull = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    margin: 0 -250px 0 0;
+    margin: 0;
     padding: 0;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    transform: translateX(250px);
     /* a styles */
     a {
     text-decoration: none;
