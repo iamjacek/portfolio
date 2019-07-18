@@ -4,7 +4,7 @@ import scroll from '../assets/arrow.png';
 import social4 from '../assets/git.png';
 import social2 from '../assets/in.png';
 import social3 from '../assets/insta.png';
-import JumpToToppic from '../assets/JumpToTop.png';
+
 import logo from '../assets/Logo.png';
 import social1 from '../assets/tw.png';
 import Background from '../components/Background/Background';
@@ -15,7 +15,7 @@ import MenuFull from '../components/Home/Menu/MenuFull';
 import Polish from '../components/Home/Polish/Polish';
 import Scroll from '../components/Home/Scroll/Scroll';
 import Social from '../components/Home/Social/Social';
-import JumpToTop from '../components/JumpToTop/JumpToTop';
+
 import VerticalLine from '../components/VerticalLine/VerticalLine';
 import VerticalLine2 from '../components/VerticalLine/VerticalLine2';
 import Layout from '../layout/Layout';
@@ -63,26 +63,18 @@ class Home extends Component{
     }
   }
 
-  toggleJumpToTop = () => {
-    
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){ 
-      document.querySelector("#JumpToTop").style.opacity = "1"; 
-
-    } else if (document.body.scrollTop < 100 || document.documentElement.scrollTop < 100){
-      document.querySelector("#JumpToTop").style.opacity = "0";
-    }
-  }
+ 
 
   componentDidMount() {
     this.handleResize();
     window.addEventListener('resize', this.handleResize.bind(this));
-    window.addEventListener('scroll', this.toggleJumpToTop);
+
   }
 
   componentWillUnmount() {
     this.handleResize();
     window.removeEventListener('resize', this.handleResize.bind(this));
-    window.removeEventListener('scroll', this.toggleJumpToTop);
+
   }
 
   //toggle menu on tablets and phones and animate ham-menu icon
@@ -257,14 +249,13 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `
   render() {
     return(
     <Layout>
+       
       <ExtraWrapper  ref={ExtraWrapper => {
               this.ExtraWrapper = ExtraWrapper;
             }}>
         <Background>
         </Background>
-        <a href="#sectionHome">
-          <JumpToTop id="JumpToTop" src={JumpToToppic}/>
-        </a>
+       
 
           <Polish 
             ref={Polish => {

@@ -6,7 +6,7 @@ const ArrowSkills = styled.img`
     top: 5vh;
     left: 5vw;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
     :hover{
       animation: wooble .25s ease-in-out infinite;
     }

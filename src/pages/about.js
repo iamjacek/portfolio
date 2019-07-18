@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import styled from 'styled-components';
 import LayoutAbout from '../layout/LayoutAbout'
 import Background2 from '../components/Background/Background2'
 import Background from '../components/Background/Background'
@@ -32,7 +33,9 @@ import H1Skills from '../components/About/Skills/H1Skills';
 import FlexPic from '../components/About/Skills/FlexPic';
 
 
-
+const AboutWrapperAll = styled.div`
+    transition: transform 250ms ease-out;
+`
 
 
 class About extends Component{
@@ -91,50 +94,58 @@ diagonalLineUnset = () => {
   document.querySelector("#Lineskill").style.opacity = 0;
 }
 
-openSkills = () => {
   
-  const skills = document.querySelector("#Skills")
-  
-  if (skills.style.left === "100vw" || skills.style.left ==="") {
-    skills.style.left = "0px";
+  openSkills = () => {
+    
+    
+    
+    if ( this.mySkills.style.transform === "translateX(100vw)" || this.mySkills.style.transform === "") {
+      console.log('click')
+      this.mySkills.style.transform = "translateX(0px)";
 
-   
-      skills.style.opacity = "1";
     
+      this.mySkills.style.opacity = "1";
+      
+      
+      const bd = document.querySelector("#sectionHome")
+      const bd3 = document.querySelector("#StyleWrapper3")
+        bd.style.transform = "translateX(-100vw)"
+        this.myWrapperAbout.style.transform = "translateX(-100vw)"
+        bd3.style.transform = "translateX(-100vw)"
+      if ( this.checkWidth() > 1023 ) {
+      } else {       
+        //rotate H1 with the line angle
+        this.rotateHeaders();
+      }
     
-    const bd = document.querySelector("#sectionHome")
-    const bd2 = document.querySelector("#sectionAbout")
-    const bd3 = document.querySelector("#StyleWrapper3")
-      bd.style.right = "85vw"
-      bd2.style.right = "85vw"
-      bd3.style.right = "85vw"
-    if ( this.checkWidth() > 1023 ) {
-    } else {       
-      //rotate H1 with the line angle
-      this.rotateHeaders();
+      this.diagonalLineSet();
     }
-   
-    this.diagonalLineSet();
   }
-}
 
-closeSkills = () => {
-  const a = document.querySelector("#Skills")
+  closeSkills = () => {
 
-  if ( a.style.left === "0px" ) {
-    const bd = document.querySelector("#sectionHome")
-    const bd2 = document.querySelector("#sectionAbout")
-    const bd3 = document.querySelector("#StyleWrapper3")
-    a.style.left = "100vw";
-    bd.style.right = "0px"
-    bd2.style.right = "0px"
-    bd3.style.right = "0px"
-    this.diagonalLineUnset();
-    setTimeout(() => {
-      a.removeAttribute('style');
-    }, 600);
+    if ( this.mySkills.style.transform === "translateX(0px)" ) {
+
+      //hide skills page
+      this.mySkills.style.transform = "translateX(100vw)";
+
+      //bring back all sections
+      const bd = document.querySelector("#sectionHome")
+      const bd3 = document.querySelector("#StyleWrapper3")
+
+      bd.style.transform = "translateX(0px)"
+      this.myWrapperAbout.style.transform = "translateX(0px)"
+      bd3.style.transform = "translateX(0px)"
+
+      this.diagonalLineUnset();
+
+      setTimeout(() => {
+        this.mySkills.removeAttribute('style');
+      }, 600);
+
+    }
   }
-}
+
 
 aboutPicture = () => {
   if ( window.innerWidth < 768) {
@@ -175,32 +186,12 @@ woobleOut = () => {
     render() {
         return(
           <LayoutAbout>
-        
-           <Background2 />
-           
-           <Frame>
-             <AboutWrapper>
-             <H1  id="h1about"
-            >
-            ABOUT ME</H1>
-            <TitleLine />
-             <Par id="parabout">
-{`I am the full of passion 
-front-end web developer 
-interested in programming 
-and web design for years.
-
-I love to code and I love 
-to make webpages alive.
-
-Video Games Fan!`}
-            </Par>
-            <Button id="buttonAbout" onClick={ this.openSkills } >Tech</Button>
-             </AboutWrapper>
-             <SmallPic id="sPic" alt="Avatar" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut }></SmallPic>
-           
-           </Frame>
-           <Skills id="Skills"> 
+           <Skills 
+              id="Skills"
+              ref={Skills => {
+                this.mySkills = Skills;
+              }}  
+           > 
            <Background isLeft/>
              <SkillsWrapper>
               
@@ -237,6 +228,37 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `}
              </SkillsWrapper>
              <LineSkills id="Lineskill"/>
            </Skills>
+          <AboutWrapperAll
+             ref={aboutWrapperAll => {
+              this.myWrapperAbout = aboutWrapperAll;
+            }}  
+          >
+            <Background2 />
+            
+            <Frame>
+              <AboutWrapper>
+              <H1  id="h1about">
+              ABOUT ME</H1>
+              <TitleLine />
+              <Par id="parabout">
+  {`I am the full of passion 
+  front-end web developer 
+  interested in programming 
+  and web design for years.
+
+  I love to code and I love 
+  to make webpages alive.
+
+  Video Games Fan!`}
+              </Par>
+              <Button id="buttonAbout" onClick={ this.openSkills } >Tech</Button>
+              </AboutWrapper>
+              <SmallPic id="sPic" alt="Avatar" onMouseOver={ this.wooble } onMouseOut={ this.woobleOut }></SmallPic>
+            
+            </Frame>
+
+           </AboutWrapperAll>
+           
            
       
         </LayoutAbout>

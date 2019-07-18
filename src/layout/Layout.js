@@ -39,7 +39,7 @@ const StyleWrapper = styled.div`
   background: ${({theme}) => theme.colors.gray};
   position: relative;
   overflow: hidden;
-  transition: 600ms all ease-in;
+  transition: 250ms all ease-out;
   ${({theme}) => theme.media.tablet} {
     min-height: 720px;
   }
