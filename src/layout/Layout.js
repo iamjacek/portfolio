@@ -35,11 +35,12 @@ const GlobalStyle = createGlobalStyle`
 
 const StyleWrapper = styled.div`
   height: 100vh;
+  width: 100vw;
   min-height: 568px;
   background: ${({theme}) => theme.colors.gray};
   position: relative;
   overflow: hidden;
-  transition: 250ms all ease-out;
+  transition: 250ms transform ease-out;
   ${({theme}) => theme.media.tablet} {
     min-height: 720px;
   }

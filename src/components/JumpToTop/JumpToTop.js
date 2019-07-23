@@ -5,7 +5,7 @@ const JumpToTop = styled.img`
         position: fixed;
         right: unset;
         bottom: unset;
-        top: 4vh;
+        top: 4.5vh;
         left: calc(50vw - 30px);
         width: 60px;
         margin: 0;

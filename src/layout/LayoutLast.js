@@ -36,7 +36,7 @@ const StyleWrapper = styled.div`
   position: relative;
   overflow: hidden;
   transition: 250ms all ease-out;
-  right: 0px;
+  width: 100vw;
   ${({theme}) => theme.media.tablet} {
     min-height: 720px;
   }

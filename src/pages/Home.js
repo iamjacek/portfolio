@@ -24,6 +24,9 @@ import Layout from '../layout/Layout';
 const ExtraWrapper = styled.div`
 width: 100%;
 height: 100%;
+position: absolute;
+top: 0;
+left: 0;
 transition: transform 250ms ease-out;
 `
 
@@ -42,14 +45,11 @@ class Home extends Component{
        
       }
       this.myMenu.style.transform = "translateX(0px)"
-      console.log("Duze okno")
     } else if ( window.innerWidth < 1367 ) {
       this.ExtraWrapper.style.transform = "translateX(0px)"
       bd2.style.transform = "translateX(0px)"
       bd3.style.transform = "translateX(0px)"
       this.myMenu.style.transform = "translateX(250px)"
-        console.log("Male okno")
-
         //on resize menu is closed and X mark turns back to hamburger
         const l1 = document.querySelector("#l1")
         const l2 = document.querySelector("#l2")
@@ -97,8 +97,7 @@ class Home extends Component{
           l2.style.opacity = "0"
           l1.style.transform = "rotate(45deg) translate(1px, 15px)"
           l3.style.transform = "rotate(-45deg) translate(0px, -15px)"
-          console.log("toogle is on")
-          menu.style.position = "fixed";
+          
           // this.sectionHome.style.opacity = "1";
           // this.sectionAbout.style.opacity = "1";
           // this.sectionJob.style.opacity = "1";
@@ -113,6 +112,7 @@ class Home extends Component{
           l2.style.opacity = "1"
           l1.style.transform = "rotate(0deg) translate(0px, 0px)"
           l3.style.transform = "rotate(0deg) translate(0px, 0px)"
+          console.log("toogle is going off")
           setTimeout(() => {
             menu.removeAttribute("style");
             // this.sectionHome.style.opacity = "0";
@@ -295,17 +295,7 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `
 
          
       </ExtraWrapper>
-      <Menu 
-            onClick={ this.toggleMenu } 
-            id="Menu"
-            ref={MenuIcon => {
-              this.hamburger = MenuIcon;
-            }} 
-          >
-            <Line id="l1"/>
-            <Line id="l2"/>
-            <Line id="l3"/>
-          </Menu>
+      
       <MenuFull 
             ref={Menu => {
               this.myMenu = Menu;
@@ -339,6 +329,17 @@ ADOBE PS, GIMP, ADOBE XD, SKETCH `
                 href="#sectionContact" onClick={ this.collapseMenu }><li>Contact</li></a>
             </ul>
           </MenuFull>
+          <Menu 
+            onClick={ this.toggleMenu } 
+            id="Menu"
+            ref={MenuIcon => {
+              this.hamburger = MenuIcon;
+            }} 
+          >
+            <Line id="l1"/>
+            <Line id="l2"/>
+            <Line id="l3"/>
+          </Menu>
     </Layout>
     )
   }             

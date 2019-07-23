@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
 const StyleWrapper = styled.div`
     height: 100vh;
+    width: 100vw;
     min-height: 720px;
     background: ${({theme}) => theme.colors.gray};
     position: relative;

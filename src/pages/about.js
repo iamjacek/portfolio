@@ -34,6 +34,8 @@ import FlexPic from '../components/About/Skills/FlexPic';
 
 
 const AboutWrapperAll = styled.div`
+    height: 100%;
+    width: 100%;
     transition: transform 250ms ease-out;
 `
 
@@ -96,43 +98,39 @@ diagonalLineUnset = () => {
 
   
   openSkills = () => {
-    
-    
-    
     if ( this.mySkills.style.transform === "translateX(100vw)" || this.mySkills.style.transform === "") {
-      console.log('click')
-      this.mySkills.style.transform = "translateX(0px)";
-
-    
+      //show skill page -> SLIDE IN
+      this.mySkills.style.transform = "translateX(0vw)";
       this.mySkills.style.opacity = "1";
-      
       
       const bd = document.querySelector("#sectionHome")
       const bd3 = document.querySelector("#StyleWrapper3")
+     
+      if ( this.checkWidth() > 1023 ) {
         bd.style.transform = "translateX(-100vw)"
         this.myWrapperAbout.style.transform = "translateX(-100vw)"
         bd3.style.transform = "translateX(-100vw)"
-      if ( this.checkWidth() > 1023 ) {
       } else {       
+       
+        bd.style.transform = "translateX(-100vw)"
+        this.myWrapperAbout.style.transform = "translateX(-85vw)"
+        bd3.style.transform = "translateX(-100vw)"
+        
         //rotate H1 with the line angle
         this.rotateHeaders();
       }
-    
       this.diagonalLineSet();
     }
   }
 
   closeSkills = () => {
-
-    if ( this.mySkills.style.transform === "translateX(0px)" ) {
-
+    if ( this.mySkills.style.transform === "translateX(0vw)" ) {
       //hide skills page
       this.mySkills.style.transform = "translateX(100vw)";
 
       //bring back all sections
       const bd = document.querySelector("#sectionHome")
       const bd3 = document.querySelector("#StyleWrapper3")
-
       bd.style.transform = "translateX(0px)"
       this.myWrapperAbout.style.transform = "translateX(0px)"
       bd3.style.transform = "translateX(0px)"
@@ -141,6 +139,7 @@ diagonalLineUnset = () => {
 
       setTimeout(() => {
         this.mySkills.removeAttribute('style');
+        this.mySkills.style.opacity = "0";
       }, 600);
 
     }

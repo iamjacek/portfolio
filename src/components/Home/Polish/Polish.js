@@ -7,9 +7,14 @@ const Polish = styled.h2`
     top: 4vh;
     left: 12vw;
     margin: 0;
+    height: 50px;
+    width: 60px;
+    padding: 10px;
     font-family: 'Rubik', sans-serif;
     font-size: 2.2rem;
-    padding: 1vh;
+    
+    text-align: center;
+    text
     ${({theme}) => theme.media.laptop} {
       font-size: 1rem;
     }

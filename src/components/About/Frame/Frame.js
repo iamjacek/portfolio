@@ -12,7 +12,7 @@ const Frame = styled.div`
     min-height: 690px;
     width: 82vw;
     background: linear-gradient(${({theme}) => theme.colors.white} -250%, ${({theme}) => theme.colors.gray} 80%);
-    margin: 4vh auto 0 auto;
+    margin: 40px auto 0 auto;
     border: 2px solid ${({theme}) => theme.colors.white};
     text-align: center;
     font-family: 'Rubik', sans-serif;
