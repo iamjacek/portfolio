@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    border: 0;
     font-family: 'Roboto', sans-serif;
     color: ${({theme}) => theme.colors.white};
     background: ${({theme}) => theme.colors.gray};
-    
   }
 
   *, *::before, *::after {
@@ -34,16 +34,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyleWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-  min-height: 568px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background: ${({theme}) => theme.colors.gray};
-  position: relative;
-  overflow: hidden;
-  transition: 250ms transform ease-out;
-  ${({theme}) => theme.media.tablet} {
-    min-height: 720px;
-  }
 `;
 
 
@@ -51,7 +46,7 @@ const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <StyleWrapper id="sectionHome">
+            <StyleWrapper>
                 {children}
             </StyleWrapper>
         </>

@@ -8,10 +8,9 @@ export const theme = {
         bold: 800,
     },
     media: {
-        tablet: '@media (min-width: 768px)',
-        tabletVertical: '@media (min-width: 1024px)',
-        laptop: '@media (min-width: 1368px)',
-        hd: '@media (min-width: 1920px)',
-        fourK: '@media (min-width: 4096px)',
+        tablet: '@media (min-width: 600px)',
+        tabletLandscape: '@media (min-width: 900px)',
+        desktop: '@media (min-width: 1200px)',
+        bigDesktop: '@media (min-width: 1800px)'
     }
 }
