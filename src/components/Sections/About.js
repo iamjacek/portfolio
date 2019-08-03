@@ -18,7 +18,10 @@ const Background = styled.div`
 
 const Wrapper = styled.div`
     width: 100vw;
+    max-width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 `
 

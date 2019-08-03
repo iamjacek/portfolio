@@ -15,7 +15,7 @@ const LogoWrapper = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 999;
+    z-index: 1;
 `
 
 const Logo = ({src, ... props}) => (

@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import Layout from "../../Layout/Layout";
 import styled from 'styled-components';
 
 import Logo from "../Logo/Logo"
-import Hamburger from "../Hamburger/Hamburger"
+
 import Icon from "../Icon/Icon"
+
+import Header from '../Header/Header'
 
 
 // ASSETS
@@ -22,7 +24,7 @@ const Background = styled.div`
     background: url('${img}');
     background-position: right bottom;
     background-size: cover; 
-    opacity: .07;
+    opacity: .01;
     position: absolute;
     top: 0;
     left: 0;
@@ -31,41 +33,14 @@ const Background = styled.div`
 
 const Wrapper = styled.div`
     width: 100vw;
-    max-width: 100%;
+    max-width: 100%;    
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
 `
 
-const Header = styled.nav`
-    height: 10%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0 20px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 99;
-    
-`
 
-const Lang = styled.button`
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 8px 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    color: ${({theme}) => theme.colors.white};
-    font-size: 1.2rem;
-    margin-bottom: 2px;
-`
 
 const Gap = styled.div`
     margin: 0;
@@ -81,6 +56,19 @@ const Gap = styled.div`
 const Scroll = styled.img`
     width: 70px;
     padding: 10px;
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+    @keyframes float {
+        0% {
+        transform: translatey(0px);
+        }
+        50% {
+        transform: translatey(-20px);
+        }
+        100% {
+        transform: translatey(0px);
+        }
+    }
 `
 
 const SocialWrapper = styled.div`
@@ -100,12 +88,7 @@ class Home extends React.Component {
             <Wrapper>
                 <Layout>
                    <Background />
-                     <Header>
-                        <Lang>
-                            PL
-                        </Lang>
-                        <Hamburger />
-                    </Header>
+                    <Header />
                     <Logo src={logoImg} />
                     <Gap>
                         <Scroll src={imgArrow}/>

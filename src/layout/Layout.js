@@ -24,6 +24,9 @@ const GlobalStyle = createGlobalStyle`
 
   html{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
   a {
