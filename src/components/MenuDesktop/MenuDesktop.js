@@ -16,16 +16,16 @@ const MenuWrapper = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
     }
 `
 
 const LinkMenu = styled.a`
     color: ${({theme}) => theme.colors.white};
     font-family: 'Rubik', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
-    padding: 20px;
+    padding: 2px 12px;
 
     &:hover{
         animation: woobleSocial .25s ease-in-out;

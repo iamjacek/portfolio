@@ -5,23 +5,25 @@ import styled from 'styled-components';
 
  const Button = styled.button`
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    bottom: -23px;
     background-color: ${({theme}) => theme.colors.gray};
-    border: 2px solid ${({theme}) => theme.colors.white};
-    width: 300px;
-    height: 50px;
+    border: none;
+    width: ${ props => props.width || "200px"};
+    height: ${ props => props.height || "60px"};
     font-family: 'Rubik', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: ${({theme}) => theme.colors.white};
+    background-color: ${({theme}) => theme.colors.red};
     transition: font-size 200ms ease-in, background-color 200ms ease-in, letter-spacing 200ms ease-in;
     letter-spacing: normal;
     :hover{
         background-color: ${({theme}) => theme.colors.red};
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         transition: all 200ms ease-in;
         letter-spacing: 1px;
         color: ${({theme}) => theme.colors.white};
-        border: 2px solid ${({theme}) => theme.colors.red};
+       
     }
   
     ${({theme}) => theme.media.tablet} {

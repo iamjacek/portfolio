@@ -24,7 +24,7 @@ const Background = styled.div`
     background: url('${img}');
     background-position: right bottom;
     background-size: cover; 
-    opacity: .01;
+    opacity: .25;
     position: absolute;
     top: 0;
     left: 0;

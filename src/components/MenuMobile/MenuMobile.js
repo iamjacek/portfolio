@@ -14,6 +14,7 @@ const MenuWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    padding-bottom: 12%;
     background: ${({theme}) => theme.colors.gray};
     display: flex;
     flex-direction: column;
@@ -27,8 +28,8 @@ const MenuWrapper = styled.div`
 const LinkMenu = styled.a`
     color: ${({theme}) => theme.colors.white};
     font-family: 'Rubik', sans-serif;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 3.5vh;
+    line-height: 2vh;
     padding: 20px;
     opacity: ${({isOpen}) => isOpen ? '1' : '0'};
     transition: opacity .2s .2s ease-out;

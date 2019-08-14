@@ -35,6 +35,10 @@ const Lang = styled.button`
     font-size: 1.2rem;
     margin-bottom: 2px;
 
+    ${({theme}) => theme.media.desktop} {
+        font-size: 1rem;
+    }
+
     &:hover{
         animation: woobleSocial .25s ease-in-out;
         color: ${({theme}) => theme.colors.red};
