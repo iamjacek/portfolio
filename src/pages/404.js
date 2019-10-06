@@ -2,7 +2,7 @@ import React, { Component }  from "react";
 import Layout from "../Layout/Layout";
 import styled from 'styled-components';
 import img from "../assets/background_home.jpg";
-import Button from "../components/Buttons/Button";
+import Button404 from "../components/Buttons/Button404"
 
 const Background = styled.div`
   height: 100%;
@@ -47,11 +47,21 @@ const Content = styled.div`
   }
 `
 
+const ButtonWrapper = styled.div`
+    position: absolute;
+    cursor: pointer;
+    bottom: 10%;
+    margin: 0 auto;
+    width: 200px;
+    height: 46px;
+    padding: 20px;
+`
+
 class PageNotFound extends Component {
 
-  goBack = () => {
-    window.history.back();
-  }
+    goBack = () => {
+        window.history.back();
+    }
 
 
   render() {
@@ -65,10 +75,12 @@ class PageNotFound extends Component {
             <Content>
               <h1>Page is not found!</h1>
               <p>You just hit a route that doesn&#39;t exist... go back or try later.</p>
-    
-              <Button onClick={ this.goBack }>
-                Go back
-              </Button>
+
+              <ButtonWrapper onClick ={ this.goBack }>
+              <Button404 />
+              </ButtonWrapper>
+              
+          
             </Content>
           </ContentWrapper>
         </Layout>

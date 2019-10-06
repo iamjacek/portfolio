@@ -29,6 +29,11 @@ const LogoWrapper = styled.div`
     position: relative;
     z-index: 1;
 
+    ${({theme}) => theme.media.tabletLandscape}{
+        transform: translateY(15%);
+        
+    }
+    
     
 `
 

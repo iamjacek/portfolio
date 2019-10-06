@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import Layout from "../../Layout/Layout";
 import styled from 'styled-components';
 import img from "../../assets/background_about.jpg";
 import AboutPicture from "../AboutPicture/AboutPicture";
-import Button from "../Buttons/Button"
-import ButtonMask from "../Buttons/ButtonMask"
+import Technology from "../Technology/Technology"
+import ButtonAbout from "../Buttons/ButtonAbout"
 
 const Background = styled.div`
     height: 100%;
@@ -97,37 +97,66 @@ const Frame = styled.div`
     }
 `
 
+const ButtonWrapper = styled.div`
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+    bottom: -23px;
+    margin: 0 auto;
+    width: 200px;
+    height: 46px;
+    padding: 20px;
+`
 
-class Home extends React.Component {
+class About extends Component {
 
-    render() {
-        return(
-            <Wrapper>
-                <Layout>
-                    <Background />
-                    <StyledWrapper>
-                        <Frame>
-                            <h2>ABOUT ME</h2>
-                            <AboutPicture />
-                            <p>
-                            I am the full of passion 
-                            front-end web developer 
-                            interested in programming 
-                            and web design for years.
-
-                            I love to code and I love 
-                            to make webpages alive.
-
-                            Video Games Fan!
-                            </p>
-                            <ButtonMask />
-                        </Frame>
-                    </StyledWrapper>
-                    
-                </Layout>
-            </Wrapper>
-        )
+    constructor(props){
+        super(props);
+        this.state = {isTechOpen: false}
     }
+
+    // //using react hooks for open state menu
+    // const [isTechOpen , setTechState] = useState(false);
+
+    // const toggleTech = () => {
+    //     setTechState(!isTechOpen);
+    // }   
+    toggleTech = () => {
+       this.setState({
+            isTechOpen: !this.state.isTechOpen
+       })
+    }     
+
+  render(){
+    return(
+        <Wrapper>
+            <Layout>
+                <Background />
+                <StyledWrapper>
+                    <Frame>
+                        <h2>ABOUT ME</h2>
+                        <AboutPicture />
+                        <p>
+                        I am the full of passion 
+                        front-end web developer 
+                        interested in programming 
+                        and web design for years.
+
+                        I love to code and make webpages alive.
+
+                        Video Games Fan!
+                        </p>
+                        <ButtonWrapper onClick={this.toggleTech}>
+                            <ButtonAbout />
+                        </ButtonWrapper>
+                    </Frame>
+                </StyledWrapper>
+                <Technology isOpen={this.state.isTechOpen} closeTech={this.toggleTech}/>
+            </Layout>
+        </Wrapper>
+    )
+  }
+        
 }
 
-export default Home;
+export default About;

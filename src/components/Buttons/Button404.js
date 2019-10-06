@@ -44,13 +44,14 @@ const ButtonWrapper = styled.div`
     }
     }
     position: absolute;
+    left: 0;
     cursor: pointer;
-    bottom: -23px;
+    bottom: 0;
     width: 200px;
     height: 46px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7vh;
+    margin-top: 0;
     overflow: hidden;
     border: 2px solid ${({theme}) => theme.colors.white};;
     font-family: 'Roboto', sans-serif;
@@ -99,12 +100,16 @@ const Mask = styled.span`
     letter-spacing: 1px;
 `
 
+
+
 const ButtonMask = () => {
+
+    
 
     return (
        <ButtonWrapper>
-           <Mask>Technology</Mask>
-           <button type="button" name="Hover">Technology</button>
+           <Mask>Go Back</Mask>
+           <button type="button" name="Hover">Go Back</button>
        </ButtonWrapper>
     )
 }

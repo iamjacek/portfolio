@@ -37,11 +37,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyleWrapper = styled.div`
+  position: relative;
   width: 100%;
-  height: 100%;
+
   margin: 0;
   padding: 0;
-  background: linear-gradient(to left,${({theme}) => theme.colors.gray}, #656464);
+  background: ${({theme}) => theme.colors.gray};
 `;
 
 

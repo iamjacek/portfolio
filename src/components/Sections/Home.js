@@ -24,11 +24,19 @@ const Background = styled.div`
     background: url('${img}');
     background-position: right bottom;
     background-size: cover; 
-    opacity: .25;
+    opacity: .4;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
+
+    ${({theme}) => theme.media.tabletLandscape}{
+        height: 76%;
+        width: 90%;
+        top: 12%;
+        left: 5%;
+        
+    }
 `
 
 const Wrapper = styled.div`
@@ -80,6 +88,8 @@ const SocialWrapper = styled.div`
     align-items: center;
     justify-content: space-around;
 `
+
+
 
 class Home extends React.Component {
 
