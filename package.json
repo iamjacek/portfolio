@@ -1,54 +1,53 @@
 {
-  "name": "jacekwituckiportfolio",
-  "private": true,
-  "homepage": "https://jacek-witucki-portfolio.netlify.com/",
-  "description": "A simple portfolio to show off some project and give some way of contact for potential customers",
-  "version": "0.1.0",
-  "author": "Jacek Witucki",
-  "dependencies": {
-    "axios": "^0.19.0",
-    "babel-plugin-styled-components": "^1.10.0",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "eslint-plugin-graphql": "^2.1.1",
-    "express": "^4.17.1",
-    "gatsby": "^2.3.16",
-    "gatsby-image": "^2.0.37",
-    "gatsby-plugin-manifest": "^2.0.28",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.32",
-    "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-sharp": "^2.1.17",
-    "graphql": "^14.5.7",
-    "nodemailer": "^6.2.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^4.2.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.17.0"
-  },
-  "keywords": [
-    "jacek witucki web development"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "node .",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iamjacek/Portfolio"
-  },
-  "bugs": {
-    "url": "https://github.com/iamjacek/Portfolio"
-  }
+	"name": "jacekwituckiportfolio",
+	"private": true,
+	"homepage": "https://jacek-witucki-portfolio.netlify.com/",
+	"description": "A simple portfolio to show off some project and give some way of contact for potential customers",
+	"version": "0.1.0",
+	"author": "Jacek Witucki",
+	"dependencies": {
+		"axios": "^0.19.0",
+		"babel-plugin-styled-components": "^1.10.0",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"eslint-plugin-graphql": "^2.1.1",
+		"express": "^4.17.1",
+		"gatsby": "^2.3.16",
+		"gatsby-image": "^2.0.37",
+		"gatsby-plugin-manifest": "^2.0.28",
+		"gatsby-plugin-offline": "^2.0.25",
+		"gatsby-plugin-react-helmet": "^3.0.12",
+		"gatsby-plugin-sharp": "^2.0.32",
+		"gatsby-plugin-styled-components": "^3.0.7",
+		"gatsby-source-filesystem": "^2.0.29",
+		"gatsby-transformer-sharp": "^2.1.17",
+		"graphql": "^14.5.7",
+		"nodemailer": "^6.2.1",
+
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-helmet": "^5.2.0",
+		"styled-components": "^4.2.0"
+	},
+	"devDependencies": {
+		"prettier": "^1.17.0"
+	},
+	"keywords": [ "jacek witucki web development" ],
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"format": "prettier --write src/**/*.{js,jsx}",
+		"start": "node .",
+		"serve": "gatsby serve",
+		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iamjacek/Portfolio"
+	},
+	"bugs": {
+		"url": "https://github.com/iamjacek/Portfolio"
+	}
 }

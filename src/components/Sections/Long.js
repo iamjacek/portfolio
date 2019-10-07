@@ -1,52 +1,41 @@
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import LayoutLast from '../../Layout/LayoutLong';
+import img from '../../assets/city.jpg';
 
-import React, { Component } from 'react'
-import styled from "styled-components"
-import LayoutLast from '../../Layout/LayoutLong'
-import img from '../../assets/city.jpg'
-import Job from './Job'
-import How from './How'
-import Contact from './Contact'
+import Job from './Job';
+import How from './How';
+import Contact from './Contact';
 // import How from '../components/How/How'
 // import Contact from '../components/Contact/Contact'
-
-
 
 const Background = styled.div`
     height: 100%;
     width: 100%;
     background: url('${img}') bottom right;
-    background-size: cover; 
+    background-size: cover;
     opacity: .03;
     position: absolute;
     top: 0;
     left: 0; 
-`
+`;
 
-class Long extends Component{
+class Long extends Component {
+	
+	
+			 render() {
+		return (
+			<LayoutLast>
+				<Background />
 
+				<Job />
 
-  
-    render() {
-        return(
-          <LayoutLast>
-        
-           <Background />
-           
-           <Job />
-         
-           
+				<How />
 
-           <How />
-             
-            
-
-           <Contact id="sectionContact"/>
-            
-           
-      
-        </LayoutLast>
-        )
-      }
+				<Contact id='sectionContact' />
+			</LayoutLast>
+		);
+	}
 }
 
 export default Long;
