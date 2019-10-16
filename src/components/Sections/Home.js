@@ -22,7 +22,7 @@ const Background = styled.div`
     height: 100%;
     width: 100%;
     background: url('${img}');
-    background-position: right bottom;
+    background-position: right 70%;
     background-size: cover; 
     opacity: .4;
     position: absolute;
@@ -31,10 +31,10 @@ const Background = styled.div`
     z-index: 0;
 
     ${({theme}) => theme.media.tabletLandscape}{
-        height: 76%;
-        width: 90%;
-        top: 12%;
-        left: 5%;
+        height: 78%;
+        width: 100%;
+        top: 10%;
+        left: 0;
         
     }
 `
@@ -96,7 +96,7 @@ class Home extends React.Component {
     render() {
         return(
             <Wrapper>
-                <Layout>
+                <Layout gradient>
                    <Background />
                     <Header />
                     <Logo src={logoImg} />

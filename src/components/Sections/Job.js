@@ -54,10 +54,10 @@ const StyledWrapper = styled.div`
 	${({ theme }) => theme.media.tablet} {
 		padding: 0 10%;
 	}
-    ${({ theme }) => theme.media.desktop} {
+	${({ theme }) => theme.media.desktop} {
 		padding: 0 20%;
 	}
-    ${({ theme }) => theme.media.bigDesktop} {
+	${({ theme }) => theme.media.bigDesktop} {
 		padding: 0 25%;
 	}
 `;
@@ -108,8 +108,11 @@ const Info = styled.a`
 	background: ${({ theme }) => theme.colors.gray};
 	color: #fff;
 	text-transform: uppercase;
-	opacity: 0;
-	transition: all 0.2s ease-in-out;
+	opacity: 1;
+	transition: transform 0.2s ease-in-out .2s, background 0.3s ease-in-out 0s;
+	:hover {
+		background: ${({ theme }) => theme.colors.red};
+	}
 `;
 
 const Picture = styled.img`
@@ -174,9 +177,7 @@ const View = styled.div`
 		transition-delay: .1s;
 	}
 	:hover ${Info} {
-		opacity: 1;
 		transform: ${({ long }) => (long ? 'translateY(-210px)' : 'translateY(-225px)')};
-		transition-delay: .2s;
 	}
 	:hover ${IconWrapper} {
 		opacity: 1;
