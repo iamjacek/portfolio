@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
 	padding: 0 20px;
 	border: none;
 	background: ${({ hidden }) =>
-		hidden ? 'linear-gradient(to right, #545353 -200%, transparent, #545353 300%)' : 'linear-gradient(to right, #545353 -30%, transparent, #545353 130%)'};
+		hidden ? 'none' : 'linear-gradient(to right, #545353 -30%, transparent, #545353 130%)'};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -108,7 +108,7 @@ const Header = () => {
 	checkBackground();
 
 	return (
-		<HeaderWrapper hidden={isNavbarHidden}>
+		<HeaderWrapper id="myHeader" hidden={isNavbarHidden}>
 			<MenuMobile isOpen={isMenuOpen} />
 			<Lang>PL</Lang>
 			<MenuDesktop />

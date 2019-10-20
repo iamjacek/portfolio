@@ -41,7 +41,7 @@ const StyleWrapper = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to left,${({theme}) => theme.colors.gray}, ${({theme}) => theme.colors.red} 900%);
+  background: linear-gradient(to left,black  -150%,${({theme}) => theme.colors.gray} 150%);
 `;
 
 
