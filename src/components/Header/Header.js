@@ -71,10 +71,11 @@ const HeaderBackground = styled.div`
 	width: 100%;
 	height: 100%;
 	left: 0;
-	top: 0%;
-	opacity: ${({ hidden }) => hidden ? 0 : 1};
+	top: 0;
+	display: block;
+	transform: ${({ hidden }) => hidden ? 'translateY(-110%)' : 'translateY(0%)'};
 	background: linear-gradient(to right, #545353 -30%, transparent, #545353 130%);
-	transition: opacity 1s ease-in-out;
+    transition: transform .2s ease-in;
 `;
 
 const Header = () => {
@@ -93,16 +94,16 @@ const Header = () => {
 	};
 
 	const checkBackground = () => {
-		var isScrolling;
+		let isScrolling;
 
 		window.addEventListener(
 			'scroll',
-			function(event) {
+			() =>  {
 				// Clear our timeout throughout the scroll
 				window.clearTimeout(isScrolling);
 
 				// Set a timeout to run after scrolling ends
-				isScrolling = setTimeout(function() {
+				isScrolling = setTimeout( () => {
 					let y = window.scrollY;
 
 					if (y > 0 && isNavbarHidden === true) {
@@ -119,7 +120,7 @@ const Header = () => {
 	checkBackground();
 
 	return (
-		<HeaderWrapper id='myHeader'>
+		<HeaderWrapper id='myHeader' >
 			<HeaderBackground hidden={isNavbarHidden} />
 			<MenuMobile isOpen={isMenuOpen} />
 			<Lang>PL</Lang>

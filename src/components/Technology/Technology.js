@@ -111,7 +111,7 @@ class Technology extends Component {
 
 	componentDidMount() {
 		tl
-			.fromTo('.myField', 2, { x: '-300%' }, { x: '5%', ease: Power2.easeInOut }, {delay: 0.5})
+			.fromTo('.myField', 2, { x: '-300%' }, { x: '0%', ease: Power2.easeInOut }, {delay: 0.5})
 			.fromTo('.myField2', 2, { x: '300%' }, { x: '0%', ease: Power2.easeInOut }, "-=2");
 	}
 	componentDidUpdate() {

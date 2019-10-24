@@ -115,7 +115,7 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<Wrapper>
+			<Wrapper id="Home">
 				<Layout gradient>
                 
 					<Background ref={(div) => (this.myBackground = div)} />

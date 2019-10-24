@@ -5,6 +5,7 @@ import img from '../../assets/background_about.jpg';
 import AboutPicture from '../AboutPicture/AboutPicture';
 import Technology from '../Technology/Technology';
 import ButtonAbout from '../Buttons/ButtonAbout';
+import { TimelineMax } from 'gsap';
 
 const Background = styled.div`
     height: 100%;
@@ -107,6 +108,8 @@ const ButtonWrapper = styled.div`
 	padding: 20px;
 `;
 
+const tl = new TimelineMax({ paused: true });
+
 class About extends Component {
 	constructor(props) {
 		super(props);
@@ -119,20 +122,58 @@ class About extends Component {
 		});
 	};
 
+
+
+	
+	componentDidMount() {
+		tl.fromTo(myFrame, 2, { opacity: "0" }, { opacity: '1', ease: Power2.easeInOut })
+		.fromTo(myPic, 2, { opacity: "0", transform: "scale(0)" }, { opacity: '1', transform: "scale(1)", ease: Power2.easeInOut }, "-=1")
+		.fromTo(myTitle, 2, { opacity: "0" }, { opacity: '1', ease: Power2.easeInOut }, "-=3")
+		
+		.fromTo(myText, 2, { opacity: "0", x: 100 }, { opacity: '1', x:0, ease: Power2.easeInOut }, "-=2")
+		.fromTo(myButton, 3, { opacity: "0", x: -100 }, { opacity: '1', x:0,  ease: Power2.easeInOut }, "-=2")
+		
+
+		const checkHeight = () => {
+			let isScrolling;
+			const sectionHeight = document.querySelector("#Home").offsetHeight;
+			window.addEventListener(
+				'scroll',
+				() => {
+					// Clear our timeout throughout the scroll
+					window.clearTimeout(isScrolling);
+	
+					// Set a timeout to run after scrolling ends
+					isScrolling = setTimeout( () =>  {
+						const y = window.scrollY;
+						console.log(y + " " + sectionHeight)
+						if ( y > sectionHeight/10*3){
+							tl.resume();
+						}
+					}, 60);
+				},
+				false
+			);
+		};
+
+		checkHeight();
+	}
+	
+
 	render() {
 		return (
 			<Wrapper>
 				<Layout>
 					<Background />
 					<StyledWrapper>
-						<Frame>
-							<h2>ABOUT ME</h2>
-							<AboutPicture />
-							<p>
+						<Frame id="myFrame">
+							<h2 id="myTitle">ABOUT ME</h2>
+							<AboutPicture id="myPic"/>
+							<p id="myText">
 								I am the full of passion front-end web developer interested in programming and web
 								design for years. I love to code and make webpages alive. Video Games Fan!
 							</p>
-							<ButtonWrapper onClick={this.toggleTech}>
+							<ButtonWrapper id="myButton" onClick={this.toggleTech}>
 								<ButtonAbout />
 							</ButtonWrapper>
 						</Frame>
