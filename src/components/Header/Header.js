@@ -13,8 +13,7 @@ const HeaderWrapper = styled.div`
 	margin: 0;
 	padding: 0 20px;
 	border: none;
-	background: ${({ hidden }) =>
-		hidden ? 'none' : 'linear-gradient(to right, #545353 -30%, transparent, #545353 130%)'};
+	background: none;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -66,6 +65,18 @@ const Lang = styled.button`
 	}
 `;
 
+const HeaderBackground = styled.div`
+	padding: 0 20px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0%;
+	opacity: ${({ hidden }) => hidden ? 0 : 1};
+	background: linear-gradient(to right, #545353 -30%, transparent, #545353 130%);
+	transition: opacity 1s ease-in-out;
+`;
+
 const Header = () => {
 	//using react hooks for open state menu
 	const [ isMenuOpen, setMenuState ] = useState(false);
@@ -74,7 +85,7 @@ const Header = () => {
 		setMenuState(!isMenuOpen);
 	};
 
-	//hide or show navbar background (increase visibility)
+	//hide or show navbar background (to increase visibility)
 	const [ isNavbarHidden, setNavbarBackground ] = useState(true);
 
 	const toggleNavbarBackground = () => {
@@ -108,7 +119,8 @@ const Header = () => {
 	checkBackground();
 
 	return (
-		<HeaderWrapper id="myHeader" hidden={isNavbarHidden}>
+		<HeaderWrapper id='myHeader'>
+			<HeaderBackground hidden={isNavbarHidden} />
 			<MenuMobile isOpen={isMenuOpen} />
 			<Lang>PL</Lang>
 			<MenuDesktop />

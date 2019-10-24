@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { TimelineMax } from 'gsap';
+
 import img from '../../assets/background_home.jpg';
 
 import ButtonTech from '../Buttons/ButtonTech';
@@ -31,7 +33,7 @@ const StyledWrapper = styled.div`
 	z-index: 97;
 	transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
 	transition: transform .2s ease-out;
-
+	overflow: hidden;
 	p {
 		padding: 10%;
 	}
@@ -100,8 +102,25 @@ const Group = styled.div`
 		box-sizing: border-box;
 	}
 `;
-
+const tl = new TimelineMax({ paused: true });
 class Technology extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { isOpen: this.props.isOpen };
+	}
+
+	componentDidMount() {
+		tl
+			.fromTo('.myField', 2, { x: '-300%' }, { x: '5%', ease: Power2.easeInOut }, {delay: 0.5})
+			.fromTo('.myField2', 2, { x: '300%' }, { x: '0%', ease: Power2.easeInOut }, "-=2");
+	}
+	componentDidUpdate() {
+		if (this.props.isOpen) {
+			tl.resume();
+		}
+	}
+	
+
 	render() {
 		return (
 			<StyledWrapper isOpen={this.props.isOpen}>
@@ -109,27 +128,27 @@ class Technology extends Component {
 
 				<Frame>
 					<Group>
-						<Field>HTML5</Field>
-						<Field>CSS3</Field>
-						<Field>SASS</Field>
-						<Field>BOOTSTRAP</Field>
+						<Field className='myField'>HTML5</Field>
+						<Field className='myField'>CSS3</Field>
+						<Field className='myField'>SASS</Field>
+						<Field className='myField'>BOOTSTRAP</Field>
 					</Group>
 
 					<Group>
-						<Field>JAVASCRIPT</Field>
-						<Field>REACT</Field>
-						<Field>GATSBY</Field>
-						<Field>STYLED-COMPONENTS</Field>
+						<Field className='myField'>JAVASCRIPT</Field>
+						<Field className='myField'>REACT</Field>
+						<Field className='myField'>GATSBY</Field>
+						<Field className='myField'>STYLED-COMPONENTS</Field>
 					</Group>
 
 					<Group>
-						<Field>CLI & GIT</Field>
-						<Field>GULP, WEBPACK, PARCEL</Field>
-						<Field>BEM</Field>
+						<Field className='myField2'>CLI & GIT</Field>
+						<Field className='myField2'>GULP, WEBPACK, PARCEL</Field>
+						<Field className='myField2'>BEM</Field>
 					</Group>
 
 					<Group>
-						<Field>PS, GIMP, ADOBE XD, SKETCH</Field>
+						<Field className='myField2'>PS, GIMP, ADOBE XD, SKETCH</Field>
 					</Group>
 
 					<ButtonWrapper onClick={this.props.closeTech}>
