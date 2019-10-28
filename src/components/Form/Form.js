@@ -6,6 +6,7 @@ import ButtonTech from '../Buttons/ButtonTech';
 const StyledWrapper = styled.div`
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	min-height: 800px;
@@ -89,7 +90,6 @@ const NameForm = styled.input`
 	${({ theme }) => theme.media.tabletLandscape} {
 		max-width: 600px;
 	}
-	
 `;
 
 const Label = styled.label`
@@ -190,7 +190,7 @@ const ButtonForm = styled.button`
 	height: 40px;
 	margin-top: 20px;
 	font-family: 'Rubik', sans-serif;
-	font-size: 1.1rem;
+	font-size: .9rem;
 	color: ${({ theme }) => theme.colors.white};
 	letter-spacing: normal;
 	transition: all 200ms ease-in;
@@ -198,7 +198,7 @@ const ButtonForm = styled.button`
 
 	:hover {
 		background-color: ${({ theme }) => theme.colors.red};
-		font-size: 1.4rem;
+		font-size: 1rem;
 		transition: all 200ms ease-in;
 		letter-spacing: 1px;
 		color: ${({ theme }) => theme.colors.white};

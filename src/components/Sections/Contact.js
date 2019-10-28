@@ -45,11 +45,7 @@ const StyledWrapper = styled.div`
 	justify-content: space-around;
 	${({ theme }) => theme.media.tabletLandscape} {
 		padding-top: 15vh;
-		max-width: 1024px;
 		margin: 0 auto;
-	}
-	${({ theme }) => theme.media.desktop} {
-		max-width: 100vw;
 	}
 `;
 
@@ -255,6 +251,8 @@ const IMG = styled.img`
 	}
 `;
 
+const tl = new TimelineMax({paused: true});
+
 class Contact extends Component {
 	constructor(props) {
 		super(props);
@@ -267,35 +265,67 @@ class Contact extends Component {
 		});
 	};
 
+	componentDidMount() {
+		tl.from('.logoContact', 1, { scale: 0.9, y: -20, opacity: 0, delay: 0.5, ease: Elastic.easeOut })
+		.from('#avatar', 1.4, { opacity: 0, ease: Power2.easeInOut }, "-=1")
+		.staggerFrom('.contactContent', 1, { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut }, '0.2', "-=1");
+		const checkHeight = () => {
+			let isScrolling;
+			const homeHeight = document.querySelector('#Home').offsetHeight;
+			const aboutHeight = document.querySelector('#About').offsetHeight;
+			const jobHeight = document.querySelector('#Job').offsetHeight;
+			const howHeight = document.querySelector('#How').offsetHeight;
+			window.addEventListener(
+				'scroll',
+				() => {
+					// Clear our timeout throughout the scroll
+					window.clearTimeout(isScrolling);
+
+					// Set a timeout to run after scrolling ends
+					isScrolling = setTimeout(() => {
+						const y = window.scrollY;
+
+						if (y > (homeHeight + aboutHeight + jobHeight +howHeight) / 10 * 9) {
+							tl.resume();
+						}
+					}, 60);
+				},
+				false
+			);
+		};
+
+		checkHeight();
+	}
+
 	render() {
 		return (
 			<Wrapper>
 				<StyledWrapper>
-					<LogoContact src={logopic} />
-					<LogoContactDouble>
+					<LogoContact src={logopic} className="logoContact"/>
+					<LogoContactDouble className="logoContact">
 						<IMG src={logoh1} />
 						<IMG src={logoh2} right />
 					</LogoContactDouble>
 
-					<Name>Jacek Witucki</Name>
-					<Ocupation>Web Development</Ocupation>
+					<Name className="contactContent">Jacek Witucki</Name>
+					<Ocupation className="contactContent">Web Development</Ocupation>
 
-					<Avatar src={avatarpic} />
+					<Avatar src={avatarpic} id="avatar"/>
 
-					<ButtonWrapper onClick={this.toggleForm}>
+					<ButtonWrapper onClick={this.toggleForm} className="contactContent">
 						<ButtonContact />
 					</ButtonWrapper>
 
-					<ContactInfo>{`info@jacekwitucki.com`}</ContactInfo>
+					<ContactInfo className="contactContent">{`info@jacekwitucki.com`}</ContactInfo>
 
-					<SocialWrapper>
+					<SocialWrapper className="contactContent">
 						<Icon src={icon1} />
 						<Icon src={icon2} />
 						<Icon src={icon3} />
 						<Icon src={icon4} />
 					</SocialWrapper>
 
-					<Footer>Copyright © 2019 Jacek Witucki</Footer>
+					<Footer className="contactContent">Copyright © 2019 Jacek Witucki</Footer>
 
 					<Form isOpen={this.state.isFormOpen} closeForm={this.toggleForm} />
 				</StyledWrapper>

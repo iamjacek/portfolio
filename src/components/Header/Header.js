@@ -21,7 +21,9 @@ const HeaderWrapper = styled.div`
 	${({ theme }) => theme.media.desktop} {
 		padding: 0 100px;
 	}
-	transition: all 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+	opacity: 0;
 `;
 
 const Lang = styled.button`
@@ -75,7 +77,8 @@ const HeaderBackground = styled.div`
 	display: block;
 	transform: ${({ hidden }) => hidden ? 'translateY(-110%)' : 'translateY(0%)'};
 	background: linear-gradient(to right, #545353 -30%, transparent, #545353 130%);
-    transition: transform .2s ease-in;
+    transition: all .6s ease-in;
+	
 `;
 
 const Header = () => {

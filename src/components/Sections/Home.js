@@ -86,52 +86,56 @@ const SocialWrapper = styled.div`
 `;
 
 const Gradient = styled.div`
-    width: 100%;
-    height: 100%;
-    background: #F0EBE7;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-`
+	width: 100%;
+	height: 100%;
+	background: #f0ebe7;
+	position: absolute;
+	top: 0;
+	left: 0;
+`;
 
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.myBackground = null;
+		this.myLoading = null;
 	}
 
-    //animate home page using gsap, all ids with prefix "my" has been created for gsap's purposes
+	//animate home page using gsap, all ids with prefix "my" has been created for gsap's purposes
+	componentWillMount() {}
 	componentDidMount() {
 		const tl = new TimelineMax();
-		tl.fromTo(this.myBackground, 2, { height: '0%' }, { height: '80%', ease: Power2.easeInOut })
-            .fromTo(this.myBackground, 2, { width: '74%' }, { width: '100%', ease: Power2.easeInOut })
-            .fromTo(myGradient, 4, { opacity: 1 }, { opacity: 0, ease: Power2.easeInOut }, "-=4")
-            .fromTo(myLogo, 2, { y:20, opacity: 0 }, { y:0, opacity: .8, ease: Power2.easeInOut }, '-=2')            
-            .fromTo(mySocials, 2, { y:20, opacity: 0 }, { y:0, opacity: 1, ease: Power2.easeInOut }, '-=2') 
-            .fromTo(myArrow, 2, {  opacity: 0 }, {  opacity: 1, ease: Power2.easeInOut }, '-=2') 
-            .fromTo(myHeader, 2, { y: -20, opacity: 0 }, {  y: 0, opacity: 1, ease: Power2.easeInOut }, '-=2.5') 
+		tl
+			.fromTo(myLogo, 1.3, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
+			.to(myLogo, 0.5, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
+			.fromTo(myLogo, 1, { scale: 0.8 }, { scale: 1, ease: Power2.easeInOut }, '-=0.8')
+			.fromTo(this.myBackground, 1, { height: '0%' }, { height: '80%', ease: Power2.easeInOut }, '+1')
+			.fromTo(this.myBackground, 1, { width: '74%' }, { width: '100%', ease: Power2.easeInOut })
+			.fromTo(myGradient, 3, { opacity: 1 }, { opacity: 0, ease: Power2.easeInOut }, '-=4')
+			.fromTo(mySocials, 2, { y: 20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeInOut }, '-=1.5')
+			.fromTo(myArrow, 2, { opacity: 0 }, { opacity: 1, ease: Power2.easeInOut }, '-=2')
+			.fromTo(myHeader, 2, { y: -20, opacity: 0 }, { y: 0, opacity: 1, ease: Power2.easeInOut }, '-=3');
 	}
 
 	render() {
 		return (
-			<Wrapper id="Home">
+			<Wrapper id='Home'>
 				<Layout gradient>
-                
-					<Background ref={(div) => (this.myBackground = div)} />
-					<Header  />
 					<Logo src={logoImg} id='myLogo' />
-                   
+
+					<Background ref={(div) => (this.myBackground = div)} />
+					<Header />
+
 					<Gap>
-						<Scroll src={imgArrow} id="myArrow"/>
+						<Scroll src={imgArrow} id='myArrow' />
 					</Gap>
-					<SocialWrapper id="mySocials" >
+					<SocialWrapper id='mySocials'>
 						<Icon src={icon1} />
 						<Icon src={icon2} />
 						<Icon src={icon3} />
 						<Icon src={icon4} />
 					</SocialWrapper>
-                    <Gradient id="myGradient"/>
+					<Gradient id='myGradient' />
 				</Layout>
 			</Wrapper>
 		);

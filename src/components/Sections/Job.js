@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { TimelineMax, Elastic } from 'gsap';
 
 //images for portfolio job section
 import pic1 from '../../assets/2theweb.png';
@@ -186,23 +187,58 @@ const View = styled.div`
 	}
 `;
 
+const tl = new TimelineMax({ paused: true });
+
 class Job extends Component {
 	constructor(props) {
 		super(props);
 	}
 
+	componentDidMount() {
+		tl.staggerFrom('.jobExample', 1, { scale: 0.9, y: -200, opacity: 0, ease: Elastic.easeOut }, '0.2');
+
+		const checkHeight = () => {
+			let isScrolling;
+			const homeHeight = document.querySelector('#Home').offsetHeight;
+			const aboutHeight = document.querySelector('#About').offsetHeight;
+			window.addEventListener(
+				'scroll',
+				() => {
+					// Clear our timeout throughout the scroll
+					window.clearTimeout(isScrolling);
+
+					// Set a timeout to run after scrolling ends
+					isScrolling = setTimeout(() => {
+						const y = window.scrollY;
+
+						if (y > (homeHeight + aboutHeight) / 10 * 7) {
+							tl.resume();
+						}
+					}, 60);
+				},
+				false
+			);
+		};
+
+		checkHeight();
+	}
+
 	render() {
 		return (
-			<Wrapper>
+			<Wrapper id="Job">
 				<StyledWrapper>
 					{/* 1st */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic1} />
 						<Mask />
 						<h2>2theWeb</h2>
 						<p>Beautiful design and simplicity always get you back best results.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info tabIndex='-1' href='#'>
+							PAGE
+						</Info>
+						<Info tabIndex='-1' href='#'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />
@@ -213,13 +249,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 2nd */}
-					<View long>
+					<View long className='jobExample'>
 						<Picture src={pic2} />
 						<Mask />
 						<h2>Portfolio</h2>
 						<p>Created to show my work. It gives you an idea what I do.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='2px' src={iconHtml} />
 							<Icon width='15px' margin='2px' src={iconNetlify} />
@@ -233,13 +273,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 3rd */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic3} />
 						<Mask />
 						<h2>Gym website</h2>
 						<p>A way to give an information to your customers even to the mobile ones.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />
@@ -251,13 +295,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 4th */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic4} />
 						<Mask />
 						<h2>To do list</h2>
 						<p>Simple to do list if bitting off more than you can chew.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />
@@ -266,13 +314,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 5th */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic5} />
 						<Mask />
 						<h2>tic tac toe</h2>
 						<p>Every one played it before. Right? You can decide wheter you starting or computer.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />
@@ -280,13 +332,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 6th */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic6} />
 						<Mask />
 						<h2>Calculator</h2>
 						<p>This basic calculator is simple react app. It can combine few different operations.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />
@@ -295,13 +351,17 @@ class Job extends Component {
 						</IconWrapper>
 					</View>
 					{/* 7th */}
-					<View>
+					<View className='jobExample'>
 						<Picture src={pic7} />
 						<Mask />
 						<h2>Tip calc</h2>
 						<p>For waiters only! None of them like when 7 people is asking to split a huge bill.</p>
-						<Info href='#'>PAGE</Info>
-						<Info href='#'>CODE</Info>
+						<Info href='#' tabIndex='-1'>
+							PAGE
+						</Info>
+						<Info href='#' tabIndex='-1'>
+							CODE
+						</Info>
 						<IconWrapper>
 							<Icon width='14px' margin='3px' src={iconHtml} />
 							<Icon width='15px' margin='3px' src={iconCss} />

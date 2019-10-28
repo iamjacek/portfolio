@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { TimelineMax } from 'gsap';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -21,9 +22,16 @@ const StyledWrapper = styled.div`
 	padding: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	flex-direction: column;
 `;
+
+const HeaderHow = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;	
+`
 
 const H1 = styled.h1`
 	color: ${({ theme }) => theme.colors.white};
@@ -34,10 +42,10 @@ const H1 = styled.h1`
 		font-size: 1.3rem;
 	}
 	${({ theme }) => theme.media.tabletLandscape} {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 	}
 	${({ theme }) => theme.media.desktop} {
-		font-size: 1.8rem;
+		font-size: 2.2rem;
 	}
 	${({ theme }) => theme.media.bigDesktop} {
 		font-size: 2.5rem;
@@ -166,22 +174,55 @@ const Text = styled.p`
 	}
 `;
 
+const tl = new TimelineMax({ paused: true });
+
 class How extends Component {
 	constructor(props) {
 		super(props);
 	}
-	
+
+	componentDidMount() {
+		tl.staggerFrom('.howContent', 2, { scale: 0.9, y: -20, opacity: 0, ease: Elastic.easeOut }, '0.2');
+
+		const checkHeight = () => {
+			let isScrolling;
+			const homeHeight = document.querySelector('#Home').offsetHeight;
+			const aboutHeight = document.querySelector('#About').offsetHeight;
+			const jobHeight = document.querySelector('#Job').offsetHeight;
+			window.addEventListener(
+				'scroll',
+				() => {
+					// Clear our timeout throughout the scroll
+					window.clearTimeout(isScrolling);
+
+					// Set a timeout to run after scrolling ends
+					isScrolling = setTimeout(() => {
+						const y = window.scrollY;
+
+						if (y > (homeHeight + aboutHeight + jobHeight) / 10 * 8) {
+							tl.resume();
+						}
+					}, 60);
+				},
+				false
+			);
+		};
+
+		checkHeight();
+	}
 
 	render() {
 		return (
-			<Wrapper>
+			<Wrapper id='How'>
 				<StyledWrapper>
-					<H1>3 STEPS</H1>
-					<TitleLine />
-					<H2>Keep it simple</H2>
+					<HeaderHow>
+						<H1 className='howContent'>3 STEPS</H1>
+						<TitleLine className='howContent' />
+						<H2 className='howContent'>Keep it simple</H2>
+					</HeaderHow>
 
 					<HowWrapper>
-						<HowContainer>
+						<HowContainer className='howContent'>
 							<Number>01</Number>
 							<Title>Research</Title>
 							<Text>
@@ -190,7 +231,7 @@ class How extends Component {
 							</Text>
 						</HowContainer>
 
-						<HowContainer>
+						<HowContainer className='howContent'>
 							<Number longer>02</Number>
 							<Title>Design</Title>
 							<Text>
@@ -200,7 +241,7 @@ class How extends Component {
 							</Text>
 						</HowContainer>
 
-						<HowContainer>
+						<HowContainer className='howContent'>
 							<Number longer>03</Number>
 							<Title>Development</Title>
 							<Text>

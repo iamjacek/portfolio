@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, Elastic } from 'gsap'
 
 import img from '../../assets/background_home.jpg';
 
@@ -110,9 +110,7 @@ class Technology extends Component {
 	}
 
 	componentDidMount() {
-		tl
-			.fromTo('.myField', 2, { x: '-300%' }, { x: '0%', ease: Power2.easeInOut }, {delay: 0.5})
-			.fromTo('.myField2', 2, { x: '300%' }, { x: '0%', ease: Power2.easeInOut }, "-=2");
+		tl.fromTo('.myField2', 2, { x: '300%' }, { x: '0%', ease: Power2.easeInOut }, "-=2");
 	}
 	componentDidUpdate() {
 		if (this.props.isOpen) {
