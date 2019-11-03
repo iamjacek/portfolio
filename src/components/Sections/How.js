@@ -30,8 +30,8 @@ const HeaderHow = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;	
-`
+	flex-direction: column;
+`;
 
 const H1 = styled.h1`
 	color: ${({ theme }) => theme.colors.white};
@@ -182,7 +182,7 @@ class How extends Component {
 	}
 
 	componentDidMount() {
-		tl.staggerFrom('.howContent', 2, { scale: 0.9, y: -20, opacity: 0, ease: Elastic.easeOut }, '0.2');
+		tl.staggerFrom('.howContent', 1, { scale: 0.9, y: -20, opacity: 0, ease: Elastic.easeOut }, '0.3');
 
 		const checkHeight = () => {
 			let isScrolling;

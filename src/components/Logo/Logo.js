@@ -16,6 +16,12 @@ const IMG = styled.img`
 			transform: translate(-6px, 0px) scale(1.025);
 		}
 	}
+    ${({ theme }) => theme.media.tablet} {
+		height: 40%;
+	}
+    ${({ theme }) => theme.media.desktop} {
+		height: 50%;
+	}
 `;
 
 const LogoWrapper = styled.div`

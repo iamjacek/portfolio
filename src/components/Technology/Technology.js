@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: ${({ theme }) => theme.colors.gray};
+	background: linear-gradient(to left,black  -220%,${({theme}) => theme.colors.gray} 150%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -77,7 +77,7 @@ const Frame = styled.div`
 	height: 80%;
 	width: 80%;
 	border: 3px solid ${({ theme }) => theme.colors.white};
-	background: linear-gradient(${({ theme }) => theme.colors.white} -250%, ${({ theme }) => theme.colors.gray} 80%);
+	background: linear-gradient(to left, black  -280%,${({theme}) => theme.colors.gray} 150%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -110,7 +110,8 @@ class Technology extends Component {
 	}
 
 	componentDidMount() {
-		tl.fromTo('.myField2', 2, { x: '300%' }, { x: '0%', ease: Power2.easeInOut }, "-=2");
+		tl.staggerFrom('.myField', 0.3, { x: '-500%', delay: 0.5, ease: Expo.easeOut }, '0.2')
+		.staggerFrom('.myField2', 0.5, { x: '500%', ease: Expo.easeOut }, '0.2', "-=1.5");
 	}
 	componentDidUpdate() {
 		if (this.props.isOpen) {

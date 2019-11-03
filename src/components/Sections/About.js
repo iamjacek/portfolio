@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import Layout from '../../Layout/Layout';
 import styled from 'styled-components';
 import img from '../../assets/background_about.jpg';
@@ -48,7 +48,7 @@ const Frame = styled.div`
 	height: 80%;
 	width: 80%;
 	border: 3px solid ${({ theme }) => theme.colors.white};
-	background: linear-gradient(${({ theme }) => theme.colors.white} -250%, ${({ theme }) => theme.colors.gray} 80%);
+	background: linear-gradient(to left, black  -280%,${({theme}) => theme.colors.gray} 150%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -133,8 +133,9 @@ class About extends Component {
 				'-=1'
 			)
 			.fromTo(myTitle, 2, { opacity: '0' }, { opacity: '1', ease: Power2.easeInOut }, '-=3')
-			.fromTo(myText, 2, { opacity: '0', x: 100 }, { opacity: '1', x: 0, ease: Power2.easeInOut }, '-=2')
-			.fromTo(myButton, 2, { opacity: '0' }, { opacity: '1', ease: Power2.easeInOut }, '-=2');
+			.fromTo(myButton, 2, { scaleY: 0 }, { scaleY: 1, ease: Expo.easeOut }, '-=1')
+			.fromTo(myText, 2, { opacity: '0', x: 100 }, { opacity: '1', x: 0, ease: Power2.easeInOut }, '-=1');
+			
 
 		const checkHeight = () => {
 			let isScrolling;

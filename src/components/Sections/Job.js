@@ -195,7 +195,7 @@ class Job extends Component {
 	}
 
 	componentDidMount() {
-		tl.staggerFrom('.jobExample', 1, { scale: 0.9, y: -200, opacity: 0, ease: Elastic.easeOut }, '0.2');
+		tl.staggerFrom('.jobExample', 0.6, { scale: 0.9, y: -200, opacity: 0, ease: Elastic.easeOut }, '0.2');
 
 		const checkHeight = () => {
 			let isScrolling;
@@ -211,7 +211,7 @@ class Job extends Component {
 					isScrolling = setTimeout(() => {
 						const y = window.scrollY;
 
-						if (y > (homeHeight + aboutHeight) / 10 * 7) {
+						if (y > (homeHeight + aboutHeight) / 10 * 6.5) {
 							tl.resume();
 						}
 					}, 60);
@@ -233,10 +233,10 @@ class Job extends Component {
 						<Mask />
 						<h2>2theWeb</h2>
 						<p>Beautiful design and simplicity always get you back best results.</p>
-						<Info tabIndex='-1' href='#'>
+						<Info tabIndex='-1' target="_blank" target="_blank" href='http://2theweb.rf.gd'>
 							PAGE
 						</Info>
-						<Info tabIndex='-1' href='#'>
+						<Info tabIndex='-1' target="_blank" href='https://github.com/iamjacek/2thewebsite'>
 							CODE
 						</Info>
 						<IconWrapper>
@@ -254,10 +254,10 @@ class Job extends Component {
 						<Mask />
 						<h2>Portfolio</h2>
 						<p>Created to show my work. It gives you an idea what I do.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://www.jacekwitucki.com' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/Portfolio' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>
@@ -278,10 +278,10 @@ class Job extends Component {
 						<Mask />
 						<h2>Gym website</h2>
 						<p>A way to give an information to your customers even to the mobile ones.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='http://gymsite.rf.gd' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/gymsite' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>
@@ -300,10 +300,10 @@ class Job extends Component {
 						<Mask />
 						<h2>To do list</h2>
 						<p>Simple to do list if bitting off more than you can chew.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='http://todojackproject.epizy.com' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/todo-list' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>
@@ -319,10 +319,10 @@ class Job extends Component {
 						<Mask />
 						<h2>tic tac toe</h2>
 						<p>Every one played it before. Right? You can decide wheter you starting or computer.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='http://tictactoejackproject.rf.gd' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/tic-tac-toe' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>
@@ -337,10 +337,10 @@ class Job extends Component {
 						<Mask />
 						<h2>Calculator</h2>
 						<p>This basic calculator is simple react app. It can combine few different operations.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='http://calculatorjackproject.rf.gd' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/simple-calc-react' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>
@@ -356,10 +356,10 @@ class Job extends Component {
 						<Mask />
 						<h2>Tip calc</h2>
 						<p>For waiters only! None of them like when 7 people is asking to split a huge bill.</p>
-						<Info href='#' tabIndex='-1'>
+						<Info href='http://tipcalc.epizy.com' tabIndex='-1' target="_blank">
 							PAGE
 						</Info>
-						<Info href='#' tabIndex='-1'>
+						<Info href='https://github.com/iamjacek/tip-calculator' tabIndex='-1' target="_blank">
 							CODE
 						</Info>
 						<IconWrapper>

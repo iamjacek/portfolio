@@ -25,7 +25,7 @@ const Background = styled.div`
     background: url('${img}');
     background-position: right 80%;
     background-size: cover; 
-    opacity: .25;
+    opacity: .1;
     position: absolute;
     margin: auto;
     position: absolute;
@@ -102,7 +102,7 @@ class Home extends React.Component {
 	}
 
 	//animate home page using gsap, all ids with prefix "my" has been created for gsap's purposes
-	componentWillMount() {}
+
 	componentDidMount() {
 		const tl = new TimelineMax();
 		tl
@@ -127,7 +127,7 @@ class Home extends React.Component {
 					<Header />
 
 					<Gap>
-						<Scroll src={imgArrow} id='myArrow' />
+						<Scroll src={imgArrow} id='myArrow' href={'#About'}/>
 					</Gap>
 					<SocialWrapper id='mySocials'>
 						<Icon src={icon1} />

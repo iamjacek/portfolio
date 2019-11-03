@@ -9,14 +9,15 @@ const StyledWrapper = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
+	padding-top: 25px;
 	min-height: 800px;
-	background: ${({ theme }) => theme.colors.gray};
+	background: linear-gradient(to left,black  -220%,${({theme}) => theme.colors.gray} 150%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	z-index: 97;
-	transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+	transform: translateX(${({ isOpen }) => isOpen ? '0' : '-100%'});
 	transition: transform .2s ease-out;
 
 	p {
@@ -41,7 +42,7 @@ const Frame = styled.div`
 	height: 80%;
 	width: 80%;
 	border: 3px solid ${({ theme }) => theme.colors.white};
-	background: linear-gradient(${({ theme }) => theme.colors.white} -250%, ${({ theme }) => theme.colors.gray} 80%);
+	background: linear-gradient(to left, black  -280%,${({theme}) => theme.colors.gray} 150%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

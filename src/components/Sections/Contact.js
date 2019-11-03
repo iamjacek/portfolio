@@ -268,7 +268,8 @@ class Contact extends Component {
 	componentDidMount() {
 		tl.from('.logoContact', 1, { scale: 0.9, y: -20, opacity: 0, delay: 0.5, ease: Elastic.easeOut })
 		.from('#avatar', 1.4, { opacity: 0, ease: Power2.easeInOut }, "-=1")
-		.staggerFrom('.contactContent', 1, { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut }, '0.2', "-=1");
+		.staggerFrom('.contactContent', 1, { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut }, '0.2', "-=1")
+		.from('.contactContent2', 1, { scale: 0.9, y: 200, ease: Elastic.easeOut });
 		const checkHeight = () => {
 			let isScrolling;
 			const homeHeight = document.querySelector('#Home').offsetHeight;
@@ -299,7 +300,7 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<Wrapper>
+			<Wrapper id="Contact">
 				<StyledWrapper>
 					<LogoContact src={logopic} className="logoContact"/>
 					<LogoContactDouble className="logoContact">
@@ -316,16 +317,16 @@ class Contact extends Component {
 						<ButtonContact />
 					</ButtonWrapper>
 
-					<ContactInfo className="contactContent">{`info@jacekwitucki.com`}</ContactInfo>
+					<ContactInfo className="contactContent2">{`info@jacekwitucki.com`}</ContactInfo>
 
-					<SocialWrapper className="contactContent">
+					<SocialWrapper className="contactContent2">
 						<Icon src={icon1} />
 						<Icon src={icon2} />
 						<Icon src={icon3} />
 						<Icon src={icon4} />
 					</SocialWrapper>
 
-					<Footer className="contactContent">Copyright © 2019 Jacek Witucki</Footer>
+					<Footer className="contactContent2">Copyright © 2019 Jacek Witucki</Footer>
 
 					<Form isOpen={this.state.isFormOpen} closeForm={this.toggleForm} />
 				</StyledWrapper>

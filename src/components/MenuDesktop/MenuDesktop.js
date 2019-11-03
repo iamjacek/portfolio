@@ -20,7 +20,7 @@ const MenuWrapper = styled.div`
     }
 `
 
-const LinkMenu = styled.a`
+const LinkMenuDesktop = styled.a`
     color: ${({theme}) => theme.colors.white};
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
@@ -35,19 +35,17 @@ const LinkMenu = styled.a`
 
 
 
-const menuItems = [
-    'Home',
-    'About',
-    'Job',
-    'How',
-    'Contact'
-]
+
 
 const MenuDesktop = () => (
     <MenuWrapper>
-       {menuItems.map( item => (
-           <LinkMenu key={item}>{item}</LinkMenu>
-       ))}
+       
+           <LinkMenuDesktop href={'#Home'}>Home</LinkMenuDesktop>
+           <LinkMenuDesktop href={'#About'}>About</LinkMenuDesktop>
+           <LinkMenuDesktop href={'#Job'}>Job</LinkMenuDesktop>
+           <LinkMenuDesktop href={'#How'}>How</LinkMenuDesktop>
+           <LinkMenuDesktop href={'#Contact'}>Contact</LinkMenuDesktop>
+
        
     </MenuWrapper>
 )

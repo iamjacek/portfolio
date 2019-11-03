@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     color: ${({theme}) => theme.colors.white};
     background: ${({theme}) => theme.colors.gray};
+    min-height: 100vh;
+    height: 100%;
+    min-height: -webkit-fill-available;
   }
 
   *, *::before, *::after {
@@ -27,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
+    height: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+   
   }
 
   a {

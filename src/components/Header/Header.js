@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
 	opacity: 0;
 `;
 
-const Lang = styled.button`
+const Faq = styled.button`
 	cursor: pointer;
 	border: none;
 	background: none;
@@ -67,19 +67,6 @@ const Lang = styled.button`
 	}
 `;
 
-const HeaderBackground = styled.div`
-	padding: 0 20px;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	display: block;
-	transform: ${({ hidden }) => hidden ? 'translateY(-110%)' : 'translateY(0%)'};
-	background: linear-gradient(to right, #545353 -30%, transparent, #545353 130%);
-    transition: all .6s ease-in;
-	
-`;
 
 const Header = () => {
 	//using react hooks for open state menu
@@ -89,46 +76,13 @@ const Header = () => {
 		setMenuState(!isMenuOpen);
 	};
 
-	//hide or show navbar background (to increase visibility)
-	const [ isNavbarHidden, setNavbarBackground ] = useState(true);
-
-	const toggleNavbarBackground = () => {
-		setNavbarBackground(!isNavbarHidden);
-	};
-
-	const checkBackground = () => {
-		let isScrolling;
-
-		window.addEventListener(
-			'scroll',
-			() =>  {
-				// Clear our timeout throughout the scroll
-				window.clearTimeout(isScrolling);
-
-				// Set a timeout to run after scrolling ends
-				isScrolling = setTimeout( () => {
-					let y = window.scrollY;
-
-					if (y > 0 && isNavbarHidden === true) {
-						toggleNavbarBackground();
-					} else if (y === 0 && isNavbarHidden === false) {
-						toggleNavbarBackground();
-					}
-				}, 60);
-			},
-			false
-		);
-	};
-
-	checkBackground();
-
 	return (
 		<HeaderWrapper id='myHeader' >
-			<HeaderBackground hidden={isNavbarHidden} />
-			<MenuMobile isOpen={isMenuOpen} />
-			<Lang>PL</Lang>
+			
+			<MenuMobile isOpen={isMenuOpen} handleClick={toggleMobileMenu}/>
+			<Faq tabIndex='-1'></Faq>
 			<MenuDesktop />
-			<Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+			<Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} id="hamburger" />
 		</HeaderWrapper>
 	);
 };

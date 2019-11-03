@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     color: ${({theme}) => theme.colors.white};
     background: ${({theme}) => theme.colors.gray};
+    height: 100%;
   }
 
   *, *::before, *::after {
@@ -27,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
+    height: 100%;
   }
 
   a {
@@ -42,7 +44,7 @@ const StyleWrapper = styled.div`
 
   margin: 0;
   padding: 0;
-  background: ${({theme}) => theme.colors.gray};
+  background: linear-gradient(to left,black  -220%,${({theme}) => theme.colors.gray} 150%);
 `;
 
 
