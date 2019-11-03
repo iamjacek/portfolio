@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Icon from '../Icon/Icon';
-
+import { TimelineMax } from 'gsap';
 import icon1 from '../../assets/tw.png';
 import icon2 from '../../assets/in.png';
 import icon3 from '../../assets/insta.png';
