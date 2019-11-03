@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
+import { TimelineMax } from 'gsap';
 import Form from '../Form/Form';
 import Icon from '../Icon/Icon';
 
