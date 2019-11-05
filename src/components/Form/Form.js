@@ -225,7 +225,7 @@ class Form extends Component {
 							mail to info@jacekwitucki.com
 						</p>
 						<form name='contact-form' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
-							{/* <NameForm type='text' name='name' /> */}
+							<NameForm type='text' name='name' />
 							<NameForm type='text' name='firstName' />
 							<Label htmlFor='name' id='nameLabel'>
 								Name
