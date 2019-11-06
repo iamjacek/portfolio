@@ -61,7 +61,7 @@ const Scroll = styled.img`
 	width: 70px;
 	padding: 10px;
 	cursor: pointer;
-	transform: translateY(200px);
+	transform: translateY(200%);
 	animation: float 2s ease-in-out infinite;
 	@keyframes float {
 		0% {
