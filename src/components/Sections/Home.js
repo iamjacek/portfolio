@@ -61,7 +61,7 @@ const Scroll = styled.img`
 	width: 70px;
 	padding: 10px;
 	cursor: pointer;
-	transform: translateY(200%);
+	opacity: 0;
 	animation: float 2s ease-in-out infinite;
 	@keyframes float {
 		0% {
@@ -129,7 +129,7 @@ class Home extends React.Component {
 					<Header />
 
 					<Gap>
-						<Scroll src={imgArrow} id='myArrow' href={'#About'}/>
+						<Scroll src={imgArrow} id='myArrow' href='#About'/>
 					</Gap>
 					<SocialWrapper id='mySocials'>
 						<Icon src={icon1}  href="https://twitter.com/JacekWitucki" target="_blank"/>
