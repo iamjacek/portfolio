@@ -61,6 +61,7 @@ const Scroll = styled.img`
 	width: 70px;
 	padding: 10px;
 	cursor: pointer;
+	transform: translateY(200px);
 	animation: float 2s ease-in-out infinite;
 	@keyframes float {
 		0% {
@@ -83,6 +84,7 @@ const SocialWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	transform: translateY(200px);
 `;
 
 const Gradient = styled.div`

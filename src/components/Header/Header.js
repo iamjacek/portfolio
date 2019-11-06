@@ -27,7 +27,6 @@ const HeaderWrapper = styled.div`
 `;
 
 const Faq = styled.button`
-	cursor: pointer;
 	border: none;
 	background: none;
 	margin: 0;
