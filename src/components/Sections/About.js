@@ -7,6 +7,7 @@ import Technology from '../Technology/Technology';
 import ButtonAbout from '../Buttons/ButtonAbout';
 import { TimelineMax } from 'gsap';
 
+
 const Background = styled.div`
     height: 100%;
     width: 100%;
@@ -107,6 +108,8 @@ const ButtonWrapper = styled.div`
 	height: 46px;
 	padding: 20px;
 `;
+
+
 
 const tl = new TimelineMax({ paused: true });
 

@@ -4,6 +4,10 @@ import { TimelineMax } from 'gsap';
 import Form from '../Form/Form';
 import Icon from '../Icon/Icon';
 
+//animate portret picture
+import diss from '../../assets/heightMap.png';
+import hoverEffect from 'hover-effect';
+
 //icons
 import icon1 from '../../assets/tw.png';
 import icon2 from '../../assets/in.png';
@@ -49,13 +53,18 @@ const StyledWrapper = styled.div`
 	}
 `;
 
-const Avatar = styled.img`
+const AvatarWrapper = styled.div`
 	width: calc(130px + 10vw);
 	margin: 10px auto;
+	height: calc(130px + 10vw);
 
 	${({ theme }) => theme.media.tablet} {
-		width: calc(150px + 10vw);
 		margin: -10px auto 10px auto;
+	}
+
+	${({ theme }) => theme.media.tabletLandscape} {
+		width: calc(100px + 10vw);
+		height: calc(100px + 10vw);
 	}
 
 	${({ theme }) => theme.media.desktop} {
@@ -67,8 +76,6 @@ const Avatar = styled.img`
 		margin-right: auto;
 		margin-top: 0;
 		margin-bottom: 0;
-		width: unset;
-		height: 30vh;
 	}
 `;
 
@@ -251,7 +258,7 @@ const IMG = styled.img`
 	}
 `;
 
-const tl = new TimelineMax({paused: true});
+const tl = new TimelineMax({ paused: true });
 
 class Contact extends Component {
 	constructor(props) {
@@ -266,16 +273,29 @@ class Contact extends Component {
 	};
 
 	componentDidMount() {
-		tl.from('.logoContact', 1, { scale: 0.9, y: -20, opacity: 0, delay: 0.5, ease: Elastic.easeOut })
-		.from('#avatar', 1.4, { opacity: 0, ease: Power2.easeInOut }, "-=1")
-		.staggerFrom('.contactContent', 1, { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut }, '0.2', "-=1")
-		.from('.contactContent2', 1, { scale: 0.9, y: 200, ease: Elastic.easeOut });
+		tl
+			.from('.logoContact', 1, { scale: 0.9, y: -20, opacity: 0, delay: 0.5, ease: Elastic.easeOut })
+			.from('#avatar', 1.4, { opacity: 0, ease: Power2.easeInOut }, '-=1')
+			.staggerFrom('.contactContent', 1, { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut }, '0.2', '-=1')
+			.from('.contactContent2', 1, { scale: 0.9, y: 200, ease: Elastic.easeOut });
 		const checkHeight = () => {
 			let isScrolling;
 			const homeHeight = document.querySelector('#Home').offsetHeight;
 			const aboutHeight = document.querySelector('#About').offsetHeight;
 			const jobHeight = document.querySelector('#Job').offsetHeight;
 			const howHeight = document.querySelector('#How').offsetHeight;
+
+			//animation on hover
+			const myImage = new hoverEffect({
+				parent: document.querySelector('#avatar'),
+				intensity: 0.3,
+				image1: avatarpic,
+				image2: avatarpic,
+				displacementImage: diss,
+				easing: Power4.easeOut,
+				speedIn: 1.6,
+				speedOut: 1.6
+			});
 			window.addEventListener(
 				'scroll',
 				() => {
@@ -286,7 +306,7 @@ class Contact extends Component {
 					isScrolling = setTimeout(() => {
 						const y = window.scrollY;
 
-						if (y > (homeHeight + aboutHeight + jobHeight +howHeight) / 10 * 9) {
+						if (y > (homeHeight + aboutHeight + jobHeight + howHeight) / 10 * 9) {
 							tl.resume();
 						}
 					}, 60);
@@ -300,33 +320,32 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<Wrapper id="Contact">
+			<Wrapper id='Contact'>
 				<StyledWrapper>
-					<LogoContact src={logopic} className="logoContact"/>
-					<LogoContactDouble className="logoContact">
+					<LogoContact src={logopic} className='logoContact' />
+					<LogoContactDouble className='logoContact'>
 						<IMG src={logoh1} />
 						<IMG src={logoh2} right />
 					</LogoContactDouble>
 
-					<Name className="contactContent">Jacek Witucki</Name>
-					<Ocupation className="contactContent">Web Development</Ocupation>
+					<Name className='contactContent'>Jacek Witucki</Name>
+					<Ocupation className='contactContent'>Web Development</Ocupation>
+					<AvatarWrapper id='avatar'>{/* <Avatar src={avatarpic}  /> */}</AvatarWrapper>
 
-					<Avatar src={avatarpic} id="avatar"/>
-
-					<ButtonWrapper onClick={this.toggleForm} className="contactContent">
+					<ButtonWrapper onClick={this.toggleForm} className='contactContent'>
 						<ButtonContact />
 					</ButtonWrapper>
 
-					<ContactInfo className="contactContent2">{`info@jacekwitucki.com`}</ContactInfo>
+					<ContactInfo className='contactContent2'>{`info@jacekwitucki.com`}</ContactInfo>
 
-					<SocialWrapper className="contactContent2">
-						<Icon src={icon1} href="https://twitter.com/JacekWitucki" target="_blank"/>
-						<Icon src={icon2}  href="https://www.linkedin.com/in/iamjacek/" target="_blank"/>
-						<Icon src={icon3}  href="https://www.instagram.com/i_am_jacek/" target="_blank"/>
-						<Icon src={icon4}  href="https://github.com/iamjacek" target="_blank"/>
+					<SocialWrapper className='contactContent2'>
+						<Icon src={icon1} href='https://twitter.com/JacekWitucki' target='_blank' />
+						<Icon src={icon2} href='https://www.linkedin.com/in/iamjacek/' target='_blank' />
+						<Icon src={icon3} href='https://www.instagram.com/i_am_jacek/' target='_blank' />
+						<Icon src={icon4} href='https://github.com/iamjacek' target='_blank' />
 					</SocialWrapper>
 
-					<Footer className="contactContent2">Copyright © 2019 Jacek Witucki</Footer>
+					<Footer className='contactContent2'>Copyright © 2019 Jacek Witucki</Footer>
 
 					<Form isOpen={this.state.isFormOpen} closeForm={this.toggleForm} />
 				</StyledWrapper>

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import src1 from "../../assets/smallpic.png"
 import src2 from "../../assets/laptop.png"
 
+
 const IMG = styled.div`
     position: relative;
     margin: 0 auto;
@@ -46,9 +47,12 @@ const IMG = styled.div`
     }
 `
 
+
 const AboutPicture = ({... props}) => (
     <div { ... props}>
-        <IMG />
+      
+          <IMG />
+       
     </div>
 )
 

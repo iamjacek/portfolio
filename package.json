@@ -23,6 +23,7 @@
 		"gatsby-transformer-sharp": "^2.1.17",
 		"graphql": "^14.5.7",
 		"gsap": "^2.1.3",
+		"hover-effect": "^1.1.0",
 		"nodemailer": "^6.2.1",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
