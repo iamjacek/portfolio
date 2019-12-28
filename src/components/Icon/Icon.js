@@ -14,9 +14,9 @@ const IMG = styled.img`
 `
 
 const Icon = ({src, ... props}) => (
-    <div { ... props}>
+    <a {...props} href={props.direct} target='_blank'>
         <IMG src={src} />
-    </div>
+    </a>
 )
   
 

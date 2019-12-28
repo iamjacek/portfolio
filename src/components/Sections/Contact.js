@@ -339,10 +339,10 @@ class Contact extends Component {
 					<ContactInfo className='contactContent2'>{`info@jacekwitucki.com`}</ContactInfo>
 
 					<SocialWrapper className='contactContent2'>
-						<Icon src={icon1} href='https://twitter.com/JacekWitucki' target='_blank' />
-						<Icon src={icon2} href='https://www.linkedin.com/in/iamjacek/' target='_blank' />
-						<Icon src={icon3} href='https://www.instagram.com/i_am_jacek/' target='_blank' />
-						<Icon src={icon4} href='https://github.com/iamjacek' target='_blank' />
+						<Icon src={icon1} direct="https://twitter.com/JacekWitucki" />
+						<Icon src={icon2} direct="https://www.linkedin.com/in/iamjacek/" />
+						<Icon src={icon3} direct="https://www.instagram.com/i_am_jacek/" />
+						<Icon src={icon4} direct="https://github.com/iamjacek" />
 					</SocialWrapper>
 
 					<Footer className='contactContent2'>Copyright © 2019 Jacek Witucki</Footer>
