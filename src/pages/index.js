@@ -1,34 +1,26 @@
-import React, { Component }  from "react";
+import React, { Component } from 'react'
 
+import Home from '../components/Sections/Home'
+import About from '../components/Sections/About'
+import Long from '../components/Sections/Long'
+import styled from 'styled-components'
 
-import Home from "../components/Sections/Home"
-import About from "../components/Sections/About"
-import Long from "../components/Sections/Long"
-
-
-
-
+const Loader = styled.div``
 
 class IndexPage extends Component {
+  componentDidMount() {}
 
-  componentDidMount () {
-
+  componentWillUnmount() {}
+  render() {
+    return (
+      <>
+        <Loader className="loader" />
+        <Home />
+        <About />
+        <Long />
+      </>
+    )
   }
+}
 
-  componentWillUnmount() {
-  
-  }
-    render() {
-      return(
-          <>
-            <Home />
-            <About />
-            <Long />
-          </>
-    );
-  }
-};
-
-export default IndexPage;
-
-
+export default IndexPage
