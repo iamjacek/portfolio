@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  ${({ theme }) => theme.media.desktop} {
+  @media (min-width: 1200px) {
     height: 100vh;
   }
 `
