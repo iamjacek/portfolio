@@ -46,6 +46,9 @@ const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
+  ${({ theme }) => theme.media.desktop} {
+    height: 100vh;
+  }
 `
 
 const Gap = styled.div`
@@ -174,12 +177,6 @@ class Home extends React.Component {
     } else {
       console.log('no window')
     }
-
-    window.addEventListener('resize', () => {
-      // We execute the same script as before
-      let vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    })
   }
 
   componentWillUnmount() {
