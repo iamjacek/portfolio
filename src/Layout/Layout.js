@@ -17,6 +17,16 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     height: 100%;
     min-height: -webkit-fill-available;
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 15px;
+      }
+      ::-webkit-scrollbar-track-piece  {
+      background-color: #F0EBE7;
+      }
+      ::-webkit-scrollbar-thumb:vertical {
+      height: 30px;
+      background-color: 	#2e2c2c;
   }
 
   *, *::before, *::after {
@@ -25,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html{
+    
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
