@@ -1,12 +1,35 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../assets/theme'
+import fontMontserrat from '../assets/fonts/Montserrat.woff2'
+import fontRoboto from '../assets/fonts/Roboto.woff2'
+import fontRubik from '../assets/fonts/Rubik.woff2'
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import url('https://fonts.googleapis.com/css?family=Rubik');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre');
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(${fontRoboto}) format('woff2');   
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url(${fontRubik}) format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Semibold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(${fontMontserrat}) format('woff2');
+  font-display: swap;
+}
+
   body {
     margin: 0;
     padding: 0;
