@@ -77,8 +77,6 @@ class MenuMobile extends Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   componentDidUpdate() {
     if (this.props.isOpen) {
       console.log('open')

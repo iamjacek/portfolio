@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../../Layout/Layout'
 import styled from 'styled-components'
-import GSAP from 'react-gsap-enhancer'
 import { TimelineMax } from 'gsap'
 import '../../assets/loader.css'
 
@@ -101,7 +100,7 @@ const Gradient = styled.div`
   left: 0;
 `
 
-class Home extends React.Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.myBackground = null
@@ -109,8 +108,6 @@ class Home extends React.Component {
   }
 
   handleLoad = () => {
-    console.log('LOADED')
-
     const tl = new TimelineMax()
     tl.fromTo(myLogo, 1.3, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
       .to(myLogo, 0.5, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
@@ -173,7 +170,7 @@ class Home extends React.Component {
       window.setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden')
         window.addEventListener('load', this.handleLoad())
-      }, 300)
+      }, 100)
     } else {
       console.log('no window')
     }

@@ -4,7 +4,7 @@ import { TimelineMax } from 'gsap'
 import Form from '../Form/Form'
 import Icon from '../Icon/Icon'
 
-//animate portret picture
+//animate portrait picture
 import diss from '../../assets/heightMap.png'
 import hoverEffect from 'hover-effect'
 
