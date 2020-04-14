@@ -190,15 +190,38 @@ class Home extends Component {
           <Header />
 
           <Gap>
-            <a href={'#About'}>
-              <Scroll src={imgArrow} id="myArrow" />
+            <a
+              href={'#About'}
+              aria-label="Click arrow to scroll to section 'About'"
+            >
+              <Scroll
+                src={imgArrow}
+                id="myArrow"
+                alt="Arrow to read about Jacek Witucki and Web Development"
+              />
             </a>
           </Gap>
           <SocialWrapper id="mySocials">
-            <Icon src={icon1} direct="https://twitter.com/JacekWitucki" />
-            <Icon src={icon2} direct="https://www.linkedin.com/in/iamjacek/" />
-            <Icon src={icon3} direct="https://www.instagram.com/i_am_jacek/" />
-            <Icon src={icon4} direct="https://github.com/iamjacek" />
+            <Icon
+              src={icon1}
+              direct="https://twitter.com/JacekWitucki"
+              aria="Twitter Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon2}
+              direct="https://www.linkedin.com/in/iamjacek/"
+              aria="LinkedIn Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon3}
+              direct="https://www.instagram.com/i_am_jacek/"
+              aria="Instagram Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon4}
+              direct="https://github.com/iamjacek"
+              aria="Github Web Development Jacek Witucki"
+            />
           </SocialWrapper>
           <Gradient id="myGradient" />
         </Layout>

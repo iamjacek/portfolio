@@ -48,7 +48,7 @@ const InnerHamburger = styled.div`
 `
 
 const Hamburger = ({ isOpen, ...props }) => (
-  <StyledHamburger {...props}>
+  <StyledHamburger {...props} aria-label="Toggle Menu">
     <InnerHamburger isOpen={isOpen} />
   </StyledHamburger>
 )

@@ -112,10 +112,26 @@ class MenuMobile extends Component {
           </LinkMenu>
         ))}
         <SocialWrapper isOpen={this.props.isOpen}>
-          <Icon src={icon1} direct="https://twitter.com/JacekWitucki" />
-          <Icon src={icon2} direct="https://www.linkedin.com/in/iamjacek/" />
-          <Icon src={icon3} direct="https://www.instagram.com/i_am_jacek/" />
-          <Icon src={icon4} direct="https://github.com/iamjacek" />
+          <Icon
+            src={icon1}
+            direct="https://twitter.com/JacekWitucki"
+            aria="Twitter Web Development Jacek Witucki"
+          />
+          <Icon
+            src={icon2}
+            direct="https://www.linkedin.com/in/iamjacek/"
+            aria="LinkedIn Web Development Jacek Witucki"
+          />
+          <Icon
+            src={icon3}
+            direct="https://www.instagram.com/i_am_jacek/"
+            aria="Instagram Web Development Jacek Witucki"
+          />
+          <Icon
+            src={icon4}
+            direct="https://github.com/iamjacek"
+            aria="Github Web Development Jacek Witucki"
+          />
         </SocialWrapper>
       </MenuWrapper>
     )

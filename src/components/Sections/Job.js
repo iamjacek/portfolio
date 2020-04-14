@@ -235,7 +235,7 @@ class Job extends Component {
         <StyledWrapper>
           {/* 1st */}
           <View className="jobExample">
-            <Picture src={pic1} />
+            <Picture src={pic1} alt="2theweb" />
             <Mask />
             <h2>2theWeb</h2>
             <p>
@@ -257,23 +257,49 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
               <Icon
                 width="9px"
                 margin="3px"
                 marginT="0px"
                 marginR="15px"
                 src={iconGulp}
+                alt="icon"
               />
-              <Icon width="17px" margin="3px" src={iconSass} />
-              <Icon width="17px" margin="3px" src={iconBootstrap} />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconSass}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconBootstrap}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 2nd */}
           <View long className="jobExample">
-            <Picture src={pic2} />
+            <Picture src={pic2} alt="jacekwitucki web development" />
             <Mask />
             <h2>Portfolio</h2>
             <p>Created to show my work. It gives you an idea what I do.</p>
@@ -292,20 +318,68 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="2px" src={iconHtml} />
-              <Icon width="15px" margin="2px" src={iconNetlify} />
-              <Icon width="16px" margin="2px" src={iconJS} />
-              <Icon width="14px" margin="2px" marginT="0px" src={iconGatsby} />
-              <Icon width="17px" margin="3px" src={iconReact} />
-              <Icon width="17px" margin="3px" src={iconStyled} />
-              <Icon width="23px" margin="3px" src={iconGimp} />
-              <Icon width="17px" marginR="15px" margin="3px" src={iconXD} />
-              <Icon width="17px" marginR="15px" margin="3px" src={icon4k} />
+              <Icon
+                width="14px"
+                margin="2px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="2px"
+                src={iconNetlify}
+                alt="web development icon"
+              />
+              <Icon
+                width="16px"
+                margin="2px"
+                src={iconJS}
+                alt="web development icon"
+              />
+              <Icon
+                width="14px"
+                margin="2px"
+                marginT="0px"
+                src={iconGatsby}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconReact}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconStyled}
+                alt="web development icon"
+              />
+              <Icon
+                width="23px"
+                margin="3px"
+                src={iconGimp}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                marginR="15px"
+                margin="3px"
+                src={iconXD}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                marginR="15px"
+                margin="3px"
+                src={icon4k}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 3rd */}
           <View className="jobExample">
-            <Picture src={pic3} />
+            <Picture src={pic3} alt="gym site" />
             <Mask />
             <h2>Gym website</h2>
             <p>
@@ -323,18 +397,56 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
-              <Icon width="22px" margin="3px" marginR="14px" src={iconParcel} />
-              <Icon width="17px" margin="3px" marginR="20px" src={iconSass} />
-              <Icon width="14px" margin="3px" marginR="16px" src={iconFigma} />
-              <Icon width="26px" margin="3px" src={iconBEM} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
+              <Icon
+                width="22px"
+                margin="3px"
+                marginR="14px"
+                src={iconParcel}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                marginR="20px"
+                src={iconSass}
+                alt="web development icon"
+              />
+              <Icon
+                width="14px"
+                margin="3px"
+                marginR="16px"
+                src={iconFigma}
+                alt="web development icon"
+              />
+              <Icon
+                width="26px"
+                margin="3px"
+                src={iconBEM}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 4th */}
           <View className="jobExample">
-            <Picture src={pic4} />
+            <Picture src={pic4} alt="to do list" />
             <Mask />
             <h2>To do list</h2>
             <p>Simple to do list if bitting off more than you can chew.</p>
@@ -353,15 +465,35 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
-              <Icon width="20px" margin="3px" src={iconReact} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
+              <Icon
+                width="20px"
+                margin="3px"
+                src={iconReact}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 5th */}
           <View className="jobExample">
-            <Picture src={pic5} />
+            <Picture src={pic5} alt="tic tac toe" />
             <Mask />
             <h2>tic tac toe</h2>
             <p>
@@ -383,14 +515,29 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 6th */}
           <View className="jobExample">
-            <Picture src={pic6} />
+            <Picture src={pic6} alt="calc" />
             <Mask />
             <h2>Calculator</h2>
             <p>
@@ -412,15 +559,35 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
-              <Icon width="20px" margin="3px" src={iconReact} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
+              <Icon
+                width="20px"
+                margin="3px"
+                src={iconReact}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
           {/* 7th */}
           <View className="jobExample">
-            <Picture src={pic7} />
+            <Picture src={pic7} alt="tip calc" />
             <Mask />
             <h2>Tip calc</h2>
             <p>
@@ -438,9 +605,24 @@ class Job extends Component {
               CODE
             </Info>
             <IconWrapper>
-              <Icon width="14px" margin="3px" src={iconHtml} />
-              <Icon width="15px" margin="3px" src={iconCss} />
-              <Icon width="17px" margin="3px" src={iconJS} />
+              <Icon
+                width="14px"
+                margin="3px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="3px"
+                src={iconCss}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconJS}
+                alt="web development icon"
+              />
             </IconWrapper>
           </View>
         </StyledWrapper>

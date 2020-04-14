@@ -7,6 +7,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: './src/assets/favicon.png',
@@ -27,6 +33,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
 
     // this (optionalProgressive Web App + Offline functionality

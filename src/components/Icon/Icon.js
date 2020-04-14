@@ -12,9 +12,9 @@ const IMG = styled.img`
   }
 `
 
-const Icon = ({ src, ...props }) => (
-  <a {...props} href={props.direct} target="_blank">
-    <IMG src={src} />
+const Icon = ({ aria, src, ...props }) => (
+  <a {...props} href={props.direct} target="_blank" aria-label={aria}>
+    <IMG src={src} alt="Icon on Web Develompent and Design Jacek Witucki" />
   </a>
 )
 

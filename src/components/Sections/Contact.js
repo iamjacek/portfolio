@@ -52,9 +52,6 @@ const StyledWrapper = styled.div`
     margin: 0 auto;
   }
 `
-const Avatar = styled.img`
-  width: 100%;
-`
 
 const AvatarWrapper = styled.div`
   width: calc(130px + 10vw);
@@ -345,16 +342,20 @@ class Contact extends Component {
     return (
       <Wrapper id="Contact">
         <StyledWrapper>
-          <LogoContact src={logopic} className="logoContact" />
+          <LogoContact
+            src={logopic}
+            className="logoContact"
+            alt="Logo Jacek Witucki Web Development"
+          />
           <LogoContactDouble className="logoContact">
-            <IMG src={logoh1} />
-            <IMG src={logoh2} right />
+            <IMG src={logoh1} alt="Logo Jacek Witucki Web Development" />
+            <IMG src={logoh2} right alt="Logo Jacek Witucki Web Design" />
           </LogoContactDouble>
 
           <Name className="contactContent">Jacek Witucki</Name>
           <Ocupation className="contactContent">Web Development</Ocupation>
           <AvatarWrapper id="avatar">
-            {/* <Avatar src={avatarpic} /> */}
+            {/* <Avatar src={avatarpic} alt='avatar of Jacek Witucki Web Development'/> */}
           </AvatarWrapper>
 
           <ButtonWrapper onClick={this.toggleForm} className="contactContent">
@@ -364,10 +365,26 @@ class Contact extends Component {
           <ContactInfo className="contactContent2">{`info@jacekwitucki.com`}</ContactInfo>
 
           <SocialWrapper className="contactContent2">
-            <Icon src={icon1} direct="https://twitter.com/JacekWitucki" />
-            <Icon src={icon2} direct="https://www.linkedin.com/in/iamjacek/" />
-            <Icon src={icon3} direct="https://www.instagram.com/i_am_jacek/" />
-            <Icon src={icon4} direct="https://github.com/iamjacek" />
+            <Icon
+              src={icon1}
+              direct="https://twitter.com/JacekWitucki"
+              aria="Twitter Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon2}
+              direct="https://www.linkedin.com/in/iamjacek/"
+              aria="LinkedIn Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon3}
+              direct="https://www.instagram.com/i_am_jacek/"
+              aria="Instagram Web Development Jacek Witucki"
+            />
+            <Icon
+              src={icon4}
+              direct="https://github.com/iamjacek"
+              aria="Github Web Development Jacek Witucki"
+            />
           </SocialWrapper>
 
           <Footer className="contactContent2">

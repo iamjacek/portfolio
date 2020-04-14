@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
   opacity: 0;
 `
 
-const Faq = styled.button`
+const Faq = styled.div`
   border: none;
   background: none;
   margin: 0;

@@ -42,7 +42,7 @@ const LogoWrapper = styled.div`
 
 const Logo = ({ src, ...props }) => (
   <LogoWrapper {...props}>
-    <IMG src={src} />
+    <IMG src={src} alt="Logo Web Development by Jacek Witucki" />
   </LogoWrapper>
 )
 

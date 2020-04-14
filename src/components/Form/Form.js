@@ -248,7 +248,9 @@ class Form extends Component {
                 Email
               </Label>
               <MsgForm name="message" />
-              <Label id="messageLabel">Message</Label>
+              <Label htmlFor="message" id="messageLabel">
+                Message
+              </Label>
 
               <ButtonWrap>
                 <ButtonForm type="submit" id="submit">
