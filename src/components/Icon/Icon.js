@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const IMG = styled.img`
   width: 48px;
-  height: 46px;
-  padding: 10px;
+  height: 48px;
+  padding: 11px;
 
   &:hover {
     cursor: pointer;

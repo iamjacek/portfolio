@@ -176,7 +176,7 @@ class Home extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('load', this.handleLoad())
+    window.removeEventListener('load', this.handleLoad(), { passive: true })
   }
 
   render() {
