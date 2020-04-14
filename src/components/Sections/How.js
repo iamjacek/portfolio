@@ -184,9 +184,9 @@ class How extends Component {
   componentDidMount() {
     tl.staggerFrom(
       '.howContent',
-      1,
+      0.4,
       { scale: 0.9, y: -20, opacity: 0, ease: Elastic.easeOut },
-      '0.3'
+      '0.13'
     )
 
     const checkHeight = () => {
@@ -209,7 +209,7 @@ class How extends Component {
             }
           }, 60)
         },
-        false
+        { passive: true }
       )
     }
 

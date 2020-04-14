@@ -198,7 +198,7 @@ class Job extends Component {
   componentDidMount() {
     tl.staggerFrom(
       '.jobExample',
-      0.6,
+      0.5,
       { scale: 0.9, y: -200, opacity: 0, ease: Elastic.easeOut },
       '0.2'
     )
@@ -222,7 +222,7 @@ class Job extends Component {
             }
           }, 60)
         },
-        false
+        { passive: true }
       )
     }
 
@@ -244,14 +244,15 @@ class Job extends Component {
             <Info
               tabIndex="-1"
               target="_blank"
-              target="_blank"
               href="http://2theweb.rf.gd"
+              rel="noreferrer"
             >
               PAGE
             </Info>
             <Info
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/iamjacek/2thewebsite"
             >
               CODE
@@ -307,6 +308,7 @@ class Job extends Component {
               href="https://www.jacekwitucki.com"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               PAGE
             </Info>
@@ -314,6 +316,7 @@ class Job extends Component {
               href="https://github.com/iamjacek/Portfolio"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>
@@ -386,13 +389,19 @@ class Job extends Component {
               A way to give an information to your customers even to the mobile
               ones.
             </p>
-            <Info href="http://gymsite.rf.gd" tabIndex="-1" target="_blank">
+            <Info
+              href="http://gymsite.rf.gd"
+              tabIndex="-1"
+              target="_blank"
+              rel="noreferrer"
+            >
               PAGE
             </Info>
             <Info
               href="https://github.com/iamjacek/gymsite"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>
@@ -454,6 +463,7 @@ class Job extends Component {
               href="http://todojackproject.epizy.com"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               PAGE
             </Info>
@@ -461,6 +471,7 @@ class Job extends Component {
               href="https://github.com/iamjacek/todo-list"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>
@@ -504,6 +515,7 @@ class Job extends Component {
               href="http://tictactoejackproject.rf.gd"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               PAGE
             </Info>
@@ -511,6 +523,7 @@ class Job extends Component {
               href="https://github.com/iamjacek/tic-tac-toe"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>
@@ -548,6 +561,7 @@ class Job extends Component {
               href="http://calculatorjackproject.rf.gd"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               PAGE
             </Info>
@@ -555,6 +569,7 @@ class Job extends Component {
               href="https://github.com/iamjacek/simple-calc-react"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>
@@ -594,13 +609,19 @@ class Job extends Component {
               For waiters only! None of them like when 7 people is asking to
               split a huge bill.
             </p>
-            <Info href="http://tipcalc.epizy.com" tabIndex="-1" target="_blank">
+            <Info
+              href="http://tipcalc.epizy.com"
+              tabIndex="-1"
+              target="_blank"
+              rel="noreferrer"
+            >
               PAGE
             </Info>
             <Info
               href="https://github.com/iamjacek/tip-calculator"
               tabIndex="-1"
               target="_blank"
+              rel="noreferrer"
             >
               CODE
             </Info>

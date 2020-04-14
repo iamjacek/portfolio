@@ -109,21 +109,20 @@ class Home extends Component {
 
   handleLoad = () => {
     const tl = new TimelineMax()
-    tl.fromTo(myLogo, 1.3, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
-      .to(myLogo, 0.5, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
+    tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
+      .to(myLogo, 0.6, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
       .fromTo(
         myLogo,
-        1,
-        { scale: 0.8 },
+        0.6,
+        { scale: 0.4 },
         { scale: 1, ease: Power2.easeInOut },
-        '-=0.8'
+        '-=0.6'
       )
       .fromTo(
         this.myBackground,
-        1,
+        0.8,
         { height: '0%' },
-        { height: '80%', ease: Power2.easeInOut },
-        '+1'
+        { height: '80%', ease: Power2.easeInOut }
       )
       .fromTo(
         this.myBackground,
@@ -133,14 +132,14 @@ class Home extends Component {
       )
       .fromTo(
         myGradient,
-        3,
+        1,
         { opacity: 1 },
         { opacity: 0, ease: Power2.easeInOut },
-        '-=4'
+        '-=2'
       )
       .fromTo(
         mySocials,
-        2,
+        1,
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, ease: Power2.easeInOut },
         '-=1.5'
@@ -169,7 +168,7 @@ class Home extends Component {
     if (window) {
       window.setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden')
-        window.addEventListener('load', this.handleLoad())
+        window.addEventListener('load', this.handleLoad(), { passive: true })
       }, 100)
     } else {
       console.log('no window')

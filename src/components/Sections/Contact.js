@@ -284,26 +284,31 @@ class Contact extends Component {
       speedOut: 1.6,
     })
 
-    tl.from('.logoContact', 1, {
+    tl.from('.logoContact', 0.4, {
       scale: 0.9,
       y: -20,
       opacity: 0,
       delay: 0.5,
       ease: Elastic.easeOut,
     })
-      .from('#avatar', 1.4, { opacity: 0, ease: Power2.easeInOut }, '-=1')
+      .from('#avatar', 0.6, { opacity: 0, ease: Power2.easeInOut }, '-=1')
       .staggerFrom(
         '.contactContent',
-        1,
+        0.5,
         { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut },
         '0.2',
         '-=1'
       )
-      .from('.contactContent2', 1, {
-        scale: 0.9,
-        y: 200,
-        ease: Elastic.easeOut,
-      })
+      .from(
+        '.contactContent2',
+        0.5,
+        {
+          scale: 0.9,
+          y: 200,
+          ease: Elastic.easeOut,
+        },
+        '-=0.2'
+      )
     const checkHeight = () => {
       let isScrolling
       const homeHeight = document.querySelector('#Home').offsetHeight
@@ -311,7 +316,7 @@ class Contact extends Component {
       const jobHeight = document.querySelector('#Job').offsetHeight
       const howHeight = document.querySelector('#How').offsetHeight
 
-      //animation on hover
+      //animation on scroll
 
       window.addEventListener(
         'scroll',
@@ -331,7 +336,7 @@ class Contact extends Component {
             }
           }, 60)
         },
-        false
+        { passive: true }
       )
     }
 

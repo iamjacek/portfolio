@@ -129,34 +129,34 @@ class About extends Component {
   componentDidMount() {
     tl.fromTo(
       myFrame,
-      2,
+      0.6,
       { opacity: '0' },
       { opacity: '1', ease: Power2.easeInOut }
     )
       .fromTo(
         myPic,
-        2,
+        1.5,
         { opacity: '0', transform: 'scale(0.5)' },
         { opacity: '1', transform: 'scale(1)', ease: Elastic.easeOut },
         '-=1'
       )
       .fromTo(
         myTitle,
-        2,
+        1,
         { opacity: '0' },
         { opacity: '1', ease: Power2.easeInOut },
         '-=3'
       )
       .fromTo(
         myButton,
-        2,
+        1,
         { scaleY: 0 },
         { scaleY: 1, ease: Expo.easeOut },
         '-=1'
       )
       .fromTo(
         myText,
-        2,
+        1,
         { opacity: '0', x: 100 },
         { opacity: '1', x: 0, ease: Power2.easeInOut },
         '-=1'
@@ -180,7 +180,7 @@ class About extends Component {
             }
           }, 60)
         },
-        false
+        { passive: true }
       )
     }
 
