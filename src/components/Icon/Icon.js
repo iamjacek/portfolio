@@ -10,6 +10,10 @@ const IMG = styled.img`
     cursor: pointer;
     animation: woobleSocial 0.25s ease-in-out;
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+    width: calc(18px + 2vw);
+    height: calc(18px + 2vw);
+  }
 `
 
 const Icon = ({ aria, src, ...props }) => (

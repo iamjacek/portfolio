@@ -78,7 +78,8 @@ const Frame = styled.div`
       font-size: 1.8rem;
     }
     ${({ theme }) => theme.media.bigDesktop} {
-      font-size: 2.5rem;
+      top: 80px;
+      font-size: calc(1rem + 1.5vw);
     }
   }
   p {
@@ -96,7 +97,7 @@ const Frame = styled.div`
       font-size: 1rem;
     }
     ${({ theme }) => theme.media.bigDesktop} {
-      font-size: 1.2rem;
+      font-size: calc(0.2rem + 1vw);
     }
   }
 `

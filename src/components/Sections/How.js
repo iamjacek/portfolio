@@ -147,12 +147,14 @@ const Number = styled.div`
 const Title = styled.h3`
   font-family: 'Montserrat Semibold', sans-serif;
   padding: 20px 0 20px 60px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin: 0;
-  text-align: center;
-  ${({ theme }) => theme.media.bigDesktop} {
-    font-size: 1.6rem;
+  text-align: left;
+  ${({ theme }) => theme.media.tabletLandscape} {
     text-align: center;
+  }
+  ${({ theme }) => theme.media.bigDesktop} {
+    font-size: 2.4rem;
   }
 `
 
@@ -161,12 +163,11 @@ const Text = styled.p`
   margin: 0;
   margin-left: auto;
   max-width: 220px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   /* padding: 23px 0 15px 60px; */
   padding-top: ${({ padding }) => padding};
   ${({ theme }) => theme.media.tablet} {
     max-width: 350px;
-    font-size: 0.8rem;
   }
   ${({ theme }) => theme.media.bigDesktop} {
     font-size: 1.2rem;

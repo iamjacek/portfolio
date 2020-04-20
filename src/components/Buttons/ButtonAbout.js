@@ -58,6 +58,9 @@ const ButtonWrapper = styled.div`
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
+  ${({ theme }) => theme.media.bigDesktop} {
+    transform: scale(1.3);
+  }
 
   button {
     width: 101%;

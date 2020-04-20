@@ -21,6 +21,9 @@ const HeaderWrapper = styled.div`
   ${({ theme }) => theme.media.desktop} {
     padding: 0 100px;
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+    padding: 0 10%;
+  }
   transition: transform 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0;

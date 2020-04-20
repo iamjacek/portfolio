@@ -40,16 +40,20 @@ const IMG = styled.div`
   }
 
   ${({ theme }) => theme.media.bigDesktop} {
-    max-width: 680px;
-    max-height: 420px;
+    max-width: unset;
+    max-height: unset;
     transform: translateX(170px);
   }
 `
 
+const Wrapper = styled.div`
+  width: 50%;
+`
+
 const AboutPicture = ({ ...props }) => (
-  <div {...props}>
+  <Wrapper {...props}>
     <IMG />
-  </div>
+  </Wrapper>
 )
 
 export default AboutPicture

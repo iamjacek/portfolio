@@ -78,6 +78,9 @@ const Scroll = styled.img`
       transform: translatey(0px);
     }
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+    width: 100px;
+  }
 `
 
 const SocialWrapper = styled.div`

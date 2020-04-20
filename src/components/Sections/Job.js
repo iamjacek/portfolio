@@ -140,6 +140,9 @@ const View = styled.div`
   :hover ${Mask} {
     opacity: 0.85;
   }
+  // ${({ theme }) => theme.media.bigDesktop} {
+  //   transform: scale(1.5);
+  // }
 
   h2 {
     text-transform: uppercase;

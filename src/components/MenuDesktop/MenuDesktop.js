@@ -29,6 +29,9 @@ const LinkMenuDesktop = styled.a`
     animation: woobleSocial 0.25s ease-in-out;
     color: ${({ theme }) => theme.colors.red};
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+    font-size: 1vw;
+  }
 `
 
 const MenuDesktop = () => (

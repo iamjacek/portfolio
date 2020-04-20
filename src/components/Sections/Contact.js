@@ -91,6 +91,7 @@ const LogoContact = styled.img`
 const Name = styled.h3`
   font-family: 'Montserrat Semibold', sans-serif;
   font-size: 1.6rem;
+  font-weight: 600;
   margin: 10px auto;
   text-align: center;
   ${({ theme }) => theme.media.tablet} {

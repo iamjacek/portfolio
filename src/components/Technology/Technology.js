@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { TimelineMax, Elastic } from 'gsap'
+import { TimelineMax } from 'gsap'
 
 import img from '../../assets/background_home.jpg'
 
@@ -54,7 +54,7 @@ const ButtonWrapper = styled.div`
 `
 
 const Field = styled.div`
-  height: 5vh;
+  height: ({long}) => long ? unset : 5vh;
   width: 75%;
   max-width: 270px;
   border: solid 1px ${({ theme }) => theme.colors.white};
@@ -71,6 +71,9 @@ const Field = styled.div`
 
   ${({ theme }) => theme.media.tabletLandscape} {
     min-width: 170px;
+  }
+  ${({ theme }) => theme.media.tabletLandscape} {
+    min-width: 400px;
   }
 `
 
@@ -164,7 +167,9 @@ class Technology extends Component {
           </Group>
 
           <Group>
-            <Field className="myField2">PS, GIMP, ADOBE XD, SKETCH</Field>
+            <Field className="myField2" long>
+              PS, GIMP, ADOBE XD, SKETCH
+            </Field>
           </Group>
 
           <ButtonWrapper onClick={this.props.closeTech}>
