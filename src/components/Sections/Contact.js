@@ -19,6 +19,7 @@ import logopic from '../../assets/Logo.png'
 import logoh1 from '../../assets/logoh1.png'
 import logoh2 from '../../assets/logoh2.png'
 import avatarpic from '../../assets/avatar.png'
+import avatarpic2 from '../../assets/avatarjpg.jpg'
 import ButtonContact from '../Buttons/ButtonContact'
 
 const Wrapper = styled.div`
@@ -278,11 +279,11 @@ class Contact extends Component {
       parent: document.querySelector('#avatar'),
       intensity: 0.3,
       image1: avatarpic,
-      image2: avatarpic,
+      image2: avatarpic2,
       displacementImage: diss,
       easing: Power4.easeOut,
-      speedIn: 1.6,
-      speedOut: 1.6,
+      speedIn: 0.6,
+      speedOut: 0.6,
     })
 
     tl.from('.logoContact', 0.4, {
@@ -360,9 +361,7 @@ class Contact extends Component {
 
           <Name className="contactContent">Jacek Witucki</Name>
           <Ocupation className="contactContent">Web Development</Ocupation>
-          <AvatarWrapper id="avatar">
-            {/* <Avatar src={avatarpic} alt='avatar of Jacek Witucki Web Development'/> */}
-          </AvatarWrapper>
+          <AvatarWrapper id="avatar" />
 
           <ButtonWrapper onClick={this.toggleForm} className="contactContent">
             <ButtonContact />

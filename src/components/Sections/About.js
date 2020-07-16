@@ -78,7 +78,7 @@ const Frame = styled.div`
       font-size: 1.8rem;
     }
     ${({ theme }) => theme.media.bigDesktop} {
-      top: 80px;
+      top: 30px;
       font-size: calc(1rem + 1.5vw);
     }
   }
