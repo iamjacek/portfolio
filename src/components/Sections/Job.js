@@ -3,21 +3,16 @@ import styled from 'styled-components'
 import { TimelineMax, Elastic } from 'gsap'
 
 //images for portfolio job section
-import pic1 from '../../assets/2theweb.png'
+import pic from '../../assets/apayroll.png'
 import pic2 from '../../assets/portfolio_dark.png'
 import pic3 from '../../assets/gymsite.png'
-import pic4 from '../../assets/todo.png'
-import pic5 from '../../assets/tictactoe.png'
-import pic6 from '../../assets/calc.png'
-import pic7 from '../../assets/tipcalc.png'
 
 //icons
 import iconHtml from '../../assets/icons/html5-dark.png'
 import iconCss from '../../assets/icons/css3-dark.png'
 import iconJS from '../../assets/icons/javascript-dark.png'
 import iconSass from '../../assets/icons/sass-dark.png'
-import iconGulp from '../../assets/icons/gulp-dark.png'
-import iconBootstrap from '../../assets/icons/bootstrap-dark.png'
+
 import iconNetlify from '../../assets/icons/netlify.png'
 import iconGatsby from '../../assets/icons/gatsby-dark.png'
 import iconReact from '../../assets/icons/react-dark.png'
@@ -237,71 +232,7 @@ class Job extends Component {
       <Wrapper id="Job">
         <StyledWrapper>
           {/* 1st */}
-          <View className="jobExample">
-            <Picture src={pic1} alt="2theweb" />
-            <Mask />
-            <h2>2theWeb</h2>
-            <p>
-              Beautiful design and simplicity always get you back best results.
-            </p>
-            <Info
-              tabIndex="-1"
-              target="_blank"
-              href="http://2theweb.rf.gd"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/iamjacek/2thewebsite"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="3px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="3px"
-                src={iconCss}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconJS}
-                alt="web development icon"
-              />
-              <Icon
-                width="9px"
-                margin="3px"
-                marginT="0px"
-                marginR="15px"
-                src={iconGulp}
-                alt="icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconSass}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconBootstrap}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-          {/* 2nd */}
+
           <View long className="jobExample">
             <Picture src={pic2} alt="jacekwitucki web development" />
             <Mask />
@@ -383,6 +314,77 @@ class Job extends Component {
               />
             </IconWrapper>
           </View>
+
+          {/* 2nd */}
+          <View long className="jobExample">
+            <Picture src={pic} alt="A payroll" />
+            <Mask />
+            <h2>A - payroll</h2>
+            <p>Website for small a accounting company.</p>
+            <Info
+              href="https://www.apayroll.co.uk"
+              tabIndex="-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              PAGE
+            </Info>
+            <Info
+              href="https://github.com/iamjacek/a-the-bookkeeping"
+              tabIndex="-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CODE
+            </Info>
+            <IconWrapper>
+              <Icon
+                width="14px"
+                margin="2px"
+                src={iconHtml}
+                alt="web development icon"
+              />
+              <Icon
+                width="15px"
+                margin="2px"
+                src={iconNetlify}
+                alt="web development icon"
+              />
+              <Icon
+                width="16px"
+                margin="2px"
+                src={iconJS}
+                alt="web development icon"
+              />
+              <Icon
+                width="14px"
+                margin="2px"
+                marginT="0px"
+                src={iconGatsby}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconReact}
+                alt="web development icon"
+              />
+              <Icon
+                width="17px"
+                margin="3px"
+                src={iconStyled}
+                alt="web development icon"
+              />
+
+              <Icon
+                width="17px"
+                marginR="15px"
+                margin="3px"
+                src={icon4k}
+                alt="web development icon"
+              />
+            </IconWrapper>
+          </View>
           {/* 3rd */}
           <View className="jobExample">
             <Picture src={pic3} alt="gym site" />
@@ -452,199 +454,6 @@ class Job extends Component {
                 width="26px"
                 margin="3px"
                 src={iconBEM}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-          {/* 4th */}
-          <View className="jobExample">
-            <Picture src={pic4} alt="to do list" />
-            <Mask />
-            <h2>To do list</h2>
-            <p>Simple to do list if bitting off more than you can chew.</p>
-            <Info
-              href="http://todojackproject.epizy.com"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              href="https://github.com/iamjacek/todo-list"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="3px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="3px"
-                src={iconCss}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconJS}
-                alt="web development icon"
-              />
-              <Icon
-                width="20px"
-                margin="3px"
-                src={iconReact}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-          {/* 5th */}
-          <View className="jobExample">
-            <Picture src={pic5} alt="tic tac toe" />
-            <Mask />
-            <h2>tic tac toe</h2>
-            <p>
-              Every one played it before. Right? You can decide wheter you
-              starting or computer.
-            </p>
-            <Info
-              href="http://tictactoejackproject.rf.gd"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              href="https://github.com/iamjacek/tic-tac-toe"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="3px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="3px"
-                src={iconCss}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconJS}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-          {/* 6th */}
-          <View className="jobExample">
-            <Picture src={pic6} alt="calc" />
-            <Mask />
-            <h2>Calculator</h2>
-            <p>
-              This basic calculator is simple react app. It can combine few
-              different operations.
-            </p>
-            <Info
-              href="http://calculatorjackproject.rf.gd"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              href="https://github.com/iamjacek/simple-calc-react"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="3px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="3px"
-                src={iconCss}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconJS}
-                alt="web development icon"
-              />
-              <Icon
-                width="20px"
-                margin="3px"
-                src={iconReact}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-          {/* 7th */}
-          <View className="jobExample">
-            <Picture src={pic7} alt="tip calc" />
-            <Mask />
-            <h2>Tip calc</h2>
-            <p>
-              For waiters only! None of them like when 7 people is asking to
-              split a huge bill.
-            </p>
-            <Info
-              href="http://tipcalc.epizy.com"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              href="https://github.com/iamjacek/tip-calculator"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="3px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="3px"
-                src={iconCss}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconJS}
                 alt="web development icon"
               />
             </IconWrapper>
