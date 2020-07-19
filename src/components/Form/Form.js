@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import ButtonTech from '../Buttons/ButtonTech'
@@ -221,52 +221,105 @@ const ButtonForm = styled.button`
   }
 `
 
-class Form extends Component {
-  render() {
-    return (
-      <StyledWrapper isOpen={this.props.isOpen}>
-        <Frame>
-          <FormWrapper>
-            <h2>CONTACT FORM</h2>
-            <p>
-              If you want to talk about project, collaboration or just say hello
-              fill this form below or mail to info@jacekwitucki.com
-            </p>
-            <form
-              name="contact-form"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <NameForm type="text" name="name" />
-              <NameForm type="text" name="firstName" />
-              <Label htmlFor="name" id="nameLabel">
-                Name
-              </Label>
-              <EmailForm type="text" name="email" />
-              <Label htmlFor="email" id="emailLabel">
-                Email
-              </Label>
-              <MsgForm name="message" />
-              <Label htmlFor="message" id="messageLabel">
-                Message
-              </Label>
+function Form(props) {
+  var counter = 0
+  useEffect(() => {
+    let name = document.querySelector('input[name = "firstName"]')
+    let email = document.querySelector('input[name = "email"]')
+    let msg = document.querySelector('textarea[name = "message"]')
+    name.addEventListener('onblur', onBlurVerification)
+    email.addEventListener('onblur', onBlurVerification)
+    msg.addEventListener('onblur', onBlurVerification)
 
-              <ButtonWrap>
-                <ButtonForm type="submit" id="submit">
-                  Send
-                </ButtonForm>
-              </ButtonWrap>
-            </form>
-          </FormWrapper>
+    return () => {
+      name.removeEventListener('onblur', onBlurVerification)
+      email.removeEventListener('onblur', onBlurVerification)
+      msg.removeEventListener('onblur', onBlurVerification)
+    }
+  }, [onBlurVerification])
 
-          <ButtonWrapper onClick={this.props.closeForm}>
-            <ButtonTech />
-          </ButtonWrapper>
-        </Frame>
-      </StyledWrapper>
-    )
+  const validateName = () => {
+    let name = document.querySelector('input[name = "firstName"]').value
+    if (name.length > 1) ++counter
   }
+
+  const validateEmail = () => {
+    let email = document.querySelector('input[name = "email"]').value
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (re.test(email)) ++counter
+  }
+
+  const validateMsg = () => {
+    let msg = document.querySelector('textarea[name = "message"]').value
+    if (msg.length > 5 && msg.length < 200) ++counter
+  }
+
+  const onBlurVerification = () => {
+    validateName()
+    validateEmail()
+    validateMsg()
+    if (counter === 3) {
+      counter = 0
+      return true
+    } else {
+      counter = 0
+      return false
+    }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    return onBlurVerification()
+  }
+
+  return (
+    <StyledWrapper isOpen={props.isOpen}>
+      <Frame>
+        <FormWrapper>
+          <h2>CONTACT FORM</h2>
+          <p>
+            If you want to talk about project, collaboration or just say hello
+            fill this form below or send an e-mail to info@jacekwitucki.com
+          </p>
+          <form
+            name="contact-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <NameForm type="text" name="name" />
+            <NameForm
+              type="text"
+              name="firstName"
+              required
+              minlength="2"
+              maxlength="12"
+            />
+            <Label htmlFor="name" id="nameLabel">
+              Name
+            </Label>
+            <EmailForm type="text" name="email" required maxlength="22" />
+            <Label htmlFor="email" id="emailLabel">
+              Email
+            </Label>
+            <MsgForm name="message" required minlength="5" maxlength="200" />
+            <Label htmlFor="message" id="messageLabel">
+              Message
+            </Label>
+
+            <ButtonWrap>
+              <ButtonForm>Send</ButtonForm>
+            </ButtonWrap>
+          </form>
+        </FormWrapper>
+
+        <ButtonWrapper onClick={props.closeForm}>
+          <ButtonTech />
+        </ButtonWrapper>
+      </Frame>
+    </StyledWrapper>
+  )
 }
 
 export default Form
