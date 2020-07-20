@@ -274,15 +274,15 @@ function Form(props) {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <NameForm type="text" name="name" />
             <NameForm
               type="text"
-              name="firstName"
+              name="name"
               required
               minlength="2"
               maxlength="12"
               onBlur={onBlurVerification}
             />
+            <NameForm type="text" name="firstName" />
             <Label htmlFor="name" id="nameLabel">
               Name
             </Label>
