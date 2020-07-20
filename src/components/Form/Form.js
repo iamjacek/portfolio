@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import ButtonTech from '../Buttons/ButtonTech'
@@ -223,20 +223,6 @@ const ButtonForm = styled.button`
 
 function Form(props) {
   var counter = 0
-  useEffect(() => {
-    let name = document.querySelector('input[name = "firstName"]')
-    let email = document.querySelector('input[name = "email"]')
-    let msg = document.querySelector('textarea[name = "message"]')
-    name.addEventListener('onblur', onBlurVerification)
-    email.addEventListener('onblur', onBlurVerification)
-    msg.addEventListener('onblur', onBlurVerification)
-
-    return () => {
-      name.removeEventListener('onblur', onBlurVerification)
-      email.removeEventListener('onblur', onBlurVerification)
-      msg.removeEventListener('onblur', onBlurVerification)
-    }
-  }, [onBlurVerification])
 
   const validateName = () => {
     let name = document.querySelector('input[name = "firstName"]').value
@@ -295,15 +281,28 @@ function Form(props) {
               required
               minlength="2"
               maxlength="12"
+              onBlur={onBlurVerification}
             />
             <Label htmlFor="name" id="nameLabel">
               Name
             </Label>
-            <EmailForm type="text" name="email" required maxlength="22" />
+            <EmailForm
+              type="text"
+              name="email"
+              required
+              maxlength="22"
+              onBlur={onBlurVerification}
+            />
             <Label htmlFor="email" id="emailLabel">
               Email
             </Label>
-            <MsgForm name="message" required minlength="5" maxlength="200" />
+            <MsgForm
+              name="message"
+              required
+              minlength="5"
+              maxlength="200"
+              onBlur={onBlurVerification}
+            />
             <Label htmlFor="message" id="messageLabel">
               Message
             </Label>
