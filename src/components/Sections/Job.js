@@ -231,91 +231,6 @@ class Job extends Component {
     return (
       <Wrapper id="Job">
         <StyledWrapper>
-          {/* 1st */}
-
-          <View long className="jobExample">
-            <Picture src={pic2} alt="jacekwitucki web development" />
-            <Mask />
-            <h2>Portfolio</h2>
-            <p>Created to show my work. It gives you an idea what I do.</p>
-            <Info
-              href="https://www.jacekwitucki.com"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PAGE
-            </Info>
-            <Info
-              href="https://github.com/iamjacek/Portfolio"
-              tabIndex="-1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CODE
-            </Info>
-            <IconWrapper>
-              <Icon
-                width="14px"
-                margin="2px"
-                src={iconHtml}
-                alt="web development icon"
-              />
-              <Icon
-                width="15px"
-                margin="2px"
-                src={iconNetlify}
-                alt="web development icon"
-              />
-              <Icon
-                width="16px"
-                margin="2px"
-                src={iconJS}
-                alt="web development icon"
-              />
-              <Icon
-                width="14px"
-                margin="2px"
-                marginT="0px"
-                src={iconGatsby}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconReact}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                margin="3px"
-                src={iconStyled}
-                alt="web development icon"
-              />
-              <Icon
-                width="23px"
-                margin="3px"
-                src={iconGimp}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                marginR="15px"
-                margin="3px"
-                src={iconXD}
-                alt="web development icon"
-              />
-              <Icon
-                width="17px"
-                marginR="15px"
-                margin="3px"
-                src={icon4k}
-                alt="web development icon"
-              />
-            </IconWrapper>
-          </View>
-
-          {/* 2nd */}
           <View long className="jobExample">
             <Picture src={pic} alt="A payroll" />
             <Mask />
@@ -385,7 +300,7 @@ class Job extends Component {
               />
             </IconWrapper>
           </View>
-          {/* 3rd */}
+
           <View className="jobExample">
             <Picture src={pic3} alt="gym site" />
             <Mask />

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { navigate } from 'gatsby-link'
 
 import ButtonTech from '../Buttons/ButtonTech'
 
@@ -80,7 +81,7 @@ const NameForm = styled.input`
   position: relative;
   display: block;
   margin: 10px auto 0px auto;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   height: 5vh;
   background: transparent;
@@ -119,7 +120,7 @@ const EmailForm = styled.input`
   position: relative;
   display: block;
   margin: 10px auto 0px auto;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   height: 5vh;
   background: transparent;
@@ -145,7 +146,7 @@ const MsgForm = styled.textarea`
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   height: 10vh;
   background: transparent;
@@ -188,12 +189,6 @@ const ButtonWrap = styled.div`
   }
 `
 
-const NameWrapper = styled.div`
-  display: inline-block;
-  height: 2px;
-  visibility: hidden;
-`
-
 const ButtonForm = styled.button`
   cursor: pointer;
   position: relative;
@@ -227,47 +222,32 @@ const ButtonForm = styled.button`
   }
 `
 
-function Form(props) {
-  var counter = 0
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
-  const validateName = () => {
-    console.log('blur triggered')
-    let name = document.querySelector('input[name = "firstName"]')
-    if (name.value.length > 1) {
-      name.classList.remove('danger')
-      ++counter
-    } else {
-      name.classList.add('danger')
-    }
-  }
+export default function Form(props) {
+  const [state, setState] = React.useState({})
 
-  const validateEmail = () => {
-    let email = document.querySelector('input[name = "email"]').value
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if (re.test(email)) ++counter
-  }
-
-  const validateMsg = () => {
-    let msg = document.querySelector('textarea[name = "message"]').value
-    if (msg.length > 5 && msg.length < 200) ++counter
-  }
-
-  const onBlurVerification = () => {
-    validateName()
-    validateEmail()
-    validateMsg()
-    if (counter === 3) {
-      counter = 0
-      return true
-    } else {
-      counter = 0
-      return false
-    }
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    return onBlurVerification()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeURI({
+        'form-name': form.getAttribute('firstName'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
   }
 
   return (
@@ -281,40 +261,37 @@ function Form(props) {
           </p>
           <form
             name="contact-form"
-            method="POST"
+            method="post"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <NameWrapper>
-              <NameForm type="text" name="name" />
-            </NameWrapper>
-
-            <NameForm
-              type="text"
-              name="firstName"
-              required
-              onBlur={onBlurVerification}
-            />
-            <Label htmlFor="name" id="nameLabel">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{' '}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
+            <Label htmlFor="firstName" id="nameLabel">
+              <NameForm type="text" name="firstName" onChange={handleChange} />
+              <br />
               Name
             </Label>
-            <EmailForm
-              type="text"
-              name="email"
-              required
-              onBlur={onBlurVerification}
-            />
             <Label htmlFor="email" id="emailLabel">
+              <EmailForm type="text" name="email" onChange={handleChange} />
+              <br />
               Email
             </Label>
-            <MsgForm name="message" required onBlur={onBlurVerification} />
+
             <Label htmlFor="message" id="messageLabel">
+              <MsgForm name="message" onChange={handleChange} />
+              <br />
               Message
             </Label>
 
             <ButtonWrap>
-              <ButtonForm>Send</ButtonForm>
+              <ButtonForm type="submit">Send</ButtonForm>
             </ButtonWrap>
           </form>
         </FormWrapper>
@@ -326,5 +303,3 @@ function Form(props) {
     </StyledWrapper>
   )
 }
-
-export default Form
