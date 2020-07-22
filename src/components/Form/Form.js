@@ -242,7 +242,7 @@ export default function Form(props) {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encodeURI({
-        'form-name': form.getAttribute('firstName'),
+        'contact-form': form.getAttribute('firstName'),
         ...state,
       }),
     })
@@ -262,6 +262,7 @@ export default function Form(props) {
           <form
             name="contact-form"
             method="post"
+            action="/thanks"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
