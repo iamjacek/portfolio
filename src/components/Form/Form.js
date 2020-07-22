@@ -188,6 +188,12 @@ const ButtonWrap = styled.div`
   }
 `
 
+const NameWrapper = styled.div`
+  display: inline-block;
+  height: 2px;
+  visibility: hidden;
+`
+
 const ButtonForm = styled.button`
   cursor: pointer;
   position: relative;
@@ -225,8 +231,14 @@ function Form(props) {
   var counter = 0
 
   const validateName = () => {
-    let name = document.querySelector('input[name = "firstName"]').value
-    if (name.length > 1) ++counter
+    console.log('blur triggered')
+    let name = document.querySelector('input[name = "firstName"]')
+    if (name.value.length > 1) {
+      name.classList.remove('danger')
+      ++counter
+    } else {
+      name.classList.add('danger')
+    }
   }
 
   const validateEmail = () => {
@@ -269,20 +281,21 @@ function Form(props) {
           </p>
           <form
             name="contact-form"
-            method="post"
+            method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
+            <NameWrapper>
+              <NameForm type="text" name="name" />
+            </NameWrapper>
+
             <NameForm
               type="text"
-              name="name"
+              name="firstName"
               required
-              minlength="2"
-              maxlength="12"
               onBlur={onBlurVerification}
             />
-            <NameForm type="text" name="firstName" />
             <Label htmlFor="name" id="nameLabel">
               Name
             </Label>
@@ -290,19 +303,12 @@ function Form(props) {
               type="text"
               name="email"
               required
-              maxlength="22"
               onBlur={onBlurVerification}
             />
             <Label htmlFor="email" id="emailLabel">
               Email
             </Label>
-            <MsgForm
-              name="message"
-              required
-              minlength="5"
-              maxlength="200"
-              onBlur={onBlurVerification}
-            />
+            <MsgForm name="message" required onBlur={onBlurVerification} />
             <Label htmlFor="message" id="messageLabel">
               Message
             </Label>
