@@ -241,8 +241,8 @@ export default function Form(props) {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encodeURI({
-        'contact-form': form.getAttribute('firstName'),
+      body: encode({
+        'form-name': form.getAttribute('name'),
         ...state,
       }),
     })
