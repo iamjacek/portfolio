@@ -235,19 +235,34 @@ export default function Form(props) {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
+  const formValidation = () => {
+    console.log('form vali')
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    let count = 0
+    if (re.test(document.querySelector('input[name=email]').value)) ++count
+    if (document.querySelector('input[name=firstName]').value.length > 1)
+      ++count
+    if (document.querySelector('textarea[name=message]').value.length > 5)
+      ++count
+    console.log(count)
+    return count
+  }
+
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
+    if (formValidation() === 3) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...state,
+        }),
+      })
+        .then(() => navigate(form.getAttribute('action')))
+        .catch(error => alert(error))
+    }
   }
 
   return (

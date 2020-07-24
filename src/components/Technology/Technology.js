@@ -72,8 +72,11 @@ const Field = styled.div`
   ${({ theme }) => theme.media.tabletLandscape} {
     min-width: 170px;
   }
-  ${({ theme }) => theme.media.tabletLandscape} {
-    min-width: 400px;
+  ${({ theme }) => theme.media.desktop} {
+    min-width: calc(300px + 5vw);
+  }
+  ${({ theme }) => theme.media.bigDesktop} {
+    min-width: calc(500px + 5vw);
   }
 `
 
