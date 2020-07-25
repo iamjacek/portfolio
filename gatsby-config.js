@@ -4,7 +4,7 @@ module.exports = {
     description: `Front end development, web development and web design. Create your website to become visible! Build your website here!`,
     author: `Jacek Witucki`,
     keywords:
-      'web development, web design, create website, coventry, bedworth, web developer, business website',
+      'web development, web design, create a website, coventry, bedworth, web developer, business website',
     siteUrl: `https://www.jacekwitucki.com`,
     image: './src/assets/ShareImage.png',
   },
