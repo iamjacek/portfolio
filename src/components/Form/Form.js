@@ -236,7 +236,6 @@ export default function Form(props) {
   }
 
   const formValidation = () => {
-    console.log('form vali')
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     let count = 0
     if (re.test(document.querySelector('input[name=email]').value)) ++count
@@ -244,7 +243,7 @@ export default function Form(props) {
       ++count
     if (document.querySelector('textarea[name=message]').value.length > 5)
       ++count
-    console.log(count)
+
     return count
   }
 
