@@ -19,21 +19,22 @@ class IndexPage extends Component {
         <CookieConsent
           style={{
             background: 'linear-gradient(to left,black -150%,#545353 150%)',
-            borderTop: 'solid 2px #FCFCFC',
           }}
           buttonStyle={{
             color: '#F0EBE7',
             background: '#DE4030',
-            border: 'solid 2px #FCFCFC',
-            fontSize: '1.1rem',
+            border: 'none',
+            fontSize: '.9rem',
+            padding: '6px 25px',
             fontWeight: '400',
             fontFamily: 'Roboto',
+            margin: '0 20px 0 0',
           }}
           contentStyle={{ color: '#FCFCFC' }}
           sameSite="strict"
         >
           This website uses cookies to enhance the user experience.{' '}
-          <Link to="/privacy" style={{ color: '#DE4030' }}>
+          <Link to="/privacy" style={{ color: '#EF4837' }}>
             Read more about privacy here
           </Link>
           .
