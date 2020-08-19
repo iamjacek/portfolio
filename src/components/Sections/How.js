@@ -6,13 +6,16 @@ const Wrapper = styled.div`
   position: relative;
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ theme }) => theme.media.tabletLandscape} {
+    height: 100vh;
+  }
 `
 
 const StyledWrapper = styled.div`

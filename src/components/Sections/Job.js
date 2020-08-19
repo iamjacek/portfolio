@@ -310,7 +310,7 @@ class Job extends Component {
               ones.
             </p>
             <Info
-              href="http://gymsite.rf.gd"
+              href="https://iamjacek.github.io/"
               tabIndex="-1"
               target="_blank"
               rel="noreferrer"

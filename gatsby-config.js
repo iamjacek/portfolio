@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jacek Witucki Web Development`,
+    title: `Web Development - Jacek Witucki`,
     description: `Front end development, web development and web design. Create your website to become visible! Build your website here!`,
     author: `Jacek Witucki`,
     keywords:
