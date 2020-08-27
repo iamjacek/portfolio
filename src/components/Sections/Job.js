@@ -6,6 +6,11 @@ import { TimelineMax, Elastic } from 'gsap'
 import pic from '../../assets/apayroll.png'
 import pic2 from '../../assets/portfolio_dark.png'
 import pic3 from '../../assets/gymsite.png'
+import wallet from '../../assets/wallet-app.png'
+import zodiak from '../../assets/zodiak_sg.png'
+import zodiakMob from '../../assets/zodiak_mobile.png'
+import canarinhos from '../../assets/canarinhos.jpg'
+import canarinhosPreview from '../../assets/canarinhosPreview.png'
 
 //icons
 import iconHtml from '../../assets/icons/html5-dark.png'
@@ -59,7 +64,7 @@ const StyledWrapper = styled.div`
 `
 
 const IconWrapper = styled.div`
-  height: 50px;
+  height: 20%;
   width: 100%;
   transform: translateY(-330px);
   display: flex;
@@ -155,10 +160,11 @@ const View = styled.div`
   p {
     font-family: Georgia, serif;
     font-weight: 500;
+    height: 20%;
     font-size: 12px;
     position: relative;
     color: ${({ theme }) => theme.colors.gray};
-    padding: 10px 20px;
+    padding: 10px 1px;
     text-align: center;
     opacity: 0;
     transition: all 0.2s linear;
@@ -235,7 +241,9 @@ class Job extends Component {
             <Picture src={pic} alt="A payroll" />
             <Mask />
             <h2>A - payroll</h2>
-            <p>Website for small a accounting company.</p>
+            <p>
+              Website for accountant company. Design, vectors and development.
+            </p>
             <Info
               href="https://www.apayroll.co.uk"
               tabIndex="-1"
@@ -304,11 +312,8 @@ class Job extends Component {
           <View className="jobExample">
             <Picture src={pic3} alt="gym site" />
             <Mask />
-            <h2>Gym website</h2>
-            <p>
-              A way to give an information to your customers even to the mobile
-              ones.
-            </p>
+            <h2>RPS Gym</h2>
+            <p>Website for a gym. Design and development.</p>
             <Info
               href="https://iamjacek.github.io/"
               tabIndex="-1"
@@ -369,6 +374,68 @@ class Job extends Component {
                 width="26px"
                 margin="3px"
                 src={iconBEM}
+                alt="web development icon"
+              />
+            </IconWrapper>
+          </View>
+          <View className="jobExample">
+            <Picture src={canarinhosPreview} alt="gym site" />
+            <Mask />
+            <h2>Canarinhos</h2>
+            <p>Design of desktop layout for a restaurant.</p>
+            <Info
+              href={canarinhos}
+              tabIndex="-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              OPEN
+            </Info>
+
+            <IconWrapper>
+              <Icon
+                width="14px"
+                margin="3px"
+                marginR="16px"
+                src={iconFigma}
+                alt="web development icon"
+              />
+            </IconWrapper>
+          </View>
+          <View className="jobExample">
+            <Picture src={zodiakMob} alt="gym site" />
+            <Mask />
+            <h2>Zodiak</h2>
+            <p>Design of the website. Desktop and mobile layout.</p>
+            <Info href={zodiak} tabIndex="-1" target="_blank" rel="noreferrer">
+              OPEN
+            </Info>
+
+            <IconWrapper>
+              <Icon
+                width="14px"
+                margin="3px"
+                marginR="16px"
+                src={iconFigma}
+                alt="web development icon"
+              />
+            </IconWrapper>
+          </View>
+          <View className="jobExample">
+            <Picture src={wallet} alt="gym site" />
+            <Mask />
+            <h2>Wallet app</h2>
+            <p>Design of the home page app, 'Paypal' alike.</p>
+            <Info href={wallet} tabIndex="-1" target="_blank" rel="noreferrer">
+              OPEN
+            </Info>
+
+            <IconWrapper>
+              <Icon
+                width="14px"
+                margin="3px"
+                marginR="16px"
+                src={iconFigma}
                 alt="web development icon"
               />
             </IconWrapper>
