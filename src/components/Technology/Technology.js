@@ -34,9 +34,10 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 97;
+  z-index: 100;
   transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
-  transition: transform 0.2s ease-out;
+  transition: ${({ isOpen }) =>
+    isOpen ? 'transform 0.2s ease-out;' : 'transform 0.2s 0.7s ease-out;'};
   overflow: hidden;
   p {
     padding: 10%;
@@ -54,29 +55,15 @@ const ButtonWrapper = styled.div`
 `
 
 const Field = styled.div`
-  height: ({long}) => long ? unset : 5vh;
-  width: 75%;
-  max-width: 270px;
-  border: solid 1px ${({ theme }) => theme.colors.white};
-  text-align: center;
-  margin: 1px auto 0 auto;
-  padding: 1.4vh;
-  font-weight: 300;
-  background: ${({ theme }) => theme.colors.gray};
-  font-size: 1.8vh;
-
-  ${({ theme }) => theme.media.tablet} {
-    min-width: 370px;
-  }
-
-  ${({ theme }) => theme.media.tabletLandscape} {
-    min-width: 170px;
-  }
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  opacity: 0;
   ${({ theme }) => theme.media.desktop} {
-    min-width: calc(300px + 5vw);
+    font-size: 14px;
   }
   ${({ theme }) => theme.media.bigDesktop} {
-    min-width: calc(500px + 5vw);
+    font-size: 16px;
   }
 `
 
@@ -97,49 +84,86 @@ const Frame = styled.div`
   align-items: center;
   justify-content: space-evenly;
   z-index: 0;
-
-  ${({ theme }) => theme.media.tabletLandscape} {
-    height: 55%;
-    width: 70%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
 `
 
 const Group = styled.div`
   width: 100%;
-  margin: auto;
-  ${({ theme }) => theme.media.tabletLandscape} {
-    width: 50%;
-    box-sizing: border-box;
+  padding: 5%;
+  font-size: 14px;
+  h4 {
+    opacity: 0;
+    ${({ theme }) => theme.media.desktop} {
+      font-size: 16px;
+    }
+    ${({ theme }) => theme.media.bigDesktop} {
+      font-size: 22px;
+    }
   }
 `
-const tl = new TimelineMax({ paused: true })
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ${({ theme }) => theme.media.tablet} {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+`
+
+const tl = new TimelineMax()
+
+const dismantle = () => {
+ 
+
+  tl.staggerFromTo(
+    '.myField',
+    0.05,
+    { x: 0, ease: Expo.easeOut },
+    { x: -1000, ease: Expo.easeOut },
+    '0.05'
+  ).staggerFromTo(
+    '.myField2',
+    0.05,
+    { x: 0, ease: Expo.easeOut },
+    { x: 1000, ease: Expo.easeOut },
+    '0.05',
+    '-=0.05'
+  )
+}
+const assemble = () => {
+  console.log('assembling')
+
+  tl.staggerFromTo(
+    '.myField',
+    0.1,
+    { x: -1000, opacity: 0, ease: Expo.easeOut },
+    { x: 0, opacity: 1, delay: 0.2, ease: Expo.easeOut },
+    '0.1'
+  ).staggerFromTo(
+    '.myField2',
+    0.1,
+    { x: 1000, opacity: 0, ease: Expo.easeOut },
+    { x: 0, opacity: 1, delay: 0.2, ease: Expo.easeOut },
+    '0.1',
+    '-=0.1'
+  )
+}
+
 class Technology extends Component {
   constructor(props) {
     super(props)
     this.state = { isOpen: this.props.isOpen }
   }
 
-  componentDidMount() {
-    tl.staggerFrom(
-      '.myField',
-      0.3,
-      { x: '-500%', delay: 0.5, ease: Expo.easeOut },
-      '0.2'
-    ).staggerFrom(
-      '.myField2',
-      0.5,
-      { x: '500%', ease: Expo.easeOut },
-      '0.2',
-      '-=1.5'
-    )
-  }
   componentDidUpdate() {
     if (this.props.isOpen) {
-      tl.resume()
+      assemble()
+    }
+    if (!this.props.isOpen) {
+      dismantle()
     }
   }
 
@@ -149,31 +173,33 @@ class Technology extends Component {
         <Background />
 
         <Frame>
-          <Group>
-            <Field className="myField">HTML5</Field>
-            <Field className="myField">CSS3</Field>
-            <Field className="myField">SASS</Field>
-            <Field className="myField">BOOTSTRAP</Field>
-          </Group>
+          <Container>
+            <Group>
+              <h4 className="myField">Technology I like to use:</h4>
+              <Field className="myField">HTML5</Field>
+              <Field className="myField">CSS3</Field>
+              <Field className="myField">SASS</Field>
+              <Field className="myField">BOOTSTRAP</Field>
+              <Field className="myField">JAVASCRIPT</Field>
+              <Field className="myField">REACT</Field>
+              <Field className="myField">GATSBY</Field>
+              <Field className="myField">STYLED-COMPONENTS</Field>
+            </Group>
 
-          <Group>
-            <Field className="myField">JAVASCRIPT</Field>
-            <Field className="myField">REACT</Field>
-            <Field className="myField">GATSBY</Field>
-            <Field className="myField">STYLED-COMPONENTS</Field>
-          </Group>
+            <Group>
+              <h4 className="myField">Bundlers, git and others...</h4>
+              <Field className="myField">CLI & GIT</Field>
+              <Field className="myField">GULP, WEBPACK, PARCEL</Field>
+              <Field className="myField">BEM</Field>
+            </Group>
 
-          <Group>
-            <Field className="myField2">CLI & GIT</Field>
-            <Field className="myField2">GULP, WEBPACK, PARCEL</Field>
-            <Field className="myField2">BEM</Field>
-          </Group>
-
-          <Group>
-            <Field className="myField2" long>
-              PS, GIMP, ADOBE XD, SKETCH
-            </Field>
-          </Group>
+            <Group>
+              <h4 className="myField2">When I edit and prototype:</h4>
+              <Field className="myField2" long>
+                PS, GIMP, ADOBE XD, SKETCH
+              </Field>
+            </Group>
+          </Container>
 
           <ButtonWrapper onClick={this.props.closeTech}>
             <ButtonTech />

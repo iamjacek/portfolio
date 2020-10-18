@@ -32,8 +32,10 @@ const MenuWrapper = styled.div`
 
 const LinkMenu = styled.a`
   color: ${({ theme }) => theme.colors.white};
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.8vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
   line-height: 10px;
   padding: 20px;
   margin: 6px;
@@ -68,7 +70,7 @@ const SocialWrapper = styled.div`
   transition: transform 0.2s 0.6s ease-out;
 `
 
-const menuItems = ['Home', 'About', 'Job', 'How', 'Contact']
+const menuItems = ['Home', 'About', 'Job', 'Testimonials', 'Contact']
 
 const tl = new TimelineMax()
 

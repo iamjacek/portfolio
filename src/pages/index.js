@@ -15,7 +15,6 @@ class IndexPage extends Component {
       <>
         <SEO title="Web Development - Jacek Witucki" />
 
-        <div className="loader" />
         <CookieConsent
           style={{
             background: 'linear-gradient(to left,black -150%,#545353 150%)',

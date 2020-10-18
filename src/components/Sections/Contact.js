@@ -316,7 +316,7 @@ class Contact extends Component {
       const homeHeight = document.querySelector('#Home').offsetHeight
       const aboutHeight = document.querySelector('#About').offsetHeight
       const jobHeight = document.querySelector('#Job').offsetHeight
-      const howHeight = document.querySelector('#How').offsetHeight
+      const howHeight = document.querySelector('#Testimonials').offsetHeight
 
       //animation on scroll
 
@@ -393,7 +393,7 @@ class Contact extends Component {
           </SocialWrapper>
 
           <Footer className="contactContent2">
-            Copyright © 2019 Jacek Witucki
+            Copyright © {new Date().getFullYear()} Jacek Witucki
           </Footer>
 
           <Form isOpen={this.state.isFormOpen} closeForm={this.toggleForm} />

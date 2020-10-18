@@ -5,6 +5,7 @@ const StyledHamburger = styled.button`
   ${({ theme }) => theme.media.desktop} {
     display: none;
   }
+  margin-left: auto;
   padding: 18px 15px;
   border: none;
   background: none;

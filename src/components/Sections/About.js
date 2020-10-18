@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import Layout from '../../Layout/Layout'
 import styled from 'styled-components'
 import img from '../../assets/background_about.jpg'
-import AboutPicture from '../AboutPicture/AboutPicture'
+
 import Technology from '../Technology/Technology'
 import ButtonAbout from '../Buttons/ButtonAbout'
 import { TimelineMax } from 'gsap'
+import src1 from '../../assets/smallpic.png'
+import src2 from '../../assets/laptop.png'
 
 const Background = styled.div`
     height: 100%;
@@ -25,12 +27,16 @@ const Wrapper = styled.div`
   width: 100vw;
   max-width: 100%;
   height: 100vh;
+  min-height: 800px;
   margin: 0;
   padding: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: 600px) {
+    min-height: 450px;
+  }
 `
 
 const StyledWrapper = styled.div`
@@ -46,6 +52,7 @@ const StyledWrapper = styled.div`
 const Frame = styled.div`
   position: relative;
   height: 80%;
+  min-height: 700px;
   width: 80%;
   border: 3px solid ${({ theme }) => theme.colors.white};
   background: linear-gradient(
@@ -58,47 +65,23 @@ const Frame = styled.div`
   align-items: center;
   justify-content: space-evenly;
   z-index: 2;
-  ${({ theme }) => theme.media.tablet} {
-    flex-direction: row;
-  }
 
-  h2 {
+  h1 {
     position: relative;
     top: 20px;
     text-align: center;
     color: ${({ theme }) => theme.colors.white};
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     margin: 30px;
-    ${({ theme }) => theme.media.tablet} {
-      position: absolute;
-      top: 0;
-    }
-    ${({ theme }) => theme.media.desktop} {
-      font-size: 1.8rem;
-    }
+    font-size: 28px;
+
     ${({ theme }) => theme.media.bigDesktop} {
-      top: 30px;
-      font-size: calc(1rem + 1.5vw);
+      font-size: calc(28px + 0.4vw);
     }
   }
-  p {
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 10% 10%;
-    ${({ theme }) => theme.media.tablet} {
-      font-size: 0.9rem;
-    }
-    ${({ theme }) => theme.media.tabletLandscape} {
-      font-size: 1.2rem;
-    }
-    ${({ theme }) => theme.media.desktop} {
-      font-size: 1rem;
-    }
-    ${({ theme }) => theme.media.bigDesktop} {
-      font-size: calc(0.2rem + 1vw);
-    }
+  ${({ theme }) => theme.media.tablet} {
+    min-height: 350px;
   }
 `
 
@@ -111,6 +94,70 @@ const ButtonWrapper = styled.div`
   width: 200px;
   height: 46px;
   padding: 20px;
+`
+
+const AboutPicture = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${({ theme }) => theme.media.tablet} {
+    width: 100%;
+  }
+`
+
+const Laptop = styled.div`
+  background: url(${src1}) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  background-position-x: center;
+  ${({ theme }) => theme.media.tablet} {
+    background: url(${src2}) no-repeat;
+    max-width: unset;
+    background-size: contain;
+    background-position-y: 20%;
+  }
+`
+
+const Container = styled.div`
+  width: 100%;
+  height: 70%;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    padding: 10% 10%;
+    height: 50%;
+    ${({ theme }) => theme.media.tablet} {
+      padding: 0 5%;
+      width: 100%;
+    }
+    ${({ theme }) => theme.media.desktop} {
+      font-size: calc(14px + 0.2vw);
+    }
+    ${({ theme }) => theme.media.bigDesktop} {
+      font-size: calc(14px + 0.4vw);
+    }
+  }
+  ${({ theme }) => theme.media.tablet} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 250px;
+  }
 `
 
 const tl = new TimelineMax({ paused: true })
@@ -195,13 +242,21 @@ class About extends Component {
           <Background />
           <StyledWrapper>
             <Frame id="myFrame">
-              <h2 id="myTitle">ABOUT ME</h2>
-              <AboutPicture id="myPic" />
-              <p id="myText">
-                I am the full of passion front-end web developer interested in
-                programming and web design for years. I love to code and make
-                webpages alive. Video Games Fan!
-              </p>
+              <h1 id="myTitle">ABOUT ME</h1>
+              <Container>
+                <AboutPicture id="myPic">
+                  <Laptop />
+                </AboutPicture>
+
+                <p id="myText">
+                  Full of passion front-end web developer. Has discovered his
+                  passion for programming and design in the early days. Making
+                  first steps in high school, with love to code, keep trying to
+                  make things on the web alive and vital. Father of two awesome
+                  kids! Active on gym and PS4 network!
+                </p>
+              </Container>
+
               <ButtonWrapper id="myButton" onClick={this.toggleTech}>
                 <ButtonAbout />
               </ButtonWrapper>

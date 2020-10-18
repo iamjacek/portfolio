@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Layout from '../../Layout/Layout'
 import styled from 'styled-components'
 import { TimelineMax } from 'gsap'
-import '../../assets/loader.css'
 
 import Logo from '../Logo/Logo'
 
@@ -112,55 +111,107 @@ class Home extends Component {
 
   handleLoad = () => {
     const tl = new TimelineMax()
-    tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
-      .to(myLogo, 0.6, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
-      .fromTo(
-        myLogo,
-        0.6,
-        { scale: 0.4 },
-        { scale: 1, ease: Power2.easeInOut },
-        '-=0.6'
-      )
-      .fromTo(
-        this.myBackground,
-        0.8,
-        { height: '0%' },
-        { height: '80%', ease: Power2.easeInOut }
-      )
-      .fromTo(
-        this.myBackground,
-        1,
-        { width: '74%' },
-        { width: '100%', ease: Power2.easeInOut }
-      )
-      .fromTo(
-        myGradient,
-        1,
-        { opacity: 1 },
-        { opacity: 0, ease: Power2.easeInOut },
-        '-=2'
-      )
-      .fromTo(
-        mySocials,
-        1,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, ease: Power2.easeInOut },
-        '-=1.5'
-      )
-      .fromTo(
-        myArrow,
-        2,
-        { opacity: 0 },
-        { opacity: 1, ease: Power2.easeInOut },
-        '-=2'
-      )
-      .fromTo(
-        myHeader,
-        2,
-        { y: -20, opacity: 0 },
-        { y: 0, opacity: 1, ease: Power2.easeInOut },
-        '-=3'
-      )
+    if (window.screen.width > 1365) {
+      tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
+        .to(myLogo, 0.6, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
+        .fromTo(
+          myLogo,
+          0.6,
+          { scale: 0.4 },
+          { scale: 1, ease: Power2.easeInOut },
+          '-=0.6'
+        )
+        .fromTo(
+          this.myBackground,
+          0.8,
+          { height: '0%' },
+          { height: '80%', ease: Power2.easeInOut }
+        )
+        .fromTo(
+          this.myBackground,
+          1,
+          { width: '74%' },
+          { width: '100%', ease: Power2.easeInOut }
+        )
+        .fromTo(
+          myGradient,
+          1,
+          { opacity: 1 },
+          { opacity: 0, ease: Power2.easeInOut },
+          '-=2'
+        )
+        .fromTo(
+          mySocials,
+          1,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, ease: Power2.easeInOut },
+          '-=1.5'
+        )
+        .fromTo(
+          myArrow,
+          2,
+          { opacity: 0 },
+          { opacity: 1, ease: Power2.easeInOut },
+          '-=2'
+        )
+        .fromTo(
+          myHeader,
+          2,
+          { y: -20, opacity: 0 },
+          { y: 0, opacity: 1, ease: Power2.easeInOut },
+          '-=3'
+        )
+    } else {
+      tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
+        .to(myLogo, 0.6, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
+        .fromTo(
+          myLogo,
+          0.6,
+          { scale: 0.4 },
+          { scale: 1, ease: Power2.easeInOut },
+          '-=0.6'
+        )
+        .fromTo(
+          this.myBackground,
+          0.8,
+          { height: '0%' },
+          { height: '100%', ease: Power2.easeInOut }
+        )
+        .fromTo(
+          this.myBackground,
+          1,
+          { width: '74%' },
+          { width: '100%', ease: Power2.easeInOut }
+        )
+        .fromTo(
+          myGradient,
+          1,
+          { opacity: 1 },
+          { opacity: 0, ease: Power2.easeInOut },
+          '-=2'
+        )
+        .fromTo(
+          mySocials,
+          1,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, ease: Power2.easeInOut },
+          '-=1.5'
+        )
+        .fromTo(
+          myArrow,
+          2,
+          { opacity: 0 },
+          { opacity: 1, ease: Power2.easeInOut },
+          '-=2'
+        )
+        .fromTo(
+          myHeader,
+          2,
+          { y: -20, opacity: 0 },
+          { y: 0, opacity: 1, ease: Power2.easeInOut },
+          '-=3'
+        )
+    }
   }
 
   //animate home page using gsap, all IDs with prefix "my" has been created for gsap's purposes
@@ -170,11 +221,8 @@ class Home extends Component {
     document.documentElement.style.setProperty('--vh', `${vh}px`)
     if (window) {
       window.setTimeout(() => {
-        document.querySelector('.loader').classList.add('hidden')
         window.addEventListener('load', this.handleLoad(), { passive: true })
-      }, 100)
-    } else {
-      console.log('no window')
+      }, 0)
     }
   }
 

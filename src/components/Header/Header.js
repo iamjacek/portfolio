@@ -20,6 +20,7 @@ const HeaderWrapper = styled.div`
   z-index: 99;
   ${({ theme }) => theme.media.desktop} {
     padding: 0 100px;
+    background: rgba(84, 83, 83, 0.15);
   }
   ${({ theme }) => theme.media.bigDesktop} {
     padding: 0 10%;
@@ -27,46 +28,6 @@ const HeaderWrapper = styled.div`
   transition: transform 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0;
-`
-
-const Faq = styled.div`
-  border: none;
-  background: none;
-  margin: 0;
-  padding: 8px 15px;
-  display: inline-block;
-  position: relative;
-  z-index: 99;
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 1.2rem;
-  margin-bottom: 2px;
-
-  ${({ theme }) => theme.media.desktop} {
-    font-size: 1rem;
-  }
-
-  &:hover {
-    animation: woobleSocial 0.25s ease-in-out;
-    color: ${({ theme }) => theme.colors.red};
-  }
-
-  @keyframes woobleSocial {
-    0% {
-      transform: translateY(0px);
-    }
-    25% {
-      transform: translateY(-2px);
-    }
-    50% {
-      transform: translateY(-4px);
-    }
-    75% {
-      transform: translateY(-2px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
 `
 
 const Header = () => {
@@ -80,7 +41,7 @@ const Header = () => {
   return (
     <HeaderWrapper id="myHeader">
       <MenuMobile isOpen={isMenuOpen} handleClick={toggleMobileMenu} />
-      <Faq tabIndex="-1" />
+
       <MenuDesktop />
       <Hamburger
         onClick={toggleMobileMenu}

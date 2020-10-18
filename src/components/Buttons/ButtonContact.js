@@ -54,7 +54,7 @@ const ButtonWrapper = styled.div`
   margin-top: 0;
   overflow: hidden;
   border: 2px solid ${({ theme }) => theme.colors.white};
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
@@ -62,7 +62,7 @@ const ButtonWrapper = styled.div`
   button {
     width: 101%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -91,7 +91,7 @@ const Mask = styled.span`
   text-align: center;
   width: 101%;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   position: absolute;
   font-size: 1.3rem;
