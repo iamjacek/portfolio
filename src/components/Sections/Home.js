@@ -96,7 +96,7 @@ const SocialWrapper = styled.div`
 const Gradient = styled.div`
   width: 100%;
   height: 100%;
-  background: #f0ebe7;
+  background: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -106,60 +106,52 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.myBackground = null
-    this.handleLoad = this.handleLoad.bind(this)
+    
   }
 
   handleLoad = () => {
     const tl = new TimelineMax()
     if (window.screen.width > 1365) {
-      tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })
-        .to(myLogo, 0.6, { rotation: 360, ease: Power2.easeInOut }, '-=0.8')
-        .fromTo(
-          myLogo,
-          0.6,
-          { scale: 0.4 },
-          { scale: 1, ease: Power2.easeInOut },
-          '-=0.6'
-        )
+      tl.fromTo(myLogo, 0.7, { opacity: 0 }, {  opacity: 1, ease: Power2.easeInOut })
         .fromTo(
           this.myBackground,
-          0.8,
+          0.5,
           { height: '0%' },
           { height: '80%', ease: Power2.easeInOut }
         )
         .fromTo(
           this.myBackground,
-          1,
+          0.6,
           { width: '74%' },
           { width: '100%', ease: Power2.easeInOut }
         )
         .fromTo(
           myGradient,
-          1,
+          0.7,
           { opacity: 1 },
           { opacity: 0, ease: Power2.easeInOut },
-          '-=2'
-        )
-        .fromTo(
-          mySocials,
-          1,
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, ease: Power2.easeInOut },
           '-=1.5'
         )
         .fromTo(
+          mySocials,
+          0.6,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, ease: Power2.easeInOut },
+          '-=1'
+        )
+        .fromTo(
           myArrow,
-          2,
+          0.5,
           { opacity: 0 },
           { opacity: 1, ease: Power2.easeInOut },
-          '-=2'
+          '-=1.2'
         )
         .fromTo(
           myHeader,
-          2,
+          0.5,
           { y: -20, opacity: 0 },
           { y: 0, opacity: 1, ease: Power2.easeInOut },
-          '-=3'
+          '-=1.2'
         )
     } else {
       tl.fromTo(myLogo, 0.8, { y: '50%' }, { y: '0%', ease: Power2.easeInOut })

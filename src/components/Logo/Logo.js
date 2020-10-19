@@ -34,7 +34,7 @@ const LogoWrapper = styled.div`
   justify-content: center;
   position: relative;
   z-index: 1;
-  transform: translateY(50%);
+
 
   ${({ theme }) => theme.media.tabletLandscape} {
     padding-top: 5%;
