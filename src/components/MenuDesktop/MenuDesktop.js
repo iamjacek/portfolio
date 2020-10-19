@@ -33,7 +33,7 @@ const LinkMenuDesktop = styled.a`
     background: rgba(240, 235, 231, 1);
   }
   ${({ theme }) => theme.media.bigDesktop} {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @media (min-width: 2500px){
     font-size: 1.5rem;

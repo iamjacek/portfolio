@@ -38,7 +38,8 @@ const Wrapper = styled.div`
 `
 
 const Testimonials = styled.div`
-width: 100%;
+  width: 100%;
+  height: 70px;
   text-align: center;
   display: flex;
   flex-direction: column;
