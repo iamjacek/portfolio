@@ -47,10 +47,10 @@ const StyledWrapper = styled.div`
 const ButtonWrapper = styled.div`
   position: absolute;
   cursor: pointer;
-  bottom: -23px;
+  bottom: -20px;
   margin: 0 auto;
   width: 200px;
-  height: 46px;
+  height: 40px;
   padding: 20px;
 `
 

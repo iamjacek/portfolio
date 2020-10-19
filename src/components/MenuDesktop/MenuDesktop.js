@@ -26,7 +26,7 @@ const LinkMenuDesktop = styled.a`
   line-height: 2rem;
   text-transform: uppercase;
   padding: 1.5% 60px;
-  transition: background 0.1s ease-out, color 0.2s ease-out;
+  transition: background 0.15s ease-out, color 0.2s ease-out, font-size 0.2s ease-out;
 
   &:hover {
     color: ${({ theme }) => theme.colors.red};

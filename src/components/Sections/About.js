@@ -89,7 +89,7 @@ const ButtonWrapper = styled.div`
   z-index: 100;
   position: absolute;
   cursor: pointer;
-  bottom: -23px;
+  bottom: -25px;
   margin: 0 auto;
   width: 200px;
   height: 46px;

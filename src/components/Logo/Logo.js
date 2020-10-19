@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const IMG = styled.img`
+  filter: brightness(0.99) blur(0.5px);
   height: 26%;
   opacity: 0.8;
   animation: logoSwing 12s ease-in-out infinite;

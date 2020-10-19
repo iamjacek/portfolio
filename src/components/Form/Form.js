@@ -33,7 +33,7 @@ const StyledWrapper = styled.div`
 const ButtonWrapper = styled.div`
   position: absolute;
   cursor: pointer;
-  bottom: -23px;
+  bottom: -25px;
   margin: 0 auto;
   width: 200px;
   height: 46px;
@@ -42,7 +42,10 @@ const ButtonWrapper = styled.div`
 
 const Frame = styled.div`
   position: relative;
-  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 80%;
   width: 80%;
@@ -52,18 +55,18 @@ const Frame = styled.div`
     black -280%,
     ${({ theme }) => theme.colors.gray} 150%
   );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  
   z-index: 0;
 `
 
 const FormWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
+
   width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   height: 100%;
   z-index: 1001;
   padding: 10px;
@@ -71,8 +74,10 @@ const FormWrapper = styled.div`
   p {
     text-align: center;
     ${({ theme }) => theme.media.tabletLandscape} {
-      padding: 2%;
+      padding: 10px 0;
+      max-width: 600px;
     }
+   
   }
 `
 
@@ -80,7 +85,7 @@ const NameForm = styled.input`
   transition: border 0.2s ease-out;
   position: relative;
   display: block;
-  margin: 0px auto 0px auto;
+  margin: 0px auto 2px auto;
   width: 100%;
   max-width: 500px;
   height: 5vh;
@@ -149,7 +154,7 @@ const MsgForm = styled.textarea`
   transition: border 0.2s ease-out;
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2px auto;
   width: 100%;
   max-width: 500px;
   height: 10vh;
@@ -201,10 +206,11 @@ const ButtonForm = styled.button`
   background-color: transparent;
   border: 2px solid ${({ theme }) => theme.colors.white};
   width: 150px;
-  height: 40px;
+  height: 30px;
   margin-top: 20px;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.white};
   letter-spacing: normal;
   transition: all 200ms ease-in;
@@ -212,17 +218,11 @@ const ButtonForm = styled.button`
 
   :hover {
     background-color: ${({ theme }) => theme.colors.red};
-    font-size: 1rem;
+    font-size: .9rem;
     transition: all 200ms ease-in;
     letter-spacing: 1px;
     color: ${({ theme }) => theme.colors.white};
     border: 2px solid ${({ theme }) => theme.colors.red};
-  }
-  ${({ theme }) => theme.media.tablet} {
-  }
-  ${({ theme }) => theme.media.desktop} {
-  }
-  ${({ theme }) => theme.media.bigDesktop} {
   }
 `
 

@@ -44,12 +44,13 @@ const ButtonWrapper = styled.div`
     }
   }
   position: absolute;
+  top: 0;
   left: 0;
   cursor: pointer;
   z-index: 1002;
   bottom: 0;
   width: 200px;
-  height: 46px;
+  height: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -59,11 +60,14 @@ const ButtonWrapper = styled.div`
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
+  ${({ theme }) => theme.media.bigDesktop} {
+    transform: scale(1.3);
+  }
   button {
     width: 101%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 1px;
     background: ${({ theme }) => theme.colors.red};
@@ -84,6 +88,8 @@ const ButtonWrapper = styled.div`
 `
 const Mask = styled.span`
   position: absolute;
+  top: 0;
+  left: 0;
   color: ${({ theme }) => theme.colors.gray};
   background: ${({ theme }) => theme.colors.white};
   background-repeat: repeat;
@@ -94,7 +100,7 @@ const Mask = styled.span`
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   position: absolute;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 0;
   padding: 9px 0;
   overflow: hidden;

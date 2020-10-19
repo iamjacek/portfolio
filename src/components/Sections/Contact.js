@@ -142,7 +142,7 @@ const ButtonWrapper = styled.div`
   cursor: pointer;
   margin: 0 auto;
   width: 220px;
-  height: 46px;
+  height: 40px;
   padding: 20px 40px;
   ${({ theme }) => theme.media.desktop} {
     position: absolute;
@@ -239,6 +239,7 @@ const LogoContactDouble = styled.div`
 `
 
 const IMG = styled.img`
+  filter: brightness(0.88) blur(0.4px);
   width: 10vw;
   left: ${props => (props.right ? 'unset' : '90px')};
   right: ${props => (props.right ? '90px' : 'unset')};
