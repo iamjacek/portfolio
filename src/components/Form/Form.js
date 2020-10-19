@@ -80,7 +80,7 @@ const NameForm = styled.input`
   transition: border 0.2s ease-out;
   position: relative;
   display: block;
-  margin: 10px auto 0px auto;
+  margin: 0px auto 0px auto;
   width: 100%;
   max-width: 500px;
   height: 5vh;
@@ -105,11 +105,15 @@ const NameForm = styled.input`
 const Label = styled.label`
   position: relative;
   width: 90%;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 5px auto;
   display: block;
   max-width: 500px;
   z-index: 1;
-
+  font-size: 0.8rem;
+  ${({ theme }) => theme.media.tablet} {
+   font-size: 1rem;
+   margin: 0 auto 10px auto;
+  }
   ${({ theme }) => theme.media.tabletLandscape} {
     max-width: 600px;
   }
@@ -290,18 +294,18 @@ export default function Form(props) {
             </p>
             <Label htmlFor="firstName" id="nameLabel">
               <NameForm type="text" name="firstName" onChange={handleChange} />
-              <br />
+              
               Name
             </Label>
             <Label htmlFor="email" id="emailLabel">
               <EmailForm type="text" name="email" onChange={handleChange} />
-              <br />
+              
               Email
             </Label>
 
             <Label htmlFor="message" id="messageLabel">
               <MsgForm name="message" onChange={handleChange} />
-              <br />
+              
               Message
             </Label>
 

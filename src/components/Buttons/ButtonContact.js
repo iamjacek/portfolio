@@ -47,7 +47,7 @@ const ButtonWrapper = styled.div`
   cursor: pointer;
   bottom: 0;
   left: 0;
-  width: 200px;
+  width: 100%;
   height: 46px;
   margin-left: auto;
   margin-right: auto;

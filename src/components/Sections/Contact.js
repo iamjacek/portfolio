@@ -141,9 +141,9 @@ const ButtonWrapper = styled.div`
   position: relative;
   cursor: pointer;
   margin: 0 auto;
-  width: 200px;
+  width: 220px;
   height: 46px;
-  padding: 20px;
+  padding: 20px 40px;
   ${({ theme }) => theme.media.desktop} {
     position: absolute;
     top: 17vh;
