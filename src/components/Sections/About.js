@@ -119,8 +119,12 @@ const Laptop = styled.div`
     background: url(${src2}) no-repeat;
     max-width: unset;
     background-size: contain;
+    background-position-y: 60%;
+  }
+  ${({ theme }) => theme.media.tabletLandscape} {
     background-position-y: 20%;
   }
+  
 `
 
 const Container = styled.div`
