@@ -47,7 +47,9 @@ const ButtonWrapper = styled.div`
   top: 0;
   left: 0;
   cursor: pointer;
-  width: 100%;
+  z-index: 1002;
+  bottom: 0;
+  width: 220px;
   height: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -62,7 +64,7 @@ const ButtonWrapper = styled.div`
     transform: scale(1.3);
   }
   button {
-    width: 100%;
+    width: 101%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -93,7 +95,7 @@ const Mask = styled.span`
   background-repeat: repeat;
   background-size: 100%;
   text-align: center;
-  width: 100%;
+  width: 101%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;

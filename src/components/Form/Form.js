@@ -72,13 +72,23 @@ const FormWrapper = styled.div`
   padding: 10px;
   h2,
   p {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     ${({ theme }) => theme.media.tabletLandscape} {
       padding: 10px 0;
       max-width: 600px;
     }
-   
+    
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+      transform: scale(1.2);
+      max-width: 800px;
+    }
+    @media(min-width: 2500px) {
+      transform: scale(1.8);
+      max-width: 1200px;
+    }
 `
 
 const NameForm = styled.input`
@@ -105,6 +115,13 @@ const NameForm = styled.input`
   ${({ theme }) => theme.media.tabletLandscape} {
     max-width: 600px;
   }
+  ${({ theme }) => theme.media.bigDesktop} {
+    max-width: 800px;
+    max-height: 50px;
+  }
+  @media(min-width: 2500px) {
+    max-width: 1200px;
+  }
 `
 
 const Label = styled.label`
@@ -121,6 +138,12 @@ const Label = styled.label`
   }
   ${({ theme }) => theme.media.tabletLandscape} {
     max-width: 600px;
+  }
+  ${({ theme }) => theme.media.bigDesktop} {
+    max-width: 800px;
+  }
+  @media(min-width: 2500px) {
+    max-width: 1200px;
   }
 `
 
@@ -147,6 +170,13 @@ const EmailForm = styled.input`
   }
   ${({ theme }) => theme.media.tabletLandscape} {
     max-width: 600px;
+  }
+  ${({ theme }) => theme.media.bigDesktop} {
+    max-width: 800px;
+    max-height: 50px;
+  }
+  @media(min-width: 2500px) {
+    max-width: 1200px;
   }
 `
 
@@ -176,6 +206,13 @@ const MsgForm = styled.textarea`
   }
   ${({ theme }) => theme.media.tabletLandscape} {
     max-width: 600px;
+  }
+  ${({ theme }) => theme.media.bigDesktop} {
+    max-width: 800px;
+    max-height: 150px;
+  }
+  @media(min-width: 2500px) {
+    max-width: 1200px;
   }
 `
 

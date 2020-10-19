@@ -25,6 +25,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ theme }) => theme.media.bigDesktop} {
+    min-height: unset;
+  }
 `
 
 const StyledWrapper = styled.div`
@@ -42,6 +45,12 @@ const StyledWrapper = styled.div`
   }
   ${({ theme }) => theme.media.bigDesktop} {
     padding: 0 15%;
+    margin: 5% 0;
+  }
+  @media (min-width: 2500px) {
+    padding: 0 15%;
+    margin: 8% 0;
+    transform: scale(1.4);
   }
 `
 

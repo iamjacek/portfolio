@@ -151,7 +151,6 @@ const ButtonWrapper = styled.div`
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.6vw;
   }
 `
 
