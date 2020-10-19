@@ -59,6 +59,7 @@ const Field = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   opacity: 0;
+  color: #b1aca9;
   ${({ theme }) => theme.media.desktop} {
     font-size: 14px;
   }
@@ -90,7 +91,8 @@ const Group = styled.div`
   width: 100%;
   padding: 5%;
   font-size: 14px;
-  h4 {
+  h1 {
+    font-size: 16px;
     opacity: 0;
     ${({ theme }) => theme.media.desktop} {
       font-size: 16px;
@@ -111,6 +113,7 @@ const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
   }
+ 
 `
 
 const tl = new TimelineMax()
@@ -175,7 +178,7 @@ class Technology extends Component {
         <Frame>
           <Container>
             <Group>
-              <h4 className="myField">Technology I like to use:</h4>
+              <h1 className="myField">Technology I like to use:</h1>
               <Field className="myField">HTML5</Field>
               <Field className="myField">CSS3</Field>
               <Field className="myField">SASS</Field>
@@ -187,14 +190,14 @@ class Technology extends Component {
             </Group>
 
             <Group>
-              <h4 className="myField">Bundlers, git and others...</h4>
+              <h1 className="myField">Bundlers, git and others...</h1>
               <Field className="myField">CLI & GIT</Field>
               <Field className="myField">GULP, WEBPACK, PARCEL</Field>
               <Field className="myField">BEM</Field>
             </Group>
 
             <Group>
-              <h4 className="myField2">When I edit and prototype:</h4>
+              <h1 className="myField2">When I edit and prototype:</h1>
               <Field className="myField2" long>
                 PS, GIMP, ADOBE XD, SKETCH
               </Field>
