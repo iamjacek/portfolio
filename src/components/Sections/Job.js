@@ -74,7 +74,7 @@ class Job extends Component {
           isScrolling = setTimeout(() => {
             const y = window.scrollY
 
-            if (y > ((homeHeight + aboutHeight) / 10) * 6.5) {
+            if (y > ((homeHeight + aboutHeight) / 10) * 5.35) {
               tl.resume()
             }
           }, 60)

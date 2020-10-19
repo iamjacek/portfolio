@@ -181,7 +181,7 @@ class About extends Component {
   componentDidMount() {
     tl.fromTo(
       myFrame,
-      0.6,
+      0.3,
       { opacity: '0' },
       { opacity: '1', ease: Power2.easeInOut }
     )
@@ -227,7 +227,7 @@ class About extends Component {
           isScrolling = setTimeout(() => {
             const y = window.scrollY
 
-            if (y > (sectionHeight / 10) * 3) {
+            if (y > (sectionHeight / 10) * 3.3) {
               tl.resume()
             }
           }, 60)

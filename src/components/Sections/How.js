@@ -26,7 +26,9 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `
 
-
+const CarouselWrapper = styled.div`
+  width: 100%;
+`
 
 const tl = new TimelineMax({ paused: true })
 
@@ -36,13 +38,12 @@ class How extends Component {
   }
 
   componentDidMount() {
-    tl.staggerFrom(
+    tl.fromTo(
       '.howContent',
-      0.4,
-      { scale: 0.9, y: -20, opacity: 0, ease: Elastic.easeOut },
-      '0.13'
+      1,
+      { opacity: 0 },
+      { opacity: 1 }
     )
-
     const checkHeight = () => {
       let isScrolling
       const homeHeight = document.querySelector('#Home').offsetHeight
@@ -58,7 +59,7 @@ class How extends Component {
           isScrolling = setTimeout(() => {
             const y = window.scrollY
 
-            if (y > ((homeHeight + aboutHeight + jobHeight) / 10) * 8) {
+            if (y > ((homeHeight + aboutHeight + jobHeight) / 10) * 7) {
               tl.resume()
             }
           }, 60)
@@ -74,9 +75,11 @@ class How extends Component {
     return (
       <Wrapper id="Testimonials">
         <StyledWrapper>
-        
-
-         <Carousel />
+        <h1 className="howContent">Testimonials</h1>
+        <CarouselWrapper className="howContent">
+          <Carousel />
+        </CarouselWrapper>
+         
         </StyledWrapper>
       </Wrapper>
     )

@@ -293,17 +293,17 @@ class Contact extends Component {
       delay: 0.5,
       ease: Elastic.easeOut,
     })
-      .from('#avatar', 0.6, { opacity: 0, ease: Power2.easeInOut }, '-=1')
+      .from('#avatar', 0.3, { opacity: 0, ease: Power2.easeInOut }, '-=0.6')
       .staggerFrom(
         '.contactContent',
-        0.5,
+        0.3,
         { scale: 0.9, y: -10, opacity: 0, ease: Elastic.easeOut },
         '0.2',
-        '-=1'
+        '-=0.6'
       )
       .from(
         '.contactContent2',
-        0.5,
+        0.3,
         {
           scale: 0.9,
           y: 200,
@@ -332,7 +332,7 @@ class Contact extends Component {
 
             if (
               y >
-              ((homeHeight + aboutHeight + jobHeight + howHeight) / 10) * 9
+              ((homeHeight + aboutHeight + jobHeight + howHeight) / 10) * 7.5
             ) {
               tl.resume()
             }

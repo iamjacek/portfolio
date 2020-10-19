@@ -22,7 +22,7 @@ const LinkMenuDesktop = styled.a`
   color: ${({ theme }) => theme.colors.white};
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 2rem;
   text-transform: uppercase;
   padding: 1.5% 60px;
@@ -33,7 +33,13 @@ const LinkMenuDesktop = styled.a`
     background: rgba(240, 235, 231, 1);
   }
   ${({ theme }) => theme.media.bigDesktop} {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  @media (min-width: 2500px){
+    font-size: 1.5rem;
+  }
+  @media (min-width: 3500px){
+    font-size: 1.9rem;
   }
 `
 

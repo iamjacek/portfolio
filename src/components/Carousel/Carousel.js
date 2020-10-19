@@ -4,7 +4,7 @@ import next from '../../assets/arrowslider.svg'
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 50px 0;
+  padding: 25px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,16 +18,16 @@ const Wrapper = styled.div`
     font-size: 12px;
   }
   ${({ theme }) => theme.media.tablet} {
-    padding: 50px 5%;
+    padding: 25px 5%;
   }
   ${({ theme }) => theme.media.tabletLandscape} {
-    padding: 50px 10%;
+    padding: 25px 10%;
   }
   ${({ theme }) => theme.media.desktop} {
-    padding: 50px 20%;
+    padding: 25px 20%;
   }
   ${({ theme }) => theme.media.bigDesktop} {
-    padding: 50px 25%;
+    padding: 25px 25%;
     h1 {
     font-size: 22px;
     }
