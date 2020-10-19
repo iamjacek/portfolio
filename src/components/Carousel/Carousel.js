@@ -74,7 +74,7 @@ const Carousel = () => {
 
   return  (
 <Wrapper>
-    <Arrow left src={next}  onClick={prevTesti}/>
+    <Arrow left src={next}  onClick={prevTesti} alt="Previous testimonials" />
   
   {(testiNo === 1) && (
     <Testimonials>
@@ -97,7 +97,7 @@ const Carousel = () => {
     </Testimonials>
   )}
     
-    <Arrow src={next}  onClick={nextTesti}/>
+    <Arrow src={next}  onClick={nextTesti} alt="Next testimonials"/>
   </Wrapper>
   )
 }
