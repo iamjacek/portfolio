@@ -72,8 +72,14 @@ const Wrapper = styled.div`
 const LogoWrap = styled.div`
   position: relative;
   width: 100%;
-  height: 50vh;
-  margin-top: -15vh;
+  height: 150px;
+  margin-top: 5%;
+  ${({ theme }) => theme.media.bigDesktop} {
+    height: 350px;
+  }
+  img {
+    height: 100%;
+  }
 `
 
 const Privacy = () => {
