@@ -22,10 +22,6 @@ My portfolio. Build for practice and showcase purposes.
 > - Styled-components
 > - GSAP
 
-## Screenshots 📺
-
-Soon...
-
 ## Live 📍
 
 <https://www.jacekwitucki.com>
