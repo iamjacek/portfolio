@@ -103,7 +103,7 @@ class Job extends Component {
             picture={pic}
             title="A - payroll"
             description="Website for accountant company. Design, vectors, development and deployment."
-            liveLink="https://www.apayroll.co.uk"
+            liveLink="https://blissful-ardinghelli-ed5cae.netlify.app/"
             gitLink="https://github.com/iamjacek/a-the-bookkeeping"
             tech={['html5', 'js', 'react', 'gatsby', 'styled component']}
             classTL="jobExample"
