@@ -17,7 +17,7 @@ class IndexPage extends Component {
 
         <CookieConsent
           style={{
-            background: 'linear-gradient(to left,black -150%,#545353 150%)',
+            background: '#EF4837',
           }}
           buttonStyle={{
             color: '#F0EBE7',
@@ -33,7 +33,10 @@ class IndexPage extends Component {
           sameSite="strict"
         >
           This website uses cookies to enhance the user experience.{' '}
-          <Link to="/privacy" style={{ color: '#EF4837' }}>
+          <Link
+            to="/privacy"
+            style={{ color: '#FCFCFC', textDecoration: 'underline' }}
+          >
             Read more about privacy here
           </Link>
           .
