@@ -6,12 +6,10 @@ import JobCard from '../JobCard/JobCard'
 
 //images for portfolio job section
 import pic from '../../assets/apayroll.png'
-
+import pic2 from '../../assets/todo-auth-login.png'
 import pic3 from '../../assets/gymsite.png'
-import wallet from '../../assets/wallet-app.png'
-import zodiak from '../../assets/zodiak_sg.png'
-import zodiakMob from '../../assets/zodiak_mobile.png'
-import canarinhos from '../../assets/canarinhos.jpg'
+import pic4 from '../../assets/beepline.png'
+
 import canarinhosPreview from '../../assets/canarinhosPreview.png'
 
 const Wrapper = styled.div`
@@ -100,6 +98,40 @@ class Job extends Component {
       <Wrapper id="Job">
         <StyledWrapper>
           <JobCard
+            picture={pic4}
+            title="BEEP-LINE"
+            description="Online store deployed on netlify and heroku. Phone accessories for everyone!"
+            liveLink="https://www.beep-line.com/"
+            gitLink="https://github.com/iamjacek/accessories-store"
+            tech={[
+              'react',
+              'strapi',
+              'heroku',
+              'Tailwind',
+              'Apollo',
+              'MongoDB',
+              'Netlify',
+            ]}
+            classTL="jobExample"
+          />
+          <JobCard
+            picture={pic2}
+            title="Not just TODO"
+            description="Remake of my first app. Users can register and keep their notes private."
+            liveLink="https://gracious-bohr-7738d8.netlify.app/"
+            gitLink="https://github.com/iamjacek/todo-auth"
+            tech={[
+              'react',
+              'strapi',
+              'heroku',
+              'materialUI',
+              'Apollo',
+              'MongoDB',
+              'Netlify',
+            ]}
+            classTL="jobExample"
+          />
+          <JobCard
             picture={pic}
             title="A - payroll"
             description="Website for accountant company. Design, vectors, development and deployment."
@@ -119,26 +151,16 @@ class Job extends Component {
           />
           <JobCard
             picture={canarinhosPreview}
-            title="Canarinhos"
-            description="Desktop layout for a restaurant."
-            liveLink="https://dribbble.com/shots/14084825-Canarinhos-restaurant-website"
-            tech={['figma', 'affinity designer']}
-            classTL="jobExample"
-          />
-          <JobCard
-            picture={zodiakMob}
-            title="Zodiak"
-            description="Design of the website. Desktop and mobile layout."
-            liveLink="https://dribbble.com/shots/14050995-Zodiak-home-page"
-            tech={['figma']}
-            classTL="jobExample"
-          />
-          <JobCard
-            picture={wallet}
-            title="Wallet app"
-            description="Home page design of the money app."
-            liveLink={wallet}
-            tech={['figma']}
+            title="Me on Dribbble"
+            description="Check my work on dribbble"
+            liveLink="https://dribbble.com/iamjacek"
+            tech={[
+              'figma',
+              'affinity designer',
+              'dribbble',
+              'ui/ux design',
+              'web design',
+            ]}
             classTL="jobExample"
           />
         </StyledWrapper>

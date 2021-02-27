@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 const View = styled.div`
   margin: 20px 0;
-  border: ${({ theme }) => theme.colors.gray} 2px solid;
+  border: ${({ theme }) => theme.colors.gray} 1px solid;
   width: 300px;
   height: 350px;
   overflow: hidden;
   position: relative;
   display: inline-block;
-  box-shadow: 1px 1px 2px #000;
+
   opacity: 1;
   ${({ theme }) => theme.media.tablet} {
     margin: 20px 10px;
