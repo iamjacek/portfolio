@@ -113,14 +113,11 @@ const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
   }
- 
 `
 
 const tl = new TimelineMax()
 
 const dismantle = () => {
- 
-
   tl.staggerFromTo(
     '.myField',
     0.05,
@@ -179,27 +176,29 @@ class Technology extends Component {
           <Container>
             <Group>
               <h1 className="myField">Technology I like to use:</h1>
-              <Field className="myField">HTML5</Field>
-              <Field className="myField">CSS3</Field>
-              <Field className="myField">SASS</Field>
-              <Field className="myField">BOOTSTRAP</Field>
-              <Field className="myField">JAVASCRIPT</Field>
-              <Field className="myField">REACT</Field>
-              <Field className="myField">GATSBY</Field>
-              <Field className="myField">STYLED-COMPONENTS</Field>
+              <Field className="myField">HTML, CSS/SASS, JS</Field>
+              <Field className="myField">REACT, GATSBY</Field>
+              <Field className="myField">
+                STYLED-COMPONENTS, TAILWIND, MATERIAL-UI
+              </Field>
+              <Field className="myField">BOOTSTRAP, BEM</Field>
             </Group>
 
             <Group>
-              <h1 className="myField">Bundlers, git and others...</h1>
+              <h1 className="myField">And some others I must reach for:</h1>
               <Field className="myField">CLI & GIT</Field>
               <Field className="myField">GULP, WEBPACK, PARCEL</Field>
-              <Field className="myField">BEM</Field>
+              <Field className="myField">NPM/YARN</Field>
+              <Field className="myField">
+                Strapi, Contentful, MongoDB, Stripe
+              </Field>
+              <Field className="myField">Heroku, Netlify</Field>
             </Group>
 
             <Group>
-              <h1 className="myField2">When I edit and prototype:</h1>
+              <h1 className="myField2">Designing and prototyping:</h1>
               <Field className="myField2" long>
-                PS, GIMP, ADOBE XD, SKETCH
+                FIGMA, AFFINITY DESIGNER, ADOBE XD
               </Field>
             </Group>
           </Container>

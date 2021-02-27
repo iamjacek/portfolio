@@ -106,6 +106,7 @@ class Job extends Component {
             tech={[
               'react',
               'strapi',
+              'Stripe',
               'heroku',
               'Tailwind',
               'Apollo',
