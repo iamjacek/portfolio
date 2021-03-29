@@ -9,6 +9,7 @@ import pic from '../../assets/apayroll.png'
 import pic2 from '../../assets/todo-auth-login.png'
 import pic3 from '../../assets/gymsite.png'
 import pic4 from '../../assets/beepline.png'
+import pic5 from '../../assets/movie-app.png'
 
 import canarinhosPreview from '../../assets/canarinhosPreview.png'
 
@@ -113,6 +114,15 @@ class Job extends Component {
               'MongoDB',
               'Netlify',
             ]}
+            classTL="jobExample"
+          />
+          <JobCard
+            picture={pic5}
+            title="MOVIE-SEARCH"
+            description="Search and rate movies in big database!"
+            liveLink="https://happy-ride-26a611.netlify.app/"
+            gitLink="https://github.com/iamjacek/search-movie"
+            tech={['react', 'netlify']}
             classTL="jobExample"
           />
           <JobCard
